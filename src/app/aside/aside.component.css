@@ -2,13 +2,14 @@
 
 .aside{
     width: 4rem;
-    height: 51.276rem;
+    height: 100vh;
     box-sizing: border-box;
     padding-left: 0rem;
     padding-right: 0rem;
     padding-bottom: 0rem;
     padding-top: none;
-    background-color: #ffffff;
+    background-color: #667972;
+    color: #111412;
     transition: ease-in-out 0.3s;
     overflow: hidden;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,10 +28,10 @@
 
 hr{
     height: 0.03rem;
-    color: #ffffff;
+    color: #5C8374;
     opacity: 100%;
-    border-top: solid;
-    border-color: #ffffff;
+    border-top: #5C8374;
+    border-color: #5C8374;
     border-bottom: none;
     border-radius: 0.01rem;
     margin-bottom: 0rem;
@@ -39,7 +40,11 @@ hr{
     margin-top: 0;
 }
 
-#divider{
+#topDivider{
+    margin-bottom: 1rem;
+}
+
+#mainDivider{
     height: 0.03rem;
     color: #000000;
     opacity: 100%;
@@ -47,10 +52,10 @@ hr{
     border-color: #000000;
     border-bottom: none;
     border-radius: 0.01rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0rem;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
-    margin-top: 0;
+    margin-top: none;
 }
 
 .item{
@@ -75,12 +80,12 @@ hr{
     
 }
 
-.item:hover{
+.item:not(#logo):hover{
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
 }
 
-.item:hover > .icon{
+.item:not(#logo):hover > .icon{
     width: 2.5rem;
     height: 2.5rem;
     padding-left: 0.75rem;
@@ -104,4 +109,13 @@ hr{
 #logo{
     margin-top: 1rem;
     margin-bottom: 1rem;
+    font-size: 125%;
+
+}
+
+#logo .icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
 }
