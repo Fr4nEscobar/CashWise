@@ -1,0 +1,107 @@
+
+
+.aside{
+    width: 4rem;
+    height: 51.276rem;
+    box-sizing: border-box;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-bottom: 0rem;
+    padding-top: none;
+    background-color: #ffffff;
+    transition: ease-in-out 0.3s;
+    overflow: hidden;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    
+}
+
+.aside:hover{
+    width: 12rem;
+}
+
+.aside:hover > .item > .text{
+    opacity: 1;
+    margin-left: 0;
+}
+
+hr{
+    height: 0.03rem;
+    color: #ffffff;
+    opacity: 100%;
+    border-top: solid;
+    border-color: #ffffff;
+    border-bottom: none;
+    border-radius: 0.01rem;
+    margin-bottom: 0rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-top: 0;
+}
+
+#divider{
+    height: 0.03rem;
+    color: #000000;
+    opacity: 100%;
+    border-top: solid;
+    border-color: #000000;
+    border-bottom: none;
+    border-radius: 0.01rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-top: 0;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    /*margin: 20px 0;*/
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    
+    
+
+}
+
+.item .icon{
+    width: 2rem;
+    height: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0rem;
+    flex-shrink: 0;
+    fill: #424242;
+    
+}
+
+.item:hover{
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.item:hover > .icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    transition: smooth 0.3s;
+    
+}
+
+.item:hover > hr{
+    margin-bottom: 0rem;
+}
+
+.item .text{
+    opacity: 0;
+    transition: ease-in-out 0.3;
+    transition-delay: .2s;
+    margin-left: 15px;
+    white-space: nowrap;
+}
+
+#logo{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
