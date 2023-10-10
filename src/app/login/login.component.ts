@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CargarScriptsService } from '../cargar-scripts.service';
 
 @Component({
   selector: 'login',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  constructor(private _CargaScripts: CargarScriptsService) {
+    _CargaScripts.carga(["logicaAnimacion"])
+  }
 }

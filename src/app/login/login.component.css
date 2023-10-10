@@ -110,8 +110,8 @@ button:focus {
 }
 
 button.ghost {
-    background: transparent;
-    border-color: #fff;
+    background: #222423;
+    border-color: #222423;
 }
 
 .form-container {
@@ -146,7 +146,6 @@ button.ghost {
 }
 
 .overlay {
-    background: #ff416c;
     background: linear-gradient(to right, #667972, #667972) no-repeat 0 0 / cover;
     color: #fff;
     position: relative;
@@ -211,8 +210,4 @@ button.ghost {
 /* Same effect for right */
 .container.right-panel-active .overlay-right {
     transform: translateY(20%);
-}
-
-input{
-    border-color: #fff;
 }
