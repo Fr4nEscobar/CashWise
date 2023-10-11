@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { AsideComponent } from './aside/aside.component';
 import { LoginComponent } from './login/login.component';
 import { CargarScriptsService } from './cargar-scripts.service';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,9 +17,12 @@ import { CargarScriptsService } from './cargar-scripts.service';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [CargarScriptsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
