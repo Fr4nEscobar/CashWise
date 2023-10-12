@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CargarScriptsService } from '../cargar-scripts.service';
 import { UserVerificationService } from '../user-verification.service';
+import { User } from './user.model';
 
 
 @Component({
@@ -9,46 +10,61 @@ import { UserVerificationService } from '../user-verification.service';
   styleUrls: ['./login.component.css']
 })
 
-export class LoginComponent {
 
-  userEmail: string="";
-  userPassword: string="";
-  usersArray: any[]=[];
+export class LoginComponent {
+  registerName: string = "";
+  registerEmail: string = "";
+  registerPassword: string = "";
+  userEmail: string = "";
+  userPassword: string = "";
+  usersArray: any[] = [];
 
   constructor(private _CargaScripts: CargarScriptsService, private userVerification: UserVerificationService) {
     _CargaScripts.carga(["logicaAnimacion"])
   }
-  
-  
 
-  async verifyUserData(): Promise<boolean> {
+
+
+  async verifyUserData(numero: number): Promise<boolean> {
     try {
       const data = await this.userVerification.bringUsers().toPromise();
-  
+      let flag = false;
+
       if (data) {
         this.usersArray = data;
       } else {
         this.usersArray = [];
       }
-  
-      let flag = false; 
-      this.usersArray.forEach(user => {
-        if (user.email === this.userEmail && user.password === this.userPassword) {
-          flag = true;
-        }
-      });
-  
+
+      if (numero === 1) {
+        this.usersArray.forEach(user => {
+          if (user.email === this.userEmail) {
+            if (user.password === this.userPassword) {
+              flag = true;
+            }
+
+          }
+        });
+      } else {
+        this.usersArray.forEach(user => {
+          if (user.email === this.registerEmail) {
+            flag = true;
+          }
+        });
+      }
       return flag;
+
+
     } catch (error) {
       console.error('Error al obtener datos de usuarios', error);
-      return false; 
+      return false;
     }
   }
-  
+
 
   async login() {
-    const result = await this.verifyUserData();
-    
+    const result = await this.verifyUserData(1);
+
     if (result) {
       console.log("login exitoso");
     } else {
@@ -56,4 +72,22 @@ export class LoginComponent {
     }
   }
 
+  async register() {
+    const result = await this.verifyUserData(0);
+
+    let user = new User(this.registerName, this.registerEmail, this.registerPassword);
+
+    if (result) {
+      console.log("El usuario ya esta registrado");
+    } else {
+      this.userVerification.addUser(user).subscribe(
+        response => {
+          console.log('Usuario registrado con éxito:', response);
+        },
+        error => {
+          console.error('Error al registrar usuario:', error);
+        }
+      );
+    }
+  }
 }

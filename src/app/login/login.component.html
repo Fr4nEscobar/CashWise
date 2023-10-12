@@ -6,16 +6,16 @@
                     <h1>Sign Up</h1>
                     <br>
                     <label>
-                        <input type="text" placeholder="Name" />
+                        <input type="text" placeholder="Name" [(ngModel)]="registerName" name="registerName"/>
                     </label>
                     <label>
-                        <input type="email" placeholder="Email" />
+                        <input type="email" placeholder="Email" [(ngModel)]="registerEmail" name="registerEmail"/>
                     </label>
                     <label>
-                        <input type="password" placeholder="Password" />
+                        <input type="password" placeholder="Password" [(ngModel)]="registerPassword" name="registerPassword"/>
                     </label>
                     <br>
-                    <button style="margin-top: 9px">Sign Up</button>
+                    <button (click)="register()">Sign Up</button>
                 </form>
             </div>
             <div class="form-container sign-in-container">
