@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CargarScriptsService } from '../cargar-scripts.service';
 import { UserVerificationService } from '../user-verification.service';
 import { User } from './user.model';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -19,11 +20,12 @@ export class LoginComponent {
   userPassword: string = "";
   usersArray: any[] = [];
 
-  constructor(private _CargaScripts: CargarScriptsService, private userVerification: UserVerificationService) {
+  constructor(private _CargaScripts: CargarScriptsService, private userVerification: UserVerificationService, private router: Router) {
     _CargaScripts.carga(["logicaAnimacion"])
+
   }
 
-
+usuarioAutenticado: boolean = false
 
   async verifyUserData(numero: number): Promise<boolean> {
     try {
@@ -67,6 +69,8 @@ export class LoginComponent {
 
     if (result) {
       console.log("login exitoso");
+      this.usuarioAutenticado = true;
+      this.router.navigate(['/home'])
     } else {
       console.log("login fallido, datos incorrectos");
     }

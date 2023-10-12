@@ -1,5 +1,14 @@
 {
   "users": [
-    
+    {
+      "name": "Tomas",
+      "email": "tbuixa@gmail.com",
+      "password": "abcd1234",
+      "transactions": [],
+      "monthlyBudget": 0,
+      "monthlySpend": 0,
+      "preferredCurrency": "ARS",
+      "id": 1
+    }
   ]
 }

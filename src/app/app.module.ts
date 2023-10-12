@@ -8,12 +8,14 @@ import { LoginComponent } from './login/login.component';
 import { CargarScriptsService } from './cargar-scripts.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AsideComponent,
     LoginComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
