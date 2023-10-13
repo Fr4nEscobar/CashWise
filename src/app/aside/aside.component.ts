@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'sidebar',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./aside.component.css']
 })
 export class AsideComponent {
+  constructor(private router: Router){
 
+  }
+
+  routeTo(route: string){
+    this.router.navigate(['/'+route])
+  }
 }

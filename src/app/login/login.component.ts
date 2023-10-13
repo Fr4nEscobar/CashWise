@@ -69,7 +69,6 @@ usuarioAutenticado: boolean = false
 
     if (result) {
       console.log("login exitoso");
-      this.usuarioAutenticado = true;
       this.router.navigate(['/home'])
     } else {
       console.log("login fallido, datos incorrectos");
@@ -87,6 +86,7 @@ usuarioAutenticado: boolean = false
       this.userVerification.addUser(user).subscribe(
         response => {
           console.log('Usuario registrado con éxito:', response);
+          this.router.navigate(['/home'])
         },
         error => {
           console.error('Error al registrar usuario:', error);

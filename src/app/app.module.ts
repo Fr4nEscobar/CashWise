@@ -9,6 +9,7 @@ import { CargarScriptsService } from './cargar-scripts.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { HomeComponent } from './home/home.component';
     AsideComponent,
     LoginComponent,
     HomeComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

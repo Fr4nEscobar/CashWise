@@ -9,6 +9,26 @@
       "monthlySpend": 0,
       "preferredCurrency": "ARS",
       "id": 1
+    },
+    {
+      "name": "Galo",
+      "email": "galofazio@gmail.com",
+      "password": "galote123",
+      "transactions": [],
+      "monthlyBudget": 0,
+      "monthlySpend": 0,
+      "preferredCurrency": "ARS",
+      "id": 2
+    },
+    {
+      "name": "Pancho",
+      "email": "fr4nciscoescobar@gmail.com",
+      "password": "panchote123",
+      "transactions": [],
+      "monthlyBudget": 0,
+      "monthlySpend": 0,
+      "preferredCurrency": "ARS",
+      "id": 3
     }
   ]
 }

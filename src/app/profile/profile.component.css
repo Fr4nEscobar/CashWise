@@ -1,0 +1,17 @@
+#container{
+    height: 90vh;
+    width: 60vh;
+    background-color: #272927;
+    border-radius: 2rem;
+    display: block;
+    
+}
+
+.data{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #667972;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

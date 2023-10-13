@@ -1,0 +1,15 @@
+
+.sidebar {
+    position: fixed;
+  }
+
+
+  
+#main-content{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    margin-right: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
