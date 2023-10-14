@@ -21,4 +21,5 @@ export class User {
      this.monthlySpend = 0;
      this.preferredCurrency = "ARS";
    }
+
  }

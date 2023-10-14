@@ -15,8 +15,6 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bolder;
     float: left;
-
-    
 }
 
 .aside:hover{
@@ -26,10 +24,6 @@
 .aside:hover > .item > .text{
     opacity: 1;
     margin-left: 0;
-}
-
-.aside:hover > *{
-    margin-right: 12rem;
 }
 
 hr{

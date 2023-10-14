@@ -24,6 +24,7 @@ import { ProfileComponent } from './profile/profile.component';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
+    
   ],
   providers: [CargarScriptsService],
   bootstrap: [AppComponent]

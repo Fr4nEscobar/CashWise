@@ -1,9 +1,31 @@
-<div id="container">
-    <div class="data">name: </div>
-    <br>
-    <div class="data">email: </div>
-    <div class="data">password: </div>
-    <div class="data">monthly budget: </div>
-    <div class="data">monthly spend: </div>
-    <div class="data">preferred currency: </div>
+<div id="container" *ngIf="isData">
+    <div class="data">
+        <label class="option">Name:</label>
+        <input class="optionInput" type="text" [placeholder]="user.name" [(ngModel)]="changeName">
+    </div>
+    <hr>
+    <div class="data">
+        <label class="option">E-mail:</label>
+        <input class="optionInput" type="text" [placeholder]="user.email" [(ngModel)]="changeEmail">
+    </div>
+    <hr>
+    <div class="data">
+        <label class="option">Password:</label>
+        <input class="optionInput" type="password" [(ngModel)]="changePassword">
+    </div>
+    <hr>
+    <div class="data">
+        <label class="option">Monthly budget:</label >
+        <input class="optionInput" type="text" [placeholder]="user.monthlyBudget" [(ngModel)]="changeMonthlyB">
+    </div>
+    <hr>
+    <div class="data">
+        <label class="option">Monthly spend:</label>
+        <input class="optionInput" type="text" [placeholder]="user.monthlySpend" [(ngModel)]="changeMonthlyS">
+    </div>
+    <hr>
+    <div class="data">
+        <label class="option">Preferred currency:</label>
+        <input class="optionInput" type="text" [placeholder]="user.preferredCurrency" [(ngModel)]="changePreferredC">
+    </div>
 </div>

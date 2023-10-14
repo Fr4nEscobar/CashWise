@@ -29,6 +29,26 @@
       "monthlySpend": 0,
       "preferredCurrency": "ARS",
       "id": 3
+    },
+    {
+      "name": "Franco",
+      "email": "francoferro@gmail.com",
+      "password": "francote123",
+      "transactions": [],
+      "monthlyBudget": 0,
+      "monthlySpend": 0,
+      "preferredCurrency": "ARS",
+      "id": 4
+    },
+    {
+      "name": "adsasdas",
+      "email": "sdadadasd",
+      "password": "fadfafaf",
+      "transactions": [],
+      "monthlyBudget": 0,
+      "monthlySpend": 0,
+      "preferredCurrency": "ARS",
+      "id": 5
     }
   ]
 }

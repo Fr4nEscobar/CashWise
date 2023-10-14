@@ -3,6 +3,7 @@ import { CargarScriptsService } from '../cargar-scripts.service';
 import { UserVerificationService } from '../user-verification.service';
 import { User } from './user.model';
 import { Router } from '@angular/router';
+import { UserVariableService } from '../user-variable.service';
 
 
 @Component({
@@ -19,13 +20,13 @@ export class LoginComponent {
   userEmail: string = "";
   userPassword: string = "";
   usersArray: any[] = [];
+  showSidebar: boolean = false;
 
-  constructor(private _CargaScripts: CargarScriptsService, private userVerification: UserVerificationService, private router: Router) {
+  constructor(private _CargaScripts: CargarScriptsService, private userVerification: UserVerificationService, private router: Router, private userVariable: UserVariableService) {
     _CargaScripts.carga(["logicaAnimacion"])
 
   }
 
-usuarioAutenticado: boolean = false
 
   async verifyUserData(numero: number): Promise<boolean> {
     try {
@@ -43,6 +44,7 @@ usuarioAutenticado: boolean = false
           if (user.email === this.userEmail) {
             if (user.password === this.userPassword) {
               flag = true;
+              this.userVariable.setUser(user.email)
             }
 
           }
@@ -85,6 +87,7 @@ usuarioAutenticado: boolean = false
     } else {
       this.userVerification.addUser(user).subscribe(
         response => {
+          this.userVariable.setUser(user.email)
           console.log('Usuario registrado con éxito:', response);
           this.router.navigate(['/home'])
         },
