@@ -19,4 +19,9 @@ export class UserVerificationService {
     return this.http.post(this.apiUrl, user);
   }
 
+  updateUser(user: any, idUser: number): Observable<any> {
+    const url = `${this.apiUrl}/${idUser}`
+    console.log(url)
+    return this.http.put(url, user)
+  }
 }

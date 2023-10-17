@@ -25,8 +25,8 @@
       "email": "fr4nciscoescobar@gmail.com",
       "password": "panchote123",
       "transactions": [],
-      "monthlyBudget": 0,
-      "monthlySpend": 0,
+      "monthlyBudget": "120000",
+      "monthlySpend": "55000",
       "preferredCurrency": "ARS",
       "id": 3
     },

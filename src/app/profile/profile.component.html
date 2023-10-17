@@ -26,6 +26,13 @@
     <hr>
     <div class="data">
         <label class="option">Preferred currency:</label>
-        <input class="optionInput" type="text" [placeholder]="user.preferredCurrency" [(ngModel)]="changePreferredC">
+        <select class="optionInput" [(ngModel)]="changePreferredC">
+            <option value="ARS">ARS</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+        </select>
+    </div>
+    <div id="ButtonContainer">
+        <button id="changeData" (click)="changeDataUser()">Change data</button>
     </div>
 </div>

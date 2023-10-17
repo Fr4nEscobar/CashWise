@@ -1,6 +1,6 @@
 #container {
     position: absolute;
-    height: 40vw;
+    height: 45vw;
     width: 40vw;
     background-color: #272927;
     border-radius: 2rem;
@@ -49,10 +49,56 @@ input:focus {
 }
 
 hr {
-    width: 38vw;
+    width: 95%;
     border-radius: 2rem;
     border-width: 0.1rem;
     background-color: #2f312f;
     border-color: #2f312f;
     box-shadow: 0 0 0 0rem;
+}
+
+button {
+    width: 25%;
+    height: 3rem;
+    border-radius: 50px;
+    margin-top: 2rem;
+    background-color: #667972;
+    border: none;
+    align-items: center;
+    color: #272927;
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    
+}
+
+#ButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #465a65;
+}
+
+.data select {
+    appearance: none;
+    text-align: center;
+    width: 15rem;
+    box-shadow: none;
+    color: #667972;
+}
+
+select:focus {
+    outline: none;
+}
+
+select:hover {
+    caret-color: #667972;
+}
+
+select::-ms-expand {
+    display: none;
 }
