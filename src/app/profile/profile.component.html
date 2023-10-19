@@ -11,7 +11,7 @@
     <hr>
     <div class="data">
         <label class="option">Password:</label>
-        <input class="optionInput" type="password" [(ngModel)]="changePassword">
+        <input class="optionInput" type="password" [placeholder]="userPassword" [(ngModel)]="changePassword">
     </div>
     <hr>
     <div class="data">
@@ -21,18 +21,18 @@
     <hr>
     <div class="data">
         <label class="option">Monthly spend:</label>
-        <input class="optionInput" type="text" [placeholder]="user.monthlySpend" [(ngModel)]="changeMonthlyS">
+        <input class="optionInput" type="text" [placeholder]="user.monthlySpend" [(ngModel)]="changeMonthlyS" disabled>
     </div>
     <hr>
     <div class="data">
         <label class="option">Preferred currency:</label>
-        <select class="optionInput" [(ngModel)]="changePreferredC">
+        <select class="optionInput" [(ngModel)]="user.preferredCurrency">
             <option value="ARS">ARS</option>
             <option value="USD">USD</option>
             <option value="EUR">EUR</option>
         </select>
     </div>
     <div id="ButtonContainer">
-        <button id="changeData" (click)="changeDataUser()">Change data</button>
+        <button id="changeData" (click)="changeDataUser()">Save changes</button>
     </div>
 </div>

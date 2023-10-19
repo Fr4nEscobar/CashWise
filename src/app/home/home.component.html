@@ -1,0 +1,31 @@
+<div id="container">
+    <div class="data">
+        <div class="budgetData">
+            <div class="budgetAndSpend">
+                <div class="monthly">
+                    <p id="monthlyBudget">MONTHLY BUDGET: </p>
+                    <h2>{{user.monthlyBudget}}</h2>
+                </div>
+                
+                <h2 id="minus">-</h2>
+                <div class="monthly">
+                    <p id="monthlySpend">MONTHLY SPEND: </p>
+                    <h2>{{user.monthlySpend}}</h2>
+                </div>
+            
+            </div>
+            <h2 id="equals">=</h2>
+            <div id="remainingBudget">
+                <h1>{{calculateRemaining()}}</h1>
+            </div>
+        </div>
+        <div class="secondContainer">
+            <div class="transferData">
+
+            </div>
+            <div class="graphData">
+
+            </div>
+        </div>
+    </div>
+</div>

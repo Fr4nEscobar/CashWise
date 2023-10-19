@@ -15,9 +15,9 @@
       "email": "galofazio@gmail.com",
       "password": "galote123",
       "transactions": [],
-      "monthlyBudget": 0,
+      "monthlyBudget": "60000",
       "monthlySpend": 0,
-      "preferredCurrency": "ARS",
+      "preferredCurrency": "",
       "id": 2
     },
     {

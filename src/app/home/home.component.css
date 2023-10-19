@@ -1,0 +1,118 @@
+#container {
+    position: absolute;
+    height: 45vw;
+    width: 40vw;
+    background-color: #272927;
+    border-radius: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: #667972;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.budgetData{
+    background-color: #222423;
+    height: 8vw;
+    width: 35vw;
+    border-radius: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   
+
+}
+
+.secondContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.transferData{
+    background-color: #222423;
+    height: 31vw;
+    width: 20vw;
+    border-radius: 1.5rem;
+    margin-top: 1.25rem;
+}
+
+.graphData{
+    background-color: #222423;
+    height: 31vw;
+    width: 12.5vw;
+    border-radius: 1.5rem;
+    margin-top: 1.25rem;
+}
+
+.budgetAndSpend{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    justify-content:space-around;
+    padding: none;
+    margin: none;
+    
+   
+}
+
+#remainingBudget{
+    width: 25vw;
+}
+
+#monthlyBudget{
+    padding: none;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+   
+}
+
+#monthlySpend{
+    padding: none;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    
+}
+
+#minus{
+    padding: none;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+#equals{
+
+}
+
+.monthly{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.monthly h2{
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    justify-content: center;
+}
+
+.monthly p{
+    justify-content: center;
+
+}
