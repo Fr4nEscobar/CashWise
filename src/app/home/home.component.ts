@@ -14,6 +14,8 @@ export class HomeComponent {
 
   constructor(private userVariable: UserVariableService) {
     this.initUserData()
+    this.user = userVariable.getUser()
+    console.log(this.user)
   }
 
   async initUserData(){
@@ -22,6 +24,6 @@ export class HomeComponent {
   }
 
   calculateRemaining(){
-    return 100
+    return this.userVariable.monthlyBudget - this.userVariable.monthlySpend
   }
 }

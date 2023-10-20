@@ -21,7 +21,15 @@
         </div>
         <div class="secondContainer">
             <div class="transferData">
-
+                <ul class="transactionList">
+                    <li class="transactionItem">
+                        <button class="newTransaction">New transaction</button>
+                    </li>
+                    <li class="transactionItem" *ngFor="let t of user.transactions">
+                        {{t.amount}}
+                        {{t.date}}
+                    </li>
+                </ul>
             </div>
             <div class="graphData">
 

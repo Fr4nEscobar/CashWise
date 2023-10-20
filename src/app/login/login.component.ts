@@ -44,7 +44,7 @@ export class LoginComponent {
           if (user.email === this.userEmail) {
             if (user.password === this.userPassword) {
               flag = true;
-              this.userVariable.setUser(user.email)
+              this.userVariable.setUser(user)
             }
 
           }

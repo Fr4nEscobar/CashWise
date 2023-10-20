@@ -5,9 +5,9 @@
       "email": "tbuixa@gmail.com",
       "password": "abcd1234",
       "transactions": [],
-      "monthlyBudget": 0,
+      "monthlyBudget": "5000",
       "monthlySpend": 0,
-      "preferredCurrency": "ARS",
+      "preferredCurrency": "",
       "id": 1
     },
     {
