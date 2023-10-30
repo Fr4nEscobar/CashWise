@@ -29,6 +29,7 @@
 
 .budgetData {
   background-color: #222423;
+  color: #d0d7d0;
   height: 8vw;
   width: 35vw;
   border-radius: 1.5rem;
@@ -98,8 +99,7 @@
   justify-content: center;
 }
 
-#equals {
-}
+
 
 .monthly {
   display: flex;
@@ -125,6 +125,7 @@
 .transactionList {
   list-style: none;
   padding: 0rem;
+  margin: 0rem;
 }
 
 .transactionItem{
@@ -136,9 +137,77 @@
 
 }
 
-.newTransaction{
-    background-color: #222423;
-    color: #667972;
-    border: none;
+#newTransaction{
+  background-color: #222423;
+  color: #667972;
+  border: none;
+  width: 65%;
+  height: 1.5rem;
+  border-radius: 1rem;
+  padding: 0rem;
+  border: solid;
+  border-width: 1px;
+  border-color: #667972;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
     
 }  
+
+#newTransaction:active{
+  background-color: #1e1f1e;
+}
+
+#transactionForm{
+  display: flex;
+  flex-direction: column;
+  color: #d0d7d0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#transactionForm input{
+  background-color: #222423;
+  border-radius: 1rem;
+  color: #d0d7d0;
+  width: 80%;
+  border: solid;
+  border-width: 1px;
+  border-color: #667972;
+  margin: 0.5rem;
+  outline: none;
+}
+
+#transactionForm select{
+  background-color: #222423;
+  border-radius: 1rem;
+  color: #d0d7d0;
+  appearance: none;
+  text-align: center;
+  box-shadow: none;
+  width: 82%;
+  border: solid;
+  border-width: 1px;
+  border-color: #667972;
+  margin: 0.5rem;
+  outline: none;
+}
+
+#addTransaction{
+  background-color: #222423;
+  color: #667972;
+  border: none;
+  width: 60%;
+  height: 1.5rem;
+  border-radius: 1rem;
+  padding: 0rem;
+  border: solid;
+  border-width: 1px;
+  border-color: #667972;
+  margin-top: 1rem;
+    
+}  
+
+#addTransaction:active{
+  background-color: #1e1f1e;
+}

@@ -19,16 +19,41 @@
   </section>
 
   <section class="transferData">
-    <ul class="transactionList">
-      <li class="transactionItem">
-        <button class="newTransaction">New transaction</button>
-      </li>
-
-      <li class="transactionItem" *ngFor="let t of user.transactions">
+    <button id="newTransaction" (click)="changeContainer()">{{textoBTrans}}</button>
+    <ul class="transactionList" *ngIf="!showForm">
+      <li class="transactionItem" *ngFor="let t of userVariable.transactions">
         {{ t.amount }}
         {{ t.date }}
       </li>
     </ul>
+    <form id="transactionForm" *ngIf="showForm">
+      <label for="type">Type:</label>
+      <select name="type" id="type" [(ngModel)]="transType">
+        <option value="income">INCOME</option>
+        <option value="outcome">OUTCOME</option>
+      </select>
+      <label for="description">Description:</label>
+      <input type="text" id="description" [(ngModel)]="transDescp">
+      <label for="amount">Amount:</label>
+      <input type="number" name="amount" id="amount" [(ngModel)]="transAmount">
+      <label for="date">Date:</label>
+      <input type="date" id="date" [(ngModel)]="transDate">
+      <label for="category">Category:</label>
+      <select name="category" id="category" [(ngModel)]="transCat">
+        <option value="market">MARKET</option>
+        <option value="services">SERVICES</option>
+        <option value="shopping">SHOPPING</option>
+        <option value="transport">TRANSPORT</option>
+        <option value="gastronomy">GASTRONOMY</option>
+        <option value="tourism">TOURISM</option>
+        <option value="noCategory" selected>NO CATEGORY</option>
+      </select>
+      <label for="participant">Sender/Receiver</label>
+      <input type="text" id="participant" [(ngModel)]="transParticipant"> 
+      <label for="comment">Comments:</label>
+      <input type="text" id="comment" [(ngModel)]="transComm">
+      <button type="submit" id="addTransaction" (click)="addTransaction()">Add</button>
+    </form>
   </section>
   
   <section class="graphData">
