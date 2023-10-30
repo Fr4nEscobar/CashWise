@@ -4,6 +4,8 @@ import { UserVariableService } from '../user-variable.service';
 import { Transaction } from '../login/user.transaction';
 import { Income } from '../login/user.transaction';
 import { Outcome } from '../login/user.transaction';
+import { UserVerificationService } from '../user-verification.service';
+
 
 
 @Component({
@@ -14,7 +16,7 @@ import { Outcome } from '../login/user.transaction';
 export class HomeComponent {
   user!: User
   email!: String
-  isData!: boolean
+  isData: boolean = false
   showForm: boolean = false
   textoBTrans: string = "New transaction"
 
@@ -25,22 +27,17 @@ export class HomeComponent {
   transCat!: string
   transComm!: string
   transParticipant!: string
+  transactions!: Transaction[]
 
   
 
-  constructor(private userVariable: UserVariableService) {
-    this.initUserData()
+  constructor(private userVariable: UserVariableService, private userVerification: UserVerificationService) {
     this.user = userVariable.getUser()
-    console.log(this.user)
-  }
-
-  async initUserData(){
-    this.user = await this.userVariable.obtainUserData();
     this.isData = true
   }
 
   calculateRemaining(){
-    return this.userVariable.monthlyBudget - this.userVariable.monthlySpend
+    // return this.user.monthlyBudget - this.user.monthlySpend
   }
 
   changeContainer() {
@@ -61,8 +58,21 @@ export class HomeComponent {
     }else{
       newTrans = new Outcome(this.transDescp, this.transDate, this.transAmount, this.transCat, this.transComm, this.transParticipant)
     }
-
-    this.userVariable.transactions.push(newTrans)
+    console.log(this.transactions)
+    this.transactions.push(newTrans)
+    console.log(this.transactions)
     
   }
+
+  // udpateTransactions() {
+  //   this.user.transactions = this.transactions
+
+  //   this.userVerification.updateUser(this.user, this.userVariable.userId).subscribe(
+  //     response => {
+  //       console.log('Usuario actualizado con éxito:', response)
+  //     },
+  //     error => {
+  //       console.log('El usuario no se puedo actualizar:', error)
+  //     })
+  // }
 }

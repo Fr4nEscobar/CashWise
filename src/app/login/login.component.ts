@@ -21,6 +21,7 @@ export class LoginComponent {
   userPassword: string = "";
   usersArray: any[] = [];
   showSidebar: boolean = false;
+  user!: User
 
   constructor(private _CargaScripts: CargarScriptsService, private userVerification: UserVerificationService, private router: Router, private userVariable: UserVariableService) {
     _CargaScripts.carga(["logicaAnimacion"])
@@ -28,33 +29,26 @@ export class LoginComponent {
   }
 
 
-  async verifyUserData(numero: number): Promise<boolean> {
+  async verifyUserData(email: string, numero: number): Promise<boolean> {
     try {
-      const data = await this.userVerification.bringUsers().toPromise();
       let flag = false;
+      const data = await this.userVerification.bringUser(email).toPromise();
 
       if (data) {
-        this.usersArray = data;
+        this.user = data[0]
       } else {
-        this.usersArray = [];
+        this.user = new User('', '', '')
       }
 
       if (numero === 1) {
-        this.usersArray.forEach(user => {
-          if (user.email === this.userEmail) {
-            if (user.password === this.userPassword) {
-              flag = true;
-              this.userVariable.setUser(user)
-            }
-
-          }
-        });
+        if(this.user.password === this.userPassword) {
+          this.userVariable.setUser(this.user)
+          flag = true
+        }
       } else {
-        this.usersArray.forEach(user => {
-          if (user.email === this.registerEmail) {
-            flag = true;
-          }
-        });
+        if(this.user.name === '') {
+        flag = false
+       }
       }
       return flag;
 
@@ -67,10 +61,11 @@ export class LoginComponent {
 
 
   async login() {
-    const result = await this.verifyUserData(1);
+    const result = await this.verifyUserData(this.userEmail, 1);
 
     if (result) {
       console.log("login exitoso");
+      
       this.router.navigate(['/home'])
     } else {
       console.log("login fallido, datos incorrectos");
@@ -78,7 +73,7 @@ export class LoginComponent {
   }
 
   async register() {
-    const result = await this.verifyUserData(0);
+    const result = await this.verifyUserData(this.registerEmail, 0);
 
     let user = new User(this.registerName, this.registerEmail, this.registerPassword);
 
@@ -87,7 +82,7 @@ export class LoginComponent {
     } else {
       this.userVerification.addUser(user).subscribe(
         response => {
-          this.userVariable.setUser(user.email)
+          this.userVariable.setUser(user)
           console.log('Usuario registrado con éxito:', response);
           this.router.navigate(['/home'])
         },

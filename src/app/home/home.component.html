@@ -21,7 +21,7 @@
   <section class="transferData">
     <button id="newTransaction" (click)="changeContainer()">{{textoBTrans}}</button>
     <ul class="transactionList" *ngIf="!showForm">
-      <li class="transactionItem" *ngFor="let t of userVariable.transactions">
+      <li class="transactionItem" *ngFor="let t of user.transactions">
         {{ t.amount }}
         {{ t.date }}
       </li>

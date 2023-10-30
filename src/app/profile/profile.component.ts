@@ -21,45 +21,42 @@ export class ProfileComponent{
   changePreferredC: string = ''
 
   constructor(private userVariable: UserVariableService, private userVerification: UserVerificationService) {
-    this.initUserData()
-    this.userPassword = this.generateStringByLength(this.userVariable.userPassword.length)
+    this.user = userVariable.getUser()
+    console.log(this.user)
+    this.userPassword = this.generateStringByLength(this.user.password.length)
   }
 
-  async initUserData(){
-    this.user = await this.userVariable.obtainUserData();
-    this.isData = true
-  }
 
-  changeDataUser(){
-    if (this.changeName !== '') {
-      this.user.name = this.changeName
-    } 
-    if (this.changeEmail !== '') {
-      this.user.email = this.changeEmail
-    }
-    if (this.changePassword !== '') {
-      this.user.password = this.changePassword
-    } 
-    if (this.changeMonthlyB !== undefined) {
-      this.user.monthlyBudget = this.changeMonthlyB
-    } 
-    if (this.changeMonthlyS !== undefined) {
-      this.user.monthlySpend = this.changeMonthlyS
-    } 
-    if (this.changePreferredC !== this.user.preferredCurrency) {
-      this.user.preferredCurrency = this.changePreferredC
-    } 
+  // changeDataUser(){
+  //   if (this.changeName !== '') {
+  //     this.user.name = this.changeName
+  //   } 
+  //   if (this.changeEmail !== '') {
+  //     this.user.email = this.changeEmail
+  //   }
+  //   if (this.changePassword !== '') {
+  //     this.user.password = this.changePassword
+  //   } 
+  //   if (this.changeMonthlyB !== undefined) {
+  //     this.user.monthlyBudget = this.changeMonthlyB
+  //   } 
+  //   if (this.changeMonthlyS !== undefined) {
+  //     this.user.monthlySpend = this.changeMonthlyS
+  //   } 
+  //   if (this.changePreferredC !== this.user.preferredCurrency) {
+  //     this.user.preferredCurrency = this.changePreferredC
+  //   } 
   
-    this.userVerification.updateUser(this.user, this.userVariable.userId).subscribe(
-      response => {
-        console.log('Usuario actualizado con éxito:', response);
-      },
-      error => {
-        console.log('El usuario no se puedo actualizar:', error);
-      }
+  //   this.userVerification.updateUser(this.user, this.user.email).subscribe(
+  //     response => {
+  //       console.log('Usuario actualizado con éxito:', response)
+  //     },
+  //     error => {
+  //       console.log('El usuario no se puedo actualizar:', error)
+  //     }
       
-    )
-  }
+  //   )
+  // }
 
   generateStringByLength(len: number){
     let pass: String = ''
