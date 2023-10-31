@@ -27,7 +27,7 @@
     </ul>
     <form id="transactionForm" *ngIf="showForm">
       <label for="type">Type:</label>
-      <select name="type" id="type" [(ngModel)]="transType">
+      <select name="type" id="type" [(ngModel)]="transType" (click)="changeParticipant()">
         <option value="income">INCOME</option>
         <option value="outcome">OUTCOME</option>
       </select>
@@ -47,7 +47,7 @@
         <option value="tourism">TOURISM</option>
         <option value="noCategory" selected>NO CATEGORY</option>
       </select>
-      <label for="participant">Sender/Receiver</label>
+      <label for="participant">{{participant}}</label>
       <input type="text" id="participant" [(ngModel)]="transParticipant" name="participant"> 
       <label for="comment">Comments:</label>
       <input type="text" id="comment" [(ngModel)]="transComm" name="comment">

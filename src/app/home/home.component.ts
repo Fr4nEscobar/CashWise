@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { User } from '../login/user.model';
 import { UserVariableService } from '../user-variable.service';
 import { Transaction } from '../login/user.transaction';
-import { Income } from '../login/user.transaction';
-import { Outcome } from '../login/user.transaction';
 import { UserVerificationService } from '../user-verification.service';
 
 
@@ -20,6 +18,7 @@ export class HomeComponent {
   isData: boolean = false
   showForm: boolean = false
   textoBTrans: string = "New transaction"
+  participant: string = 'Sender'
 
   transType!: string
   transDescp!: string
@@ -41,6 +40,14 @@ export class HomeComponent {
     console.log(this.transactions)
   }
 
+  changeParticipant() {
+    if(this.transType === 'income') {
+      this.participant = 'Sender'
+    } else {
+      this.participant = 'Receiver'
+    }
+  }
+
   calculateRemaining(){
      return this.user.monthlyBudget! - this.user.monthlySpend!
   }
@@ -58,10 +65,10 @@ export class HomeComponent {
   addTransaction(){
     let newTrans: Transaction
     if(this.transType==='income'){
-      newTrans = new Income(this.transDescp, this.transDate, this.transAmount, this.transCat, this.transComm, this.transParticipant)
+      newTrans = new Transaction(this.transDescp, this.transDate, this.transAmount, this.transCat, this.transComm, this.transType, this.transParticipant)
       this.user.monthlyBudget! = this.user.monthlyBudget! + this.transAmount
     }else{
-      newTrans = new Outcome(this.transDescp, this.transDate, this.transAmount, this.transCat, this.transComm, this.transParticipant)
+      newTrans = new Transaction(this.transDescp, this.transDate, this.transAmount, this.transCat, this.transComm, this.transType, this.transParticipant)
       this.user.monthlySpend! = this.user.monthlySpend! + this.transAmount
     }
     this.transactions.push(newTrans)

@@ -3,7 +3,7 @@
     {
       "name": "Tomas",
       "email": "tbuixa@gmail.com",
-      "password": "abcd1234",
+      "password": "tomasote123",
       "transactions": [],
       "monthlyBudget": "5000",
       "monthlySpend": 0,
@@ -14,15 +14,7 @@
       "name": "Galo",
       "email": "galofazio@gmail.com",
       "password": "galote123",
-      "transactions": [
-        {
-          "description": "Sueldo Noviembre",
-          "date": "2023-10-31",
-          "amount": 20000,
-          "category": "noCategory",
-          "sender": "Jefe"
-        }
-      ],
+      "transactions": [],
       "monthlyBudget": 40000,
       "monthlySpend": 0,
       "preferredCurrency": "",
@@ -32,19 +24,10 @@
       "name": "Francisco",
       "email": "fr4nciscoescobar@gmail.com",
       "password": "panchote123",
-      "transactions": [
-        {
-          "description": "dasdasd",
-          "date": "2023-10-04",
-          "amount": 10000,
-          "category": "services",
-          "comment": "123456",
-          "sender": "Galote"
-        }
-      ],
-      "monthlyBudget": 130000,
-      "monthlySpend": 55000,
-      "preferredCurrency": "",
+      "transactions": [],
+      "monthlyBudget": 140000,
+      "monthlySpend": 85000,
+      "preferredCurrency": "ARS",
       "id": 3
     },
     {

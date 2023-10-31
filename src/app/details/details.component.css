@@ -51,6 +51,30 @@
 #transfersList{
     list-style: none;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0rem;
+    width: 100%;
+    border-top: 1px solid #d0d7d0;
+    margin: 0rem;
+}
+#outcomeList{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0rem;
+    width: 100%;
+    border-top: 1px solid #d0d7d0;
+    margin: 0rem;
+}
+
+#incomeList{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     padding: 0rem;
@@ -61,7 +85,76 @@
 
 .transferItem{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     border-bottom: 1px solid #d0d7d0;
     width: 100%;
+}
+
+.transferItem p {
+    width: 20%;
+}
+
+.transferItem h3 {
+    width: 20%;
+}
+
+.transferItem:hover {
+    background-color: #1e1f1e;
+}
+
+.expandTransfer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.expandTransfer .description {
+    order: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+.expandTransfer .date {
+    order: 1;
+    width: 100%;
+}
+
+.expandTransfer .amount {
+    order: 5;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100%;
+}
+.expandTransfer .category {
+    order: 2;
+    width: 100%;
+}
+.expandTransfer .comment {
+    order: 3;
+    width: 100%;
+}
+.expandTransfer .dateT {
+    order: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100%;
+}
+.expandTransfer .categoryT {
+    order: 1;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100%;
+}
+.expandTransfer .commentT {
+    order: 2;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+.ocultTransfer {
+    display: none;
 }

@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { User } from '../login/user.model';
 import { UserVariableService } from '../user-variable.service';
 import { Transaction } from '../login/user.transaction';
-import { Income } from '../login/user.transaction';
-import { Outcome } from '../login/user.transaction';
 import { UserVerificationService } from '../user-verification.service';
 
 @Component({
@@ -17,10 +15,22 @@ export class DetailsComponent {
   isData: boolean = false
   incomeButtonOn: boolean = false
   outcomeButtonOn: boolean = false
+  clickedIndex: Number = -1;
+  incomeList: Transaction[] = []
+  outcomeList: Transaction[] = []
+ 
 
   constructor(private userVariable: UserVariableService, private userVerification: UserVerificationService) {
     this.user = userVariable.getUser()
     this.userId = userVariable.getId()
+    this.user.transactions?.forEach((t) => {
+      if(t.type === 'income') {
+        this.incomeList.push(t)
+      } else {
+        this.outcomeList.push(t)
+      }
+    })
+    console.log(this.user.preferredCurrency)
     this.isData = true
   }
 
@@ -40,6 +50,10 @@ export class DetailsComponent {
     }else{
       this.outcomeButtonOn = !this.outcomeButtonOn
     }
+  }
+
+  expandTransfer(index: Number) {
+    this.clickedIndex = index === this.clickedIndex ? -1 : index;
   }
 
 
