@@ -1,0 +1,67 @@
+
+*{
+    color: #d0d7d0;
+}
+
+#container {
+    position: absolute;
+    height: 45vw;
+    width: 40vw;
+    background-color: #272927;
+    border-radius: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#buttonContainer{
+    display: flex;
+    justify-content:space-around;
+    height: 3rem;
+}
+
+.selectionButton{
+    height: 100%;
+    width: 50%;
+    border: none;
+    background-color: #272927;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#incomeButton{
+    border-top-left-radius: 1rem;
+}
+
+#outcomeButton{
+    border-top-right-radius: 1rem;
+}
+
+.buttonOn{
+    background-color: #1e1f1e;    
+}
+
+#listContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#transfersList{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0rem;
+    width: 100%;
+    border-top: 1px solid #d0d7d0;
+    margin: 0rem;
+}
+
+.transferItem{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #d0d7d0;
+    width: 100%;
+}

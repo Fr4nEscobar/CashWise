@@ -1,5 +1,17 @@
-<section id="transferList">
-    <ul class="transfer" >
-        <li id="tranferName"></li>
-    </ul>
-</section>
+<div id="container" *ngIf="isData">
+    <section id="transferList">
+        <section id="buttonContainer">
+            <button id="incomeButton" class="selectionButton" [ngClass]="{'buttonOn':incomeButtonOn}" (click)="clickOnIncome()">Income</button>
+            <button id="outcomeButton" class="selectionButton" [ngClass]="{'buttonOn':outcomeButtonOn}" (click)="clickOnOutcome()">Outcome</button>
+        </section>
+        <section id="listContainer">
+            <ul id="transfersList" >
+                <li class="transferItem" *ngFor="let t of user.transactions">
+                    <h3>{{t.description}}</h3>
+                    Amount: {{t.amount}}
+                    Date: {{t.date}}
+                </li>
+            </ul>
+        </section>
+    </section>
+</div>

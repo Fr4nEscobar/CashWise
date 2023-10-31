@@ -14,8 +14,16 @@
       "name": "Galo",
       "email": "galofazio@gmail.com",
       "password": "galote123",
-      "transactions": [],
-      "monthlyBudget": "60000",
+      "transactions": [
+        {
+          "description": "Sueldo Noviembre",
+          "date": "2023-10-31",
+          "amount": 20000,
+          "category": "noCategory",
+          "sender": "Jefe"
+        }
+      ],
+      "monthlyBudget": 40000,
       "monthlySpend": 0,
       "preferredCurrency": "",
       "id": 2
