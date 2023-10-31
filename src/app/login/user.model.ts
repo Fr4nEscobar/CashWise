@@ -18,6 +18,7 @@ export class User {
      this.password = password;
      this.transactions = []
      this.monthlyBudget = 0;
+     console.log(typeof this.monthlyBudget)
      this.monthlySpend = 0;
      this.preferredCurrency = "ARS";
    }

@@ -22,6 +22,7 @@ export class LoginComponent {
   usersArray: any[] = [];
   showSidebar: boolean = false;
   user!: User
+  userId!: number
 
   constructor(private _CargaScripts: CargarScriptsService, private userVerification: UserVerificationService, private router: Router, private userVariable: UserVariableService) {
     _CargaScripts.carga(["logicaAnimacion"])
@@ -36,13 +37,15 @@ export class LoginComponent {
 
       if (data) {
         this.user = data[0]
+        this.user.monthlyBudget = parseFloat(data[0].monthlyBudget)
+        this.user.monthlySpend = parseFloat(data[0].monthlySpend)
+        this.userId = parseInt(data[0].id)
       } else {
         this.user = new User('', '', '')
       }
 
       if (numero === 1) {
         if(this.user.password === this.userPassword) {
-          this.userVariable.setUser(this.user)
           flag = true
         }
       } else {
@@ -62,8 +65,9 @@ export class LoginComponent {
 
   async login() {
     const result = await this.verifyUserData(this.userEmail, 1);
-
+    
     if (result) {
+      this.userVariable.setUser(this.user, this.userId)
       console.log("login exitoso");
       
       this.router.navigate(['/home'])
@@ -82,7 +86,8 @@ export class LoginComponent {
     } else {
       this.userVerification.addUser(user).subscribe(
         response => {
-          this.userVariable.setUser(user)
+          console.log(typeof user.monthlyBudget)
+          this.userVariable.setUser(user, this.userId)
           console.log('Usuario registrado con éxito:', response);
           this.router.navigate(['/home'])
         },

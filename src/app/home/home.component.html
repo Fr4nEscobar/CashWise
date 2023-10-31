@@ -22,8 +22,7 @@
     <button id="newTransaction" (click)="changeContainer()">{{textoBTrans}}</button>
     <ul class="transactionList" *ngIf="!showForm">
       <li class="transactionItem" *ngFor="let t of user.transactions">
-        {{ t.amount }}
-        {{ t.date }}
+        {{t.description}}
       </li>
     </ul>
     <form id="transactionForm" *ngIf="showForm">
@@ -33,11 +32,11 @@
         <option value="outcome">OUTCOME</option>
       </select>
       <label for="description">Description:</label>
-      <input type="text" id="description" [(ngModel)]="transDescp">
+      <input type="text" id="description" [(ngModel)]="transDescp" name="description">
       <label for="amount">Amount:</label>
-      <input type="number" name="amount" id="amount" [(ngModel)]="transAmount">
+      <input type="number" name="amount" id="amount" [(ngModel)]="transAmount" name="amount">
       <label for="date">Date:</label>
-      <input type="date" id="date" [(ngModel)]="transDate">
+      <input type="date" id="date" [(ngModel)]="transDate" name="date">
       <label for="category">Category:</label>
       <select name="category" id="category" [(ngModel)]="transCat">
         <option value="market">MARKET</option>
@@ -49,9 +48,9 @@
         <option value="noCategory" selected>NO CATEGORY</option>
       </select>
       <label for="participant">Sender/Receiver</label>
-      <input type="text" id="participant" [(ngModel)]="transParticipant"> 
+      <input type="text" id="participant" [(ngModel)]="transParticipant" name="participant"> 
       <label for="comment">Comments:</label>
-      <input type="text" id="comment" [(ngModel)]="transComm">
+      <input type="text" id="comment" [(ngModel)]="transComm" name="comment">
       <button type="submit" id="addTransaction" (click)="addTransaction()">Add</button>
     </form>
   </section>

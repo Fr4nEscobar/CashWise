@@ -11,20 +11,24 @@ import { Outcome } from "./login/user.transaction";
 
 export class UserVariableService {
   user!: User
+  userId!: Number
   
   
 
   constructor( private userVerification: UserVerificationService) { 
-    console.log(this.user)
+
   }
 
+getId() {
+  return this.userId
+}
   
 getUser(){
-  console.log(this.user)
   return this.user
 }
-  setUser(user: User) {
+  setUser(user: User, userId: number) {
     this.user = user
+    this.userId = userId
   }
 
 }

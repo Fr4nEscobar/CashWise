@@ -21,13 +21,22 @@
       "id": 2
     },
     {
-      "name": "Pancho",
+      "name": "Francisco",
       "email": "fr4nciscoescobar@gmail.com",
       "password": "panchote123",
-      "transactions": [],
-      "monthlyBudget": "120000",
-      "monthlySpend": "55000",
-      "preferredCurrency": "ARS",
+      "transactions": [
+        {
+          "description": "dasdasd",
+          "date": "2023-10-04",
+          "amount": 10000,
+          "category": "services",
+          "comment": "123456",
+          "sender": "Galote"
+        }
+      ],
+      "monthlyBudget": 130000,
+      "monthlySpend": 55000,
+      "preferredCurrency": "",
       "id": 3
     },
     {
@@ -49,6 +58,16 @@
       "monthlySpend": 0,
       "preferredCurrency": "ARS",
       "id": 5
+    },
+    {
+      "name": "Lester",
+      "email": "lesterCrest@gmail.com",
+      "password": "lestote123",
+      "transactions": [],
+      "monthlyBudget": 0,
+      "monthlySpend": 0,
+      "preferredCurrency": "ARS",
+      "id": 6
     }
   ]
 }
