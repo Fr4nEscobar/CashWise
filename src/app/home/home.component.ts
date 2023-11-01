@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { User } from '../login/user.model';
 import { UserVariableService } from '../user-variable.service';
 import { Transaction } from '../login/user.transaction';
@@ -19,6 +19,7 @@ export class HomeComponent {
   showForm: boolean = false
   textoBTrans: string = "New transaction"
   participant: string = 'Sender'
+  operator: string = ""
 
   transType!: string
   transDescp!: string
@@ -29,7 +30,7 @@ export class HomeComponent {
   transParticipant!: string
   transactions!: Transaction[]
 
-  
+  @ViewChild('transactionForm', { static: false }) transactionForm: any;
 
   constructor(private userVariable: UserVariableService, private userVerification: UserVerificationService) {
     this.user = userVariable.getUser()
@@ -64,17 +65,21 @@ export class HomeComponent {
 
   addTransaction(){
     let newTrans: Transaction
-    if(this.transType==='income'){
-      newTrans = new Transaction(this.transDescp, this.transDate, this.transAmount, this.transCat, this.transComm, this.transType, this.transParticipant)
-      this.user.monthlyBudget! = this.user.monthlyBudget! + this.transAmount
-    }else{
-      newTrans = new Transaction(this.transDescp, this.transDate, this.transAmount, this.transCat, this.transComm, this.transType, this.transParticipant)
-      this.user.monthlySpend! = this.user.monthlySpend! + this.transAmount
+    if(this.transactionForm.valid) {
+      if(this.transType==='income'){
+        newTrans = new Transaction(this.transDescp, this.transDate, this.transAmount, this.transCat, this.transComm, this.transType, this.transParticipant)
+        this.user.monthlyBudget! = this.user.monthlyBudget! + this.transAmount
+      }else{
+        newTrans = new Transaction(this.transDescp, this.transDate, this.transAmount, this.transCat, this.transComm, this.transType, this.transParticipant)
+        this.user.monthlySpend! = this.user.monthlySpend! + this.transAmount
+      }
+      this.transactions.push(newTrans)
+  
+      this.transactionForm.resetForm()
+      this.udpateTransactions()
+    } else {
+      alert("Required fields must be filled")
     }
-    this.transactions.push(newTrans)
-    console.log(this.transactions)
-    
-    this.udpateTransactions()
   }
 
   udpateTransactions() {

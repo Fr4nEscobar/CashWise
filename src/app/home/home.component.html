@@ -22,21 +22,26 @@
     <button id="newTransaction" (click)="changeContainer()">{{textoBTrans}}</button>
     <ul class="transactionList" *ngIf="!showForm">
       <li class="transactionItem" *ngFor="let t of user.transactions">
-        {{t.description}}
+        <p id="transferDesc">{{t.description}}</p>
+        <div id="transferAmount">
+          <p class="transferOperator" *ngIf="t.type === 'income'">+</p>
+          <p class="transferOperator" *ngIf="t.type === 'outcome'">-</p>
+          <p id="transferNumber">{{t.amount}}</p>
+        </div>
       </li>
     </ul>
-    <form id="transactionForm" *ngIf="showForm">
+    <form id="transactionForm" #transactionForm="ngForm" (ngSubmit)="addTransaction()" *ngIf="showForm">
       <label for="type">Type:</label>
-      <select name="type" id="type" [(ngModel)]="transType" (click)="changeParticipant()">
+      <select name="type" id="type" [(ngModel)]="transType" (click)="changeParticipant()" required>
         <option value="income">INCOME</option>
         <option value="outcome">OUTCOME</option>
       </select>
       <label for="description">Description:</label>
-      <input type="text" id="description" [(ngModel)]="transDescp" name="description">
+      <input type="text" id="description" [(ngModel)]="transDescp" name="description" required>
       <label for="amount">Amount:</label>
-      <input type="number" name="amount" id="amount" [(ngModel)]="transAmount" name="amount">
+      <input type="number" name="amount" id="amount" [(ngModel)]="transAmount" name="amount" required>
       <label for="date">Date:</label>
-      <input type="date" id="date" [(ngModel)]="transDate" name="date">
+      <input type="date" id="date" [(ngModel)]="transDate" name="date" required>
       <label for="category">Category:</label>
       <select name="category" id="category" [(ngModel)]="transCat">
         <option value="market">MARKET</option>
@@ -51,7 +56,7 @@
       <input type="text" id="participant" [(ngModel)]="transParticipant" name="participant"> 
       <label for="comment">Comments:</label>
       <input type="text" id="comment" [(ngModel)]="transComm" name="comment">
-      <button type="submit" id="addTransaction" (click)="addTransaction()">Add</button>
+      <button type="submit" id="addTransaction">Add</button>
     </form>
   </section>
   

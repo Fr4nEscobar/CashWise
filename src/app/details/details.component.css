@@ -33,8 +33,16 @@
     border-top-left-radius: 1rem;
 }
 
+#incomeButton:hover{
+    font-size: 1.3rem;
+}
+
 #outcomeButton{
     border-top-right-radius: 1rem;
+}
+
+#outcomeButton:hover{
+    font-size: 1.3rem;
 }
 
 .buttonOn{
@@ -94,10 +102,14 @@
 
 .transferItem p {
     width: 20%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.transferItem h3 {
+.transferItem h4 {
     width: 20%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .transferItem:hover {
@@ -112,49 +124,67 @@
 
 .expandTransfer .description {
     order: 0;
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: bold;
     width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .expandTransfer .date {
     order: 1;
     width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .expandTransfer .amount {
     order: 5;
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: bold;
     width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 .expandTransfer .category {
     order: 2;
     width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 .expandTransfer .comment {
     order: 3;
     width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 .expandTransfer .dateT {
     order: 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 .expandTransfer .categoryT {
     order: 1;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 .expandTransfer .commentT {
     order: 2;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .ocultTransfer {
     display: none;
 }
+
+

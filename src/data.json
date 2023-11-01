@@ -4,10 +4,56 @@
       "name": "Tomas",
       "email": "tbuixa@gmail.com",
       "password": "tomasote123",
-      "transactions": [],
-      "monthlyBudget": "5000",
+      "transactions": [
+        {
+          "description": "Regalo de la abuela",
+          "date": "2023-10-31",
+          "amount": 2000,
+          "category": "noCategory",
+          "comment": "jaja se lo rompio la vieja",
+          "type": "income",
+          "participant": "Abuela"
+        },
+        {
+          "description": "Cena con mi amorcito <3",
+          "date": "2023-10-30",
+          "amount": 8000,
+          "category": "gastronomy",
+          "comment": "2 combos grandes big mac",
+          "type": "outcome",
+          "participant": "McDonalds"
+        },
+        {
+          "description": "Dinero por la comida del perro Jorgito",
+          "date": "2023-10-30",
+          "amount": 3500,
+          "category": "market",
+          "comment": "Mamá me pasó plata x la comida de Jorgito",
+          "type": "income",
+          "participant": "Mamá"
+        },
+        {
+          "description": "Hamburguesa doble",
+          "date": "2023-10-30",
+          "amount": 1000,
+          "category": "gastronomy",
+          "comment": "nefasta",
+          "type": "outcome",
+          "participant": "McDonalds"
+        },
+        {
+          "description": "Hamburguesa doble",
+          "date": "2023-10-31",
+          "amount": 69,
+          "category": "gastronomy",
+          "comment": "nefasta",
+          "type": "outcome",
+          "participant": "McDonalds"
+        }
+      ],
+      "monthlyBudget": 10500,
       "monthlySpend": 0,
-      "preferredCurrency": "",
+      "preferredCurrency": "ARS",
       "id": 1
     },
     {

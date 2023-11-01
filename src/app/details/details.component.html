@@ -8,7 +8,7 @@
             <ul id="transfersList" *ngIf="incomeButtonOn == false && outcomeButtonOn == false">
                 <li class="transferItem" [ngClass]="{'ocultTransfer': clickedIndex !== -1}" [ngClass]="{'expandTransfer': clickedIndex === i}" *ngFor="let t of user.transactions; let i = index" (click)="expandTransfer(i)">
                     <p class="date">{{t.date}}</p>
-                    <h3 class="description">{{t.description}}</h3>
+                    <h4 class="description">{{t.description}}</h4>
                     <p class="amount">{{user.preferredCurrency}}: {{t.amount}}</p>
                     <p class="category" *ngIf="clickedIndex === i">{{t.category}}</p>
                     <p class="comment" *ngIf="clickedIndex === i">{{t.comment}}</p>
@@ -20,7 +20,7 @@
             <ul id="incomeList" *ngIf="incomeButtonOn">
                 <li class="transferItem" [ngClass]="{'ocultTransfer': clickedIndex !== -1}" [ngClass]="{'expandTransfer': clickedIndex === i}" *ngFor="let t of incomeList; let i = index" (click)="expandTransfer(i)">
                     <p class="date">{{t.date}}</p>
-                    <h3 class="description">{{t.description}}</h3>
+                    <h4 class="description">{{t.description}}</h4>
                     <p class="amount">{{user.preferredCurrency}}: {{t.amount}}</p>
                     <p class="category" *ngIf="clickedIndex === i">{{t.category}}</p>
                     <p class="comment" *ngIf="clickedIndex === i">{{t.comment}}</p>
@@ -32,7 +32,7 @@
             <ul id="outcomeList" *ngIf="outcomeButtonOn">
                 <li class="transferItem" [ngClass]="{'ocultTransfer': clickedIndex !== -1}" [ngClass]="{'expandTransfer': clickedIndex === i}" *ngFor="let t of outcomeList; let i = index" (click)="expandTransfer(i)">
                     <p class="date">{{t.date}}</p>
-                    <h3 class="description">{{t.description}}</h3>
+                    <h4 class="description">{{t.description}}</h4>
                     <p class="amount">{{user.preferredCurrency}}: {{t.amount}}</p>
                     <p class="category" *ngIf="clickedIndex === i">{{t.category}}</p>
                     <p class="comment" *ngIf="clickedIndex === i">{{t.comment}}</p>
