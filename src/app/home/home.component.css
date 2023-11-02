@@ -124,7 +124,23 @@
   width: 100%;
   padding: 0rem;
   margin: 0rem;
-  border-top: 1px solid #667972;
+  border-top: 1px solid #3d4b46;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  
+}
+
+.transactionList::-webkit-scrollbar{
+  background: #272927;
+  width: 0.5rem;
+  border-radius: 3px;
+}
+
+.transactionList::-webkit-scrollbar-thumb{
+  appearance: none;
+  background-color: #667972;
+  border-radius: 3px;
 }
 
 .transactionItem{

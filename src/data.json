@@ -49,11 +49,102 @@
           "comment": "nefasta",
           "type": "outcome",
           "participant": "McDonalds"
+        },
+        {
+          "description": "Pizza americana",
+          "date": "2023-11-01",
+          "amount": 5000,
+          "category": "gastronomy",
+          "comment": "Riquisima",
+          "type": "outcome",
+          "participant": "Botanico"
+        },
+        {
+          "description": "Internet",
+          "date": "2023-10-30",
+          "amount": 10000,
+          "category": "services",
+          "comment": "Al fin me cambio a Claro",
+          "type": "outcome",
+          "participant": "Claro"
+        },
+        {
+          "description": "Sueldo",
+          "date": "2023-11-02",
+          "amount": 25000,
+          "category": "noCategory",
+          "comment": "No paga nada el rata",
+          "type": "income",
+          "participant": "Boss"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-10-20",
+          "amount": 1000,
+          "category": "gastronomy",
+          "comment": "ascasdcsad",
+          "type": "outcome",
+          "participant": "Ca"
+        },
+        {
+          "description": "cxvxcvc",
+          "date": "2022-02-03",
+          "amount": 32424,
+          "category": "noCategory",
+          "comment": "daw",
+          "type": "income",
+          "participant": "Galotinho"
+        },
+        {
+          "description": "nose",
+          "date": "2023-02-10",
+          "amount": 20000,
+          "category": "transport",
+          "comment": "nadie",
+          "type": "outcome",
+          "participant": "nadie"
+        },
+        {
+          "description": "a",
+          "date": "2022-02-12",
+          "amount": 222,
+          "category": "services",
+          "comment": "nose",
+          "type": "outcome",
+          "participant": "nose"
+        },
+        {
+          "description": "Pizza",
+          "date": "2022-08-20",
+          "amount": 10000,
+          "category": "market",
+          "comment": "panchote crack",
+          "type": "outcome",
+          "participant": "panchote"
+        },
+        {
+          "description": "Deuda pancho",
+          "date": "2023-11-02",
+          "amount": 10000,
+          "category": "noCategory",
+          "comment": "El chopan me debía guita",
+          "type": "income",
+          "participant": "Pancho"
+        },
+        {
+          "description": "Regalo de la abuela",
+          "date": "2023-11-02",
+          "amount": 3000,
+          "category": "noCategory",
+          "comment": "Otra vez me da guita la nona",
+          "type": "income",
+          "participant": "Abuela"
         }
       ],
-      "monthlyBudget": 10500,
-      "monthlySpend": 0,
+      "monthlyBudget": 80924,
+      "monthlySpend": 46222,
       "preferredCurrency": "ARS",
+      "payments": [],
       "id": 1
     },
     {
@@ -64,6 +155,7 @@
       "monthlyBudget": 40000,
       "monthlySpend": 0,
       "preferredCurrency": "",
+      "payments": [],
       "id": 2
     },
     {
@@ -74,6 +166,7 @@
       "monthlyBudget": 140000,
       "monthlySpend": 85000,
       "preferredCurrency": "ARS",
+      "payments": [],
       "id": 3
     },
     {
@@ -84,6 +177,7 @@
       "monthlyBudget": 0,
       "monthlySpend": 0,
       "preferredCurrency": "ARS",
+      "payments": [],
       "id": 4
     },
     {
@@ -94,6 +188,7 @@
       "monthlyBudget": 0,
       "monthlySpend": 0,
       "preferredCurrency": "ARS",
+      "payments": [],
       "id": 5
     },
     {
@@ -104,7 +199,112 @@
       "monthlyBudget": 0,
       "monthlySpend": 0,
       "preferredCurrency": "ARS",
+      "payments": [],
       "id": 6
+    },
+    {
+      "name": "Tomás González Pírez",
+      "email": "q",
+      "password": "q",
+      "transactions": [],
+      "monthlyBudget": 0,
+      "monthlySpend": 0,
+      "preferredCurrency": "ARS",
+      "payments": [
+        {
+          "recurrent": "true",
+          "description": "Gym",
+          "date": "2023-11-05",
+          "amount": 9500,
+          "category": "services",
+          "comment": "Saladito eh (pero no tanto como Forza)",
+          "participant": "Meta"
+        },
+        {
+          "recurrent": "true",
+          "description": "a ver que onda",
+          "date": "2023-11-04",
+          "amount": 30,
+          "category": "gastronomy",
+          "comment": "nefasta",
+          "participant": "Botanico"
+        },
+        {
+          "recurrent": "true",
+          "description": "Luz",
+          "date": "2023-11-06",
+          "amount": 15000,
+          "category": "services",
+          "comment": "luz mensual",
+          "participant": "EDEA"
+        },
+        {
+          "recurrent": "true",
+          "description": "Cuota alimentaria",
+          "date": "2023-11-04",
+          "amount": 25000,
+          "category": "noCategory",
+          "comment": "la comida del nene",
+          "participant": "Ex"
+        },
+        {
+          "recurrent": "true",
+          "description": "Facultad",
+          "date": "2023-11-04",
+          "amount": 10000,
+          "category": "services",
+          "comment": "Cuota de la Facu",
+          "participant": "UTN"
+        },
+        {
+          "recurrent": "true",
+          "description": "Jiu Jitsu",
+          "date": "2023-11-04",
+          "amount": 10000,
+          "category": "noCategory",
+          "comment": "cuota de la academia",
+          "participant": "SOLUM"
+        }
+      ],
+      "notifications": [
+        {
+          "description": "Gym",
+          "timeLeft": 2.121370787037037,
+          "participant": "Meta",
+          "amount": 9500
+        },
+        {
+          "description": "a ver que onda",
+          "timeLeft": 1.121370787037037,
+          "participant": "Botanico",
+          "amount": 30
+        },
+        {
+          "description": "Luz",
+          "timeLeft": 3.1184327314814815,
+          "participant": "EDEA",
+          "amount": 15000
+        },
+        {
+          "description": "Cuota alimentaria",
+          "timeLeft": 1,
+          "participant": "Ex",
+          "amount": 25000
+        },
+        {
+          "description": "Facultad",
+          "timeLeft": 1,
+          "participant": "UTN",
+          "amount": 10000
+        },
+        {
+          "description": "Jiu Jitsu",
+          "timeLeft": 2,
+          "participant": "SOLUM",
+          "amount": 10000
+        }
+      ],
+      "id": 7
     }
   ]
 }

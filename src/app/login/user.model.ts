@@ -1,5 +1,5 @@
-import { Transaction } from "./user.transaction";
-
+import { Transaction, Payment } from "./user.transaction";
+import { Notification } from "./user.notifications";
 
 
 export class User {
@@ -10,6 +10,8 @@ export class User {
     monthlyBudget?: number;
     monthlySpend?: number;
     preferredCurrency?: string;
+    payments?: Payment[]
+    notifications?: Notification[] 
  
    constructor(name: string, email: string, password: string){
      this.name = name;
@@ -19,6 +21,8 @@ export class User {
      this.monthlyBudget = 0;
      this.monthlySpend = 0;
      this.preferredCurrency = "ARS";
+     this.payments = []
+     this.notifications = []
    }
 
  }

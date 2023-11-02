@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DetailsComponent } from './details/details.component';
+import { FuturePaymentsComponent } from './future-payments/future-payments.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { DetailsComponent } from './details/details.component';
     HomeComponent,
     ProfileComponent,
     DetailsComponent,
+    FuturePaymentsComponent,
+    NotificationsComponent,
   ],
   imports: [
     BrowserModule,

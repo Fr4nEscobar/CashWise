@@ -1,0 +1,91 @@
+<div id="container" *ngIf="isData">
+  <section id="paymentList">
+    <section id="buttonContainer">
+      <button id="newPayment" (click)="changeContainer()">
+        {{ textoBTrans }}
+      </button>
+    </section>
+    <section id="listContainer">
+      <ul id="paymentsList" *ngIf="!showForm">
+        <li
+          class="paymentItem"
+          [ngClass]="{ expandTransfer: clickedIndex === i }"
+          *ngFor="let p of user.payments; let i = index"
+          (click)="expandPayment(i)"
+        >
+          <p class="date">{{ p.date }}</p>
+
+          <h4 class="description">{{ p.description }}</h4>
+          <p class="amount">{{ user.preferredCurrency }}: {{ p.amount }}</p>
+          <p class="category" *ngIf="clickedIndex === i">{{ p.category }}</p>
+          <p class="comment" *ngIf="clickedIndex === i">{{ p.comment }}</p>
+          <p class="dateT" *ngIf="clickedIndex === i">Fecha:</p>
+          <p class="categoryT" *ngIf="clickedIndex === i">Category:</p>
+          <p class="commentT" *ngIf="clickedIndex === i">Comment:</p>
+        </li>
+      </ul>
+      <form
+        id="paymentForm"
+        #paymentForm="ngForm"
+        (ngSubmit)="addPayment()"
+        *ngIf="showForm"
+      >
+        <label for="description">Description:</label>
+        <input
+          type="text"
+          id="description"
+          [(ngModel)]="payDescp"
+          name="description"
+          required
+        />
+        <label for="amount">Amount:</label>
+        <input
+          type="number"
+          name="amount"
+          id="amount"
+          [(ngModel)]="payAmount"
+          name="amount"
+          required
+        />
+        <label for="date">Date:</label>
+        <input
+          type="date"
+          id="date"
+          [(ngModel)]="payDate"
+          name="date"
+          required
+        />
+        <label for="category">Category:</label>
+        <select name="category" id="category" [(ngModel)]="payCat">
+          <option value="market">MARKET</option>
+          <option value="services">SERVICES</option>
+          <option value="shopping">SHOPPING</option>
+          <option value="transport">TRANSPORT</option>
+          <option value="gastronomy">GASTRONOMY</option>
+          <option value="tourism">TOURISM</option>
+          <option value="noCategory" selected>NO CATEGORY</option>
+        </select>
+        <label for="participant">Receiver</label>
+        <input
+          type="text"
+          id="participant"
+          [(ngModel)]="payParticipant"
+          name="participant"
+        />
+        <label for="comment">Comments:</label>
+        <input type="text" id="comment" [(ngModel)]="payComm" name="comment" />
+        <label for="recurrent">Recurrent:</label>
+        <select
+          name="recurrent"
+          id="recurrent"
+          [(ngModel)]="payRecurrent"
+          required
+        >
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+        <button type="submit" id="addPayment">Add</button>
+      </form>
+    </section>
+  </section>
+</div>

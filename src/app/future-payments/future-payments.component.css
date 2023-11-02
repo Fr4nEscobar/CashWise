@@ -8,29 +8,11 @@
     height: 45vw;
     width: 40vw;
     background-color: #272927;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+    border-radius: 2rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    overflow-y: auto;
 }
-
-#container::-webkit-scrollbar{
-    background: #272927;
-    width: 0.5rem;
-    border-top-right-radius: 3rem;
-    border-bottom-right-radius: 3rem;
-
-  }
-  
-  #container::-webkit-scrollbar-thumb{
-    appearance: none;
-    background-color: #667972;
-    border-radius: 2rem;
-    border-top-right-radius: 3rem;
-    border-bottom-right-radius: 3rem;
-  }
 
 #buttonContainer{
     display: flex;
@@ -38,46 +20,33 @@
     height: 3rem;
 }
 
-.selectionButton{
+#newPayment{
     height: 100%;
-    width: 50%;
+    width: 100%;
     border: none;
     background-color: #272927;
     font-size: 1.2rem;
     font-weight: bold;
-}
-
-#incomeButton{
+    border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
 }
 
-#incomeButton:hover{
+#newPayment:hover{
     font-size: 1.3rem;
 }
 
-#outcomeButton{
-    border-top-right-radius: 1rem;
-}
-
-#outcomeButton:hover{
-    font-size: 1.3rem;
-}
-
-.buttonOn{
-    background-color: #1e1f1e;    
+#newPayment:active{
+    background-color: #1e1f1e;  
 }
 
 #listContainer{
     width: 100%;
     height: 100%;
     display: flex;
-   
     justify-content: center;
 }
 
-
-
-#transfersList{
+#paymentsList{
     list-style: none;
     display: flex;
     flex-direction: column-reverse;
@@ -87,35 +56,22 @@
     width: 100%;
     border-top: 1px solid #d0d7d0;
     margin: 0rem;
-
+    overflow-y: auto;
 }
 
+#paymentsList::-webkit-scrollbar{
+    background: #272927;
+    width: 0.5rem;
+    border-radius: 3px;
+  }
+  
+  #paymentsList::-webkit-scrollbar-thumb{
+    appearance: none;
+    background-color: #667972;
+    border-radius: 3px;
+  }
 
-#outcomeList{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 0rem;
-    width: 100%;
-    border-top: 1px solid #d0d7d0;
-    margin: 0rem;
-}
-
-#incomeList{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 0rem;
-    width: 100%;
-    border-top: 1px solid #d0d7d0;
-    margin: 0rem;
-}
-
-.transferItem{
+.paymentItem{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -124,19 +80,19 @@
     width: 100%;
 }
 
-.transferItem p {
+.paymentItem p {
     width: 20%;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
-.transferItem h4 {
+.paymentItem h4 {
     width: 20%;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
-.transferItem:hover {
+.paymentItem:hover {
     background-color: #1e1f1e;
 }
 
@@ -211,4 +167,67 @@
     display: none;
 }
 
+#paymentForm{
+    display: flex;
+    flex-direction: column;
+    color: #d0d7d0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #667972;
+    padding-top: 0.5rem;
+  }
+  
+  #paymentForm input{
+    background-color: #222423;
+    border-radius: 1rem;
+    color: #d0d7d0;
+    width: 80%;
+    border: solid;
+    border-width: 1px;
+    border-color: #667972;
+    margin: 0.5rem;
+    outline: none;
+  }
+  
+  #paymentForm select{
+    background-color: #222423;
+    border-radius: 1rem;
+    color: #d0d7d0;
+    appearance: none;
+    text-align: center;
+    box-shadow: none;
+    width: 82%;
+    border: solid;
+    border-width: 1px;
+    border-color: #667972;
+    margin: 0.5rem;
+    outline: none;
+  }
+
+  #addPayment{
+    background-color: #272927;
+    color: #d0d7d0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    width: 100%;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    border-top: 1px solid #667972;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0.5rem;
+      
+  }
+  
+  #addPayment:hover{
+    font-size: 1.2rem;
+    padding-top: 0.45rem;
+    padding-bottom: 0.45rem;
+  }
+  
+  #addPayment:active{
+    background-color: #1e1f1e;
+  }
 

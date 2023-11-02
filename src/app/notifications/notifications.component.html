@@ -1,0 +1,17 @@
+<div class="notifications" [ngClass]="{'expandTrue': expand}" (click)="expandNotifications()" *ngIf="isData">
+    <div  id="container">
+      <div id="logo">
+        <img class="icon" src="./../../assets/icons/notifcations.png" width="100px" alt="Error al cargar" />
+        <div id="notiText">Notifications</div>
+      </div>
+      <div id="listContainer">
+        <ul id="notificationsList">
+          <li class="notificationItem" *ngFor="let n of notifications">
+            {{n.description}}:
+            You have {{n.timeLeft}} days to pay ${{n.amount}} to {{n.participant}}
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
+  
