@@ -14,17 +14,23 @@ export class ProfileComponent{
   userId!: Number
   userPassword: String = ''
   isData!: boolean
-  changeName: string = ''
-  changeEmail: string = ''
-  changePassword: string = ''
-  changeMonthlyB!: number
-  changeMonthlyS!: number
-  changePreferredC: string = ''
+  changeName?: string
+  changeEmail?: string
+  changePassword?: string
+  changeMonthlyB?: number
+  changeMonthlyS?: number
+  changePreferredC?: string
 
   constructor(private userVariable: UserVariableService, private userVerification: UserVerificationService) {
     this.user = userVariable.getUser()
     this.userId = userVariable.getId()
     this.isData = true
+    this.changeName = this.user.name
+    this.changeEmail = this.user.email
+    this.changePassword = this.user.password
+    this.changeMonthlyB = this.user.monthlyBudget
+    this.changeMonthlyS = this.user.monthlySpend
+    this.changePreferredC = this.user.preferredCurrency
     this.userPassword = this.generateStringByLength(this.user.password!.length)
   }
 

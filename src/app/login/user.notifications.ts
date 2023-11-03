@@ -5,6 +5,7 @@ export class Notification{
     timeLeft?: number
     participant?: string
     amount?: number
+    active?: boolean
 
 constructor(description: string, issueDate: Date, timeSince: number, timeleft: number, participant: string, amount: number){
     this.description = description;
@@ -13,6 +14,7 @@ constructor(description: string, issueDate: Date, timeSince: number, timeleft: n
     this.timeLeft = timeleft;
     this.participant = participant;
     this.amount = amount;
+    this.active = true;
     
 }
 }

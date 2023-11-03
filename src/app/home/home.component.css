@@ -1,38 +1,38 @@
   #container {
   position: absolute;
-  height: 45vw;
+  height: 80%;
   width: 40vw;
-  background-color: #272927;
-  border-radius: 2rem;
+  background-color: #141414;
+  border-radius: 1rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: grid;
   justify-content: center;
-  color: #667972;
+  color: #86c232;
   font-weight: bold;
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-top: 0rem;
+  margin-bottom: 3rem;
   grid-template-areas:
     'budgetData'
     'transferData';
   grid-template-columns: 1fr; /* Una columna para budgetData */
-  grid-template-rows: auto auto;
+  grid-template-rows: 20% 80%;
   /* Tres filas automáticas para budgetData, transferData y graphData */
   grid-gap: 10px; /* Espacio entre las celdas */
 }
 
 
 .budgetData {
-  background-color: #222423;
+  background-color: #161616;
   color: #d0d7d0;
   height: 8vw;
   width: 35vw;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -44,24 +44,26 @@
 }
 
 .transferData {
-  background-color: #222423;
-  height: 31vw;
+  background-color: #161616;
+  height: 100%;
   width: 20vw;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   margin-top: 1.25rem;
   grid-area: transferData;
   width: 48%;
+  margin-bottom: 2.5rem;
 }
 
 .graphData {
-  background-color: #222423;
-  height: 31vw;
+  background-color: #161616;
+  height: 100%;
   width: 12.5vw;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   margin-top: 1.25rem;
   grid-area: transferData;
   width: 48%;
   justify-self: end;
+  margin-bottom: 2.5rem;
 }
 
 .budgetAndSpend {
@@ -181,7 +183,7 @@
 }
 
 #newTransaction{
-  background-color: #222423;
+  background-color: #161616;
   color: #d0d7d0;
   font-weight: bold;
   font-size: 1.2rem;

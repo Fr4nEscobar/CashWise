@@ -6,15 +6,17 @@
       </div>
       <div id="listContainer">
         <ul id="notificationsList">
-          <li class="notificationItem" *ngFor="let n of notifications">
-            <div id="notiText">
+          <ng-container *ngFor="let n of notifications">
+          <li class="notificationItem"  *ngIf="n.active">
+            <div id="notiText" >
               <div id="notiTitle">
                 <p *ngIf="n.timeSince === 0">{{n.description}} (today):</p><p *ngIf="n.timeSince !== 0">{{n.description}} ({{n.timeSince}} days ago):</p>
               </div>
               <p>You have {{n.timeLeft}} days to pay ${{n.amount}} to {{n.participant}}</p>
             </div>
-            <button id="deleteNoti"><img src="./../../assets/icons/7delete.png" alt=""></button>
+            <button id="deleteNoti" ><img src="./../../assets/icons/7delete.png" alt="" (click)="deleteNotification(n)"></button>
           </li>
+        </ng-container>
         </ul>
       </div>
     </div>

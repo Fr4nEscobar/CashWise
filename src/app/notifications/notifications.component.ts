@@ -87,4 +87,13 @@ export class NotificationsComponent {
       notification.timeSince = remainingDays;
     });
   }
+
+  deleteNotification(notificacion: Notification){
+    this.notifications.forEach(n => {
+      if(n.description === notificacion.description){
+        n.active = false;
+        this.udpateNotificationsInUser()
+      }
+    });
+  }
 }

@@ -213,7 +213,7 @@
       "email": "q",
       "password": "q",
       "transactions": [],
-      "monthlyBudget": 0,
+      "monthlyBudget": 40000,
       "monthlySpend": 0,
       "preferredCurrency": "ARS",
       "payments": [
@@ -284,59 +284,66 @@
       "notifications": [
         {
           "description": "Gym",
-          "issueDate": "2023-11-03",
+          "issueDate": "2023-11-03T19:38:34.852Z",
+          "timeSince": 0,
           "timeLeft": 2,
           "participant": "Meta",
           "amount": 9500,
-          "timeSince": 0
+          "active": true
         },
         {
           "description": "a ver que onda",
-          "issueDate": "2023-11-03",
+          "issueDate": "2023-11-03T19:38:34.852Z",
+          "timeSince": 0,
           "timeLeft": 1,
           "participant": "Botanico",
           "amount": 30,
-          "timeSince": 0
+          "active": true
         },
         {
           "description": "Luz",
-          "issueDate": "2023-11-01",
+          "issueDate": "2023-11-03T19:38:34.852Z",
+          "timeSince": 0,
           "timeLeft": 3,
           "participant": "EDEA",
           "amount": 15000,
-          "timeSince": 2
+          "active": true
         },
         {
           "description": "Cuota alimentaria",
-          "issueDate": "2023-11-03",
+          "issueDate": "2023-11-03T19:38:34.852Z",
+          "timeSince": 0,
           "timeLeft": 1,
           "participant": "Ex",
           "amount": 25000,
-          "timeSince": 0
+          "active": true
         },
         {
           "description": "Facultad",
-          "issueDate": "2023-11-03",
+          "issueDate": "2023-11-03T19:38:34.852Z",
+          "timeSince": 0,
           "timeLeft": 1,
           "participant": "UTN",
           "amount": 10000,
-          "timeSince": 0
+          "active": true
         },
         {
           "description": "Jiu Jitsu",
-          "issueDate": "2023-11-03",
+          "issueDate": "2023-11-03T19:38:34.852Z",
+          "timeSince": 0,
           "timeLeft": 1,
           "participant": "SOLUM",
           "amount": 10000,
-          "timeSince": 0
+          "active": false
         },
         {
           "description": "Donaciones a la iglesia",
-          "issueDate": "2023-11-03T14:12:46.900Z",
+          "issueDate": "2023-11-03T19:38:34.852Z",
           "timeSince": 0,
           "timeLeft": 5,
           "participant": "Parroquia San Jorge",
-          "amount": 15000
+          "amount": 15000,
+          "active": false
         }
       ],
       "id": 7

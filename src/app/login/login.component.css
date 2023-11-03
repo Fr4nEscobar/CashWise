@@ -29,14 +29,14 @@ span {
 }
 
 a {
-    color: #0e263d;
+    color: #161616;
     font-size: 14px;
     text-decoration: none;
     margin: 15px 0;
 }
 
 .container {
-    background: #222423;
+    background: #161616;
     /*box-shadow: 30px 14px 28px rgba(0, 0, 5, .2), 0 10px 10px rgba(0, 0, 0, .2);*/
     position: relative;
     overflow: hidden;
@@ -50,7 +50,7 @@ a {
 
 
 .form-container form {
-    background: #222423;
+    background: #161616;
     display: flex;
     flex-direction: column;
     padding: 0 50px;
@@ -69,11 +69,11 @@ a {
 
 .social-container a:hover {
     transform: rotateZ(13deg);
-    border: 1px solid #0e263d;
+    border: 1px solid #161616;
 }
 
 .form-container input {
-    background: #222423;
+    background: #161616;
     border: 10;
     border-color: #fff;
     border-radius: 50px;
@@ -89,8 +89,8 @@ a {
 button {
     border-radius: 50px;
     box-shadow: 0 1px 1px;
-    border: 1px solid #667972;
-    background: #667972;
+    border: 1px solid #86c232;
+    background: #86c232;
     color: #fff;
     font-size: 12px;
     font-weight: bold;
@@ -109,8 +109,8 @@ button:focus {
 }
 
 button.ghost {
-    background: #222423;
-    border-color: #222423;
+    background: #161616;
+    border-color: #161616;
 }
 
 .form-container {
@@ -142,11 +142,12 @@ button.ghost {
     overflow: hidden;
     transition: transform .6s ease-in-out;
     z-index: 100;
+    color: #86c232;
 }
 
 .overlay {
-    background: linear-gradient(to right, #667972, #667972) no-repeat 0 0 / cover;
-    color: #fff;
+    background: linear-gradient(to right, #141414, #141414) no-repeat 0 0 / cover;
+    color: #86c232;
     position: relative;
     left: -100%;
     height: 100%;
