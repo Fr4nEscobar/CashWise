@@ -1,14 +1,19 @@
-<div class="notifications" [ngClass]="{'expandTrue': expand}" (click)="expandNotifications()" *ngIf="isData">
+<div class="notifications" *ngIf="isData">
     <div  id="container">
       <div id="logo">
-        <img class="icon" src="./../../assets/icons/notifcations.png" width="100px" alt="Error al cargar" />
+        <img class="icon" src="./../../assets/icons/6notifications.png" width="100px" alt="Error al cargar" />
         <div id="notiText">Notifications</div>
       </div>
       <div id="listContainer">
         <ul id="notificationsList">
           <li class="notificationItem" *ngFor="let n of notifications">
-            {{n.description}}:
-            You have {{n.timeLeft}} days to pay ${{n.amount}} to {{n.participant}}
+            <div id="notiText">
+              <div id="notiTitle">
+                <p *ngIf="n.timeSince === 0">{{n.description}} (today):</p><p *ngIf="n.timeSince !== 0">{{n.description}} ({{n.timeSince}} days ago):</p>
+              </div>
+              <p>You have {{n.timeLeft}} days to pay ${{n.amount}} to {{n.participant}}</p>
+            </div>
+            <button id="deleteNoti"><img src="./../../assets/icons/7delete.png" alt=""></button>
           </li>
         </ul>
       </div>

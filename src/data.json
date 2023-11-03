@@ -145,6 +145,7 @@
       "monthlySpend": 46222,
       "preferredCurrency": "ARS",
       "payments": [],
+      "notifications": [],
       "id": 1
     },
     {
@@ -156,6 +157,7 @@
       "monthlySpend": 0,
       "preferredCurrency": "",
       "payments": [],
+      "notifications": [],
       "id": 2
     },
     {
@@ -167,6 +169,7 @@
       "monthlySpend": 85000,
       "preferredCurrency": "ARS",
       "payments": [],
+      "notifications": [],
       "id": 3
     },
     {
@@ -178,6 +181,7 @@
       "monthlySpend": 0,
       "preferredCurrency": "ARS",
       "payments": [],
+      "notifications": [],
       "id": 4
     },
     {
@@ -189,6 +193,7 @@
       "monthlySpend": 0,
       "preferredCurrency": "ARS",
       "payments": [],
+      "notifications": [],
       "id": 5
     },
     {
@@ -200,6 +205,7 @@
       "monthlySpend": 0,
       "preferredCurrency": "ARS",
       "payments": [],
+      "notifications": [],
       "id": 6
     },
     {
@@ -264,44 +270,73 @@
           "category": "noCategory",
           "comment": "cuota de la academia",
           "participant": "SOLUM"
+        },
+        {
+          "recurrent": "true",
+          "description": "Donaciones a la iglesia",
+          "date": "2023-11-08",
+          "amount": 15000,
+          "category": "noCategory",
+          "comment": "diezmo",
+          "participant": "Parroquia San Jorge"
         }
       ],
       "notifications": [
         {
           "description": "Gym",
-          "timeLeft": 2.121370787037037,
+          "issueDate": "2023-11-03",
+          "timeLeft": 2,
           "participant": "Meta",
-          "amount": 9500
+          "amount": 9500,
+          "timeSince": 0
         },
         {
           "description": "a ver que onda",
-          "timeLeft": 1.121370787037037,
+          "issueDate": "2023-11-03",
+          "timeLeft": 1,
           "participant": "Botanico",
-          "amount": 30
+          "amount": 30,
+          "timeSince": 0
         },
         {
           "description": "Luz",
-          "timeLeft": 3.1184327314814815,
+          "issueDate": "2023-11-01",
+          "timeLeft": 3,
           "participant": "EDEA",
-          "amount": 15000
+          "amount": 15000,
+          "timeSince": 2
         },
         {
           "description": "Cuota alimentaria",
+          "issueDate": "2023-11-03",
           "timeLeft": 1,
           "participant": "Ex",
-          "amount": 25000
+          "amount": 25000,
+          "timeSince": 0
         },
         {
           "description": "Facultad",
+          "issueDate": "2023-11-03",
           "timeLeft": 1,
           "participant": "UTN",
-          "amount": 10000
+          "amount": 10000,
+          "timeSince": 0
         },
         {
           "description": "Jiu Jitsu",
-          "timeLeft": 2,
+          "issueDate": "2023-11-03",
+          "timeLeft": 1,
           "participant": "SOLUM",
-          "amount": 10000
+          "amount": 10000,
+          "timeSince": 0
+        },
+        {
+          "description": "Donaciones a la iglesia",
+          "issueDate": "2023-11-03T14:12:46.900Z",
+          "timeSince": 0,
+          "timeLeft": 5,
+          "participant": "Parroquia San Jorge",
+          "amount": 15000
         }
       ],
       "id": 7

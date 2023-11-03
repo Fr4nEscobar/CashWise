@@ -32,30 +32,31 @@
 
 #notiText{
     color: black;
-    opacity: 100%;
+    opacity: 0%;
 }
 
-.expandTrue{
+.notifications:hover{
     width: 13.5rem;
 }
 
-.expandTrue .icon{
+.notifications:hover .icon{
     order: 2;
     padding-right: 0rem;
 }
 
-.expandTrue #notiText{
+.notifications:hover #notiText{
     order: 1;
+    opacity: 100%;
 }
 
-.expandTrue #logo{
+.notifications:hover #logo{
     justify-content: center;
     align-items: center;
     text-align: center;
     align-items: center;
 }
 
-.expandTrue #container > .text{
+.notifications:hover #container > .text{
     opacity: 1;
     margin-left: 0;
    
@@ -87,15 +88,57 @@
 }
 
 .notificationItem{
-    text-align: center;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid black;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
-.expandTrue #notificationsList{
+#notiText{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+}
+
+#notiTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#notiTitle p{
+    margin: 0;
+    font-weight: bold;
+}
+
+.notificationItem p{
+    font-weight: 400;
+    margin: 0;
+}
+
+.notifications:hover #notificationsList{
     list-style: none;
     opacity: 100;
 }
+
+#deleteNoti{
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    order: 2;
+}
+
+#deleteNoti img{
+    width: 2rem;
+    height: 2rem;
+}
+
