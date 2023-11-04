@@ -1,5 +1,4 @@
 
-
 .aside{
     width: 4rem;
     height: 100vh;
@@ -117,4 +116,9 @@ hr{
     height: 2.5rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+}
+
+#logOut {
+    position: absolute;
+    bottom: 0;
 }

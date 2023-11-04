@@ -10,7 +10,6 @@
   display: grid;
   justify-content: center;
   color: #86c232;
-  font-weight: bold;
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 2.5rem;
@@ -81,6 +80,11 @@
   font-size: 4rem;
 }
 
+#remainingBudget h1{
+  font-weight: 400;
+  color: #86c232;
+}
+
 #monthlyBudget {
   padding: none;
   margin-top: 0rem;
@@ -126,7 +130,7 @@
   width: 100%;
   padding: 0rem;
   margin: 0rem;
-  border-top: 1px solid #3d4b46;
+  border-top: 1px solid #fff;
   overflow-y: auto;
   display: flex;
   flex-direction: column-reverse;
@@ -134,25 +138,25 @@
 }
 
 .transactionList::-webkit-scrollbar{
-  background: #272927;
+  background: #161616;
   width: 0.5rem;
   border-radius: 3px;
 }
 
 .transactionList::-webkit-scrollbar-thumb{
   appearance: none;
-  background-color: #667972;
+  background-color: #86c232;
   border-radius: 3px;
 }
 
 .transactionItem{
-  color: #d0d7d0;
+  color: #fff;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #667972;
+  border-bottom: 1px solid #fff;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 
@@ -184,76 +188,110 @@
 
 #newTransaction{
   background-color: #161616;
-  color: #d0d7d0;
+  color: #86c232;
+  font-size: 1rem;
   font-weight: bold;
-  font-size: 1.2rem;
+  text-transform: uppercase;
   border: none;
   width: 100%;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   border: none;
 }  
 
 #newTransaction:hover{
-  font-size: 1.3rem;
-  padding-top: 0.45rem;
-  padding-bottom: 0.45rem;
+  font-size: 0.95rem;
+  padding-top: 0.525rem;
+  padding-bottom: 0.525rem;
 }
 
 #newTransaction:active{
-  background-color: #1e1f1e;
+  background-color: #1d1d1d;
 }
 
 #transactionForm{
   display: flex;
   flex-direction: column;
-  color: #d0d7d0;
+  color: #fff;
   width: 100%;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #667972;
+  border-top: 1px solid #fff;
   padding-top: 0.5rem;
+  overflow-y: auto;
+}
+
+#transactionForm::-webkit-scrollbar{
+  background: #161616;
+  width: 0.5rem;
+  border-radius: 3px;
+}
+
+#transactionForm::-webkit-scrollbar-thumb{
+  appearance: none;
+  background-color: #86c232;
+  border-radius: 3px;
 }
 
 #transactionForm input{
-  background-color: #222423;
+  text-align: center;
+  background-color: #161616;
   border-radius: 1rem;
-  color: #d0d7d0;
+  color: #fff;
   width: 80%;
   border: solid;
   border-width: 1px;
-  border-color: #667972;
+  border-color: #fff;
   margin: 0.5rem;
   outline: none;
+  padding: 0.5rem;
+}
+
+#transactionForm input:hover {
+  transform: scale(101%);
+}
+
+#transactionForm input:focus {
+  border-color: #86c232;
 }
 
 #transactionForm select{
-  background-color: #222423;
+  background-color: #141414;
   border-radius: 1rem;
-  color: #d0d7d0;
+  color: #fff;
   appearance: none;
   text-align: center;
   box-shadow: none;
   width: 82%;
   border: solid;
   border-width: 1px;
-  border-color: #667972;
+  border-color: #fff;
   margin: 0.5rem;
   outline: none;
+  padding: 0.5rem;
+}
+
+#transactionForm select:hover {
+  transform: scale(101%);
+}
+
+#transactionForm select:focus {
+  border-color: #86c232;
 }
 
 #addTransaction{
-  background-color: #222423;
-  color: #d0d7d0;
+  background-color: #141414;
+  color: #86c232;
   font-weight: bold;
-  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
   border: none;
   width: 100%;
   border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
-  border-top: 1px solid #667972;
+  border-top: 1px solid #fff;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   margin-top: 0.5rem;
@@ -261,11 +299,11 @@
 }
 
 #addTransaction:hover{
-  font-size: 1.2rem;
-  padding-top: 0.45rem;
-  padding-bottom: 0.45rem;
+    font-size: 0.95rem;
+    padding-top: 0.525rem;
+    padding-bottom: 0.525rem;
 }
 
 #addTransaction:active{
-  background-color: #1e1f1e;
+  background-color: #1d1d1d;
 }

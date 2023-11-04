@@ -16,7 +16,8 @@
                         <input type="password" placeholder="Password" [(ngModel)]="registerPassword" name="registerPassword"/>
                     </label>
                     <br>
-                    <button (click)="register()">Sign Up</button>
+                    <button (click)="register()">Sign Up</button><br>
+                    <p class="message">{{signUpMessage}}</p>
                 </form>
             </div>
             <div class="form-container sign-in-container">
@@ -31,6 +32,8 @@
                     </label>
                     <br>
                     <button (click)="login()">Sign In</button>
+                    <br>
+                    <p class="message">{{signInMessage}}</p>
                 </form>
             </div>
             <div class="overlay-container">

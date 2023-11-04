@@ -149,13 +149,13 @@
       "id": 1
     },
     {
-      "name": "Galo",
+      "name": "Galo Fazio",
       "email": "galofazio@gmail.com",
-      "password": "galote123",
+      "password": "cacona",
       "transactions": [],
-      "monthlyBudget": 40000,
+      "monthlyBudget": 0,
       "monthlySpend": 0,
-      "preferredCurrency": "",
+      "preferredCurrency": "ARS",
       "payments": [],
       "notifications": [],
       "id": 2
@@ -212,7 +212,143 @@
       "name": "Tomás González Pírez",
       "email": "q",
       "password": "q",
-      "transactions": [],
+      "transactions": [
+        {
+          "description": "Regalo de la abuela",
+          "date": "2023-10-31",
+          "amount": 2000,
+          "category": "noCategory",
+          "comment": "jaja se lo rompio la vieja",
+          "type": "income",
+          "participant": "Abuela"
+        },
+        {
+          "description": "Cena con mi amorcito <3",
+          "date": "2023-10-30",
+          "amount": 8000,
+          "category": "gastronomy",
+          "comment": "2 combos grandes big mac",
+          "type": "outcome",
+          "participant": "McDonalds"
+        },
+        {
+          "description": "Dinero por la comida del perro Jorgito",
+          "date": "2023-10-30",
+          "amount": 3500,
+          "category": "market",
+          "comment": "Mamá me pasó plata x la comida de Jorgito",
+          "type": "income",
+          "participant": "Mamá"
+        },
+        {
+          "description": "Hamburguesa doble",
+          "date": "2023-10-30",
+          "amount": 1000,
+          "category": "gastronomy",
+          "comment": "nefasta",
+          "type": "outcome",
+          "participant": "McDonalds"
+        },
+        {
+          "description": "Hamburguesa doble",
+          "date": "2023-10-31",
+          "amount": 69,
+          "category": "gastronomy",
+          "comment": "nefasta",
+          "type": "outcome",
+          "participant": "McDonalds"
+        },
+        {
+          "description": "Pizza americana",
+          "date": "2023-11-01",
+          "amount": 5000,
+          "category": "gastronomy",
+          "comment": "Riquisima",
+          "type": "outcome",
+          "participant": "Botanico"
+        },
+        {
+          "description": "Internet",
+          "date": "2023-10-30",
+          "amount": 10000,
+          "category": "services",
+          "comment": "Al fin me cambio a Claro",
+          "type": "outcome",
+          "participant": "Claro"
+        },
+        {
+          "description": "Sueldo",
+          "date": "2023-11-02",
+          "amount": 25000,
+          "category": "noCategory",
+          "comment": "No paga nada el rata",
+          "type": "income",
+          "participant": "Boss"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-10-20",
+          "amount": 1000,
+          "category": "gastronomy",
+          "comment": "ascasdcsad",
+          "type": "outcome",
+          "participant": "Ca"
+        },
+        {
+          "description": "cxvxcvc",
+          "date": "2022-02-03",
+          "amount": 32424,
+          "category": "noCategory",
+          "comment": "daw",
+          "type": "income",
+          "participant": "Galotinho"
+        },
+        {
+          "description": "nose",
+          "date": "2023-02-10",
+          "amount": 20000,
+          "category": "transport",
+          "comment": "nadie",
+          "type": "outcome",
+          "participant": "nadie"
+        },
+        {
+          "description": "a",
+          "date": "2022-02-12",
+          "amount": 222,
+          "category": "services",
+          "comment": "nose",
+          "type": "outcome",
+          "participant": "nose"
+        },
+        {
+          "description": "Pizza",
+          "date": "2022-08-20",
+          "amount": 10000,
+          "category": "market",
+          "comment": "panchote crack",
+          "type": "outcome",
+          "participant": "panchote"
+        },
+        {
+          "description": "Deuda pancho",
+          "date": "2023-11-02",
+          "amount": 10000,
+          "category": "noCategory",
+          "comment": "El chopan me debía guita",
+          "type": "income",
+          "participant": "Pancho"
+        },
+        {
+          "description": "Regalo de la abuela",
+          "date": "2023-11-02",
+          "amount": 3000,
+          "category": "noCategory",
+          "comment": "Otra vez me da guita la nona",
+          "type": "income",
+          "participant": "Abuela"
+        }
+      ],
       "monthlyBudget": 40000,
       "monthlySpend": 0,
       "preferredCurrency": "ARS",

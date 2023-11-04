@@ -1,13 +1,13 @@
 
 *{
-    color: #d0d7d0;
+    color: #fff;
 }
 
 #container {
     position: absolute;
     height: 45vw;
     width: 40vw;
-    background-color: #272927;
+    background-color: #141414;
     border-radius: 1rem;
     top: 50%;
     left: 50%;
@@ -21,22 +21,28 @@
 }
 
 #newPayment{
-    height: 100%;
-    width: 100%;
-    border: none;
-    background-color: #272927;
-    font-size: 1.2rem;
+    background-color: #141414;
+    color: #86c232;
     font-weight: bold;
-    border-top-right-radius: 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    width: 100%;
     border-top-left-radius: 1rem;
-}
-
+    border-top-right-radius: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+      
+  }
+  
 #newPayment:hover{
-    font-size: 1.3rem;
-}
+    font-size: 0.95rem;
+    padding-top: 0.525rem;
+    padding-bottom: 0.525rem;
+  }
 
 #newPayment:active{
-    background-color: #1e1f1e;  
+    background-color: #1d1d1d;  
 }
 
 #listContainer{
@@ -44,6 +50,8 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    overflow-y: auto;
+    max-height: 42.5vw;
     
 }
 
@@ -55,23 +63,20 @@
     text-align: center;
     padding: 0rem;
     width: 100%;
-    max-height: 42.5vw;
-    border-top: 1px solid #d0d7d0;
+    border-top: 1px solid #fff;
     margin: 0rem;
-    overflow-y: auto;
 
-    
 }
 
-#paymentsList::-webkit-scrollbar{
-    background: #272927;
+#listContainer::-webkit-scrollbar{
+    background: #141414;
     width: 0.5rem;
     border-radius: 3px;
   }
   
-#paymentsList::-webkit-scrollbar-thumb{
+#listContainer::-webkit-scrollbar-thumb{
     appearance: none;
-    background-color: #667972;
+    background-color: #86c232;
     border-radius: 3px;
   }
 
@@ -80,7 +85,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid #d0d7d0;
+    border-bottom: 1px solid #fff;
     width: 100%;
 }
 
@@ -97,7 +102,7 @@
 }
 
 .paymentItem:hover {
-    background-color: #1e1f1e;
+    background-color: #1d1d1d;
 }
 
 .expandTransfer {
@@ -174,51 +179,71 @@
 #paymentForm{
     display: flex;
     flex-direction: column;
-    color: #d0d7d0;
+    color: #fff;
     width: 100%;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid #667972;
+    border-top: 1px solid #fff;
     padding-top: 0.5rem;
   }
   
   #paymentForm input{
-    background-color: #222423;
+    text-align: center;
+    background-color: #141414;
     border-radius: 1rem;
-    color: #d0d7d0;
+    color: #fff;
     width: 80%;
     border: solid;
     border-width: 1px;
-    border-color: #667972;
+    border-color: #fff;
     margin: 0.5rem;
     outline: none;
+    padding: 0.5rem;
   }
+
+    #paymentForm input:hover {
+        transform: scale(101%);
+    }
+
+    #paymentForm input:focus {
+        border-color: #86c232;
+    }
   
   #paymentForm select{
-    background-color: #222423;
+    background-color: #141414;
     border-radius: 1rem;
-    color: #d0d7d0;
+    color: #fff;
     appearance: none;
     text-align: center;
     box-shadow: none;
     width: 82%;
     border: solid;
     border-width: 1px;
-    border-color: #667972;
+    border-color: #fff;
     margin: 0.5rem;
     outline: none;
+    padding: 0.5rem;
   }
 
+  #paymentForm select:hover {
+    transform: scale(101%);
+}
+
+#paymentForm select:focus {
+    border-color: #86c232;
+}
+
   #addPayment{
-    background-color: #272927;
-    color: #d0d7d0;
+    background-color: #141414;
+    color: #86c232;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
     border: none;
     width: 100%;
-    border-bottom-left-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
-    border-top: 1px solid #667972;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top: 1px solid #fff;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     margin-top: 0.5rem;
@@ -226,12 +251,12 @@
   }
   
   #addPayment:hover{
-    font-size: 1.2rem;
-    padding-top: 0.45rem;
-    padding-bottom: 0.45rem;
+    font-size: 0.95rem;
+    padding-top: 0.525rem;
+    padding-bottom: 0.525rem;
   }
   
   #addPayment:active{
-    background-color: #1e1f1e;
+    background-color: #1d1d1d;
   }
 

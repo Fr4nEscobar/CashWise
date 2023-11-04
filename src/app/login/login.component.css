@@ -1,6 +1,7 @@
  * {
     box-sizing: border-box;
-    color: #ffffff;
+    color: #86c232;
+
 }
 
 section{
@@ -110,7 +111,9 @@ button:focus {
 
 button.ghost {
     background: #161616;
-    border-color: #161616;
+    border-color: #86c232;
+    color:  #fff;
+    box-shadow: none;
 }
 
 .form-container {
@@ -118,6 +121,24 @@ button.ghost {
     top: 0;
     height: 100%;
     transition: all .6s ease-in-out;
+}
+
+.form-container p {
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.message {
+    color: #fff;
+}
+
+.form-container button{
+    box-shadow: none;
+}
+
+.form-container input{
+    border: 1px solid #fff;
+    color: #fff;
 }
 
 .sign-in-container {
@@ -170,6 +191,11 @@ button.ghost {
     transform: translateY(0);
     transition: transform .6s ease-in-out;
 }
+
+.overlay-panel p {
+    color: #fff;
+}
+
 
 .overlay-right {
     right: 0;

@@ -96,7 +96,7 @@
 }
 
 #notificationsList::-webkit-scrollbar{
-    background: #667972;
+    background: #141414;
     width: 0.5rem;
     border-top-right-radius: 3rem;
     border-bottom-right-radius: 3rem;
@@ -105,7 +105,7 @@
   
 #notificationsList::-webkit-scrollbar-thumb{
     appearance: none;
-    background-color: #272927;
+    background-color: #141414;
     border-radius: 2rem;
     border-top-right-radius: 3rem;
     border-bottom-right-radius: 3rem;
@@ -124,6 +124,17 @@
 }
 
 #notiText{
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+    width: 10rem;
+    padding-right: 0.5rem;
+}
+
+#notiTitleText{
+    color: #86c232;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -141,6 +152,7 @@
 #notiTitle p{
     margin: 0;
     font-weight: bold;
+    color: #86c232;
 }
 
 .notificationItem p{

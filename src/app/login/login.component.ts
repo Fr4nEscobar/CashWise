@@ -23,6 +23,9 @@ export class LoginComponent {
   showSidebar: boolean = false;
   user!: User
   userId!: number
+  signUpMessage: string = ''
+  signInMessage: string = ''
+
 
   constructor(private _CargaScripts: CargarScriptsService, private userVerification: UserVerificationService, private router: Router, private userVariable: UserVariableService) {
     _CargaScripts.carga(["logicaAnimacion"])
@@ -68,11 +71,15 @@ export class LoginComponent {
     
     if (result) {
       this.userVariable.setUser(this.user, this.userId)
-      console.log("login exitoso");
+      console.log("successful login");
+      this.signInMessage = ''
       
       this.router.navigate(['/home'])
     } else {
-      console.log("login fallido, datos incorrectos");
+      console.log("login failed: incorrect data");
+      this.signInMessage = ''
+      this.signInMessage = 'Incorrect Email or Password'
+
     }
   }
 
@@ -82,17 +89,23 @@ export class LoginComponent {
     let user = new User(this.registerName, this.registerEmail, this.registerPassword);
 
     if (result) {
-      console.log("El usuario ya esta registrado");
+      console.log("sign up failed: user already registred");
+      this.signUpMessage = ''
+      this.signUpMessage = 'The user has already registered'
+
     } else {
       this.userVerification.addUser(user).subscribe(
         response => {
           console.log(typeof user.monthlyBudget)
           this.userVariable.setUser(user, this.userId)
           console.log('Usuario registrado con éxito:', response);
+          this.signUpMessage = ''
           this.router.navigate(['/home'])
         },
         error => {
           console.error('Error al registrar usuario:', error);
+          this.signUpMessage = ''
+          this.signUpMessage = 'An error has occurred while registering your user, please try again later'
         }
       );
     }

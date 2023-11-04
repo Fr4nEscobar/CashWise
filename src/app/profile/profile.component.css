@@ -2,7 +2,7 @@
     position: absolute;
     height: 45vw;
     width: 40vw;
-    background-color: #272927;
+    background-color: #141414;
     border-radius: 1rem;
     top: 50%;
     left: 50%;
@@ -11,7 +11,7 @@
 }
 
 #container::-webkit-scrollbar{
-    background: #272927;
+    background: #141414;
     width: 0.5rem;
     border-top-right-radius: 3rem;
     border-bottom-right-radius: 3rem;
@@ -20,7 +20,7 @@
   
 #container::-webkit-scrollbar-thumb{
     appearance: none;
-    background-color: #667972;
+    background-color: #fff;
     border-radius: 2rem;
     border-top-right-radius: 3rem;
     border-bottom-right-radius: 3rem;
@@ -31,12 +31,11 @@
     flex-direction: row;
     padding-left: 2rem;
     padding-right: 2rem;
-    color: #d0d7d0;
-    font-weight: bold;
+    color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-content: space-between;
-    padding-top: 2.7rem;
-    padding-bottom: 2.7rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .data label {
@@ -45,26 +44,32 @@
 
 .data input {
     text-align: center;
+    background-color: #141414;
     width: 15rem;
     box-shadow: none;
-    color: #d0d7d0;
-    font-weight: bold;
+    color: #fff;
     border-radius: 1rem;
-    border: 1px solid #667972;
+    border: 1px solid #fff;
+    padding: 0.5rem;
+}
+
+.data input:hover {
+    transform: scale(101%);
+}
+
+.data input:focus {
+    border-color: #86c232;
+    outline: none;
 }
 
 .data input::placeholder {
     text-align: center;
 }
 
-input:focus {
-    outline: none;
-}
-
 .optionInput {
-    background-color: #272927;
+    background-color: #141414;
     border-radius: 0.4rem;
-    border-color: #464646;
+    border-color: #fff;
     border-width: 0.1rem;
 }
 
@@ -72,24 +77,24 @@ hr {
     width: 95%;
     border-radius: 2rem;
     border-width: 0.1rem;
-    background-color: #2f312f;
-    border-color: #2f312f;
+    background-color: #141414;
+    color: #141414;
+    border-color: #86c232;
     box-shadow: 0 0 0 0rem;
 }
 
 button {
-    width: 25%;
-    height: 3rem;
-    border-radius: 50px;
-    margin-top: 2rem;
-    background-color: #667972;
-    border: none;
-    align-items: center;
-    color: black;
-    font-size: medium;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 3rem;
+    box-shadow: 0 1px 1px;
+    border: 1px solid #86c232;
+    background: #86c232;
+    color: #fff;
+    font-size: 0.8rem;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    padding: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
     
 }
 
@@ -99,27 +104,29 @@ button {
     justify-content: center;
 }
 
-button:hover {
-    background-color: #465a65;
+button:active {
+    transform: scale(.95);
 }
 
 .data select {
     appearance: none;
+    background-color: #141414;
     text-align: center;
-    width: 15rem;
+    width: 16rem;
     box-shadow: none;
-    color: #d0d7d0;
-    font-weight: bold;
+    color: #fff;
     border-radius: 1rem;
-    border: 1px solid #667972;
+    border: 1px solid #fff;
+    padding: 0.5rem;
 }
 
-select:focus {
+.data select:hover {
+    transform: scale(101%);
+}
+
+.data select:focus {
+    border-color: #86c232;
     outline: none;
-}
-
-select:hover {
-    caret-color: #667972;
 }
 
 select::-ms-expand {

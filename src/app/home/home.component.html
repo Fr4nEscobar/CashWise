@@ -2,12 +2,12 @@
   <section class="budgetData">
     <section class="budgetAndSpend">
       <div class="monthly">
-        <p id="monthlyBudget">MONTHLY BUDGET: {{ user.monthlyBudget }}</p>
+        <p id="monthlyBudget">Monthly Budget: {{ user.monthlyBudget }}</p>
       </div>
 
       <h2 id="minus">-</h2>
       <div class="monthly">
-        <p id="monthlySpend">MONTHLY SPEND: {{ user.monthlySpend }}</p>
+        <p id="monthlySpend">Monthly Spend: {{ user.monthlySpend }}</p>
       </div>
     </section>
 
@@ -33,8 +33,8 @@
     <form id="transactionForm" #transactionForm="ngForm" (ngSubmit)="addTransaction()" *ngIf="showForm">
       <label for="type">Type:</label>
       <select name="type" id="type" [(ngModel)]="transType" (click)="changeParticipant()" required>
-        <option value="income">INCOME</option>
-        <option value="outcome">OUTCOME</option>
+        <option value="income">Income</option>
+        <option value="outcome">Outcome</option>
       </select>
       <label for="description">Description:</label>
       <input type="text" id="description" [(ngModel)]="transDescp" name="description" required>
@@ -44,13 +44,13 @@
       <input type="date" id="date" [(ngModel)]="transDate" name="date" required>
       <label for="category">Category:</label>
       <select name="category" id="category" [(ngModel)]="transCat">
-        <option value="market">MARKET</option>
-        <option value="services">SERVICES</option>
-        <option value="shopping">SHOPPING</option>
-        <option value="transport">TRANSPORT</option>
-        <option value="gastronomy">GASTRONOMY</option>
-        <option value="tourism">TOURISM</option>
-        <option value="noCategory" selected>NO CATEGORY</option>
+        <option value="market">Market</option>
+        <option value="services">Servicies</option>
+        <option value="shopping">Shopping</option>
+        <option value="transport">Transport</option>
+        <option value="gastronomy">Gastronomy</option>
+        <option value="tourism">Tourism</option>
+        <option value="noCategory" selected>Others</option>
       </select>
       <label for="participant">{{participant}}</label>
       <input type="text" id="participant" [(ngModel)]="transParticipant" name="participant"> 
