@@ -172,18 +172,59 @@
     margin-bottom: 0.5rem;
 }
 
-.expandTransfer .btnDelete{
+.btnDelete{
     order: 6;
+    background-color: transparent;
+    border: none;
+    margin-left: 0.75rem;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+
 }
-.expandTransfer .btnEdit{
+
+.btnDelete:active {
+    transform: scale(.95);
+}
+
+.btnEdit{
     order: 6;
+    background-color: transparent;
+    border: none;
+    margin-right: 0.75rem;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+}
+
+.btnEdit:active {
+    transform: scale(.95);
+}
+
+.btnDelete img {
+    height: 100%;
+}
+
+.btnEdit img {
+    height: 100%;
 }
 
 .ocultTransfer {
     display: none;
 }
 
-#paymentForm{
+#buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.expandTransfer #buttons {
+    order: 6;
+}
+
+form{
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -194,7 +235,7 @@
     padding-top: 0.5rem;
   }
   
-  #paymentForm input{
+  form input{
     text-align: center;
     background-color: #141414;
     border-radius: 1rem;
@@ -208,15 +249,15 @@
     padding: 0.5rem;
   }
 
-    #paymentForm input:hover {
+  form input:hover {
         transform: scale(101%);
     }
 
-    #paymentForm input:focus {
+    form input:focus {
         border-color: #86c232;
     }
   
-  #paymentForm select{
+    form select{
     background-color: #141414;
     border-radius: 1rem;
     color: #fff;
@@ -232,11 +273,11 @@
     padding: 0.5rem;
   }
 
-  #paymentForm select:hover {
+  form select:hover {
     transform: scale(101%);
 }
 
-#paymentForm select:focus {
+form select:focus {
     border-color: #86c232;
 }
 
@@ -266,4 +307,5 @@
   #addPayment:active{
     background-color: #1d1d1d;
   }
+
 

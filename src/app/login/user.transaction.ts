@@ -1,13 +1,13 @@
 export class Transaction {
     description?: string;
-    date?: Date;
+    date?: string;
     amount?: number;
     category?: string;
     comment?: string;
     type?: string
     participant?: string
 
-    constructor(description: string, date: Date, amount: number, category: string, comment: string, type: string, participant: string){
+    constructor(description: string, date: string, amount: number, category: string, comment: string, type: string, participant: string){
         this.description = description;
         this.date = date;
         this.amount = amount;
@@ -20,14 +20,14 @@ export class Transaction {
 
 export class Payment {
     description?: string;
-    date?: Date;
+    date?: string;
     amount?: number;
     category?: string;
     comment?: string;
     recurrent?: boolean = false
     participant?: string
 
-    constructor(description: string, date: Date, amount: number, category: string, comment: string, recurrent: boolean, participant: string){
+    constructor(description: string, date: string, amount: number, category: string, comment: string, recurrent: boolean, participant: string){
         this.description = description;
         this.date = date;
         this.amount = amount;

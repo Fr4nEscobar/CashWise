@@ -6,7 +6,7 @@
       </button>
     </section>
     <section id="listContainer">
-      <ul id="paymentsList" *ngIf="!showForm">
+      <ul id="paymentsList" *ngIf="showList">
         <li
           class="paymentItem"
           [ngClass]="{ expandTransfer: clickedIndex === i }"
@@ -23,9 +23,10 @@
           <p class="dateT" *ngIf="clickedIndex === i">Fecha:</p>
           <p class="categoryT" *ngIf="clickedIndex === i">Category:</p>
           <p class="commentT" *ngIf="clickedIndex === i">Comment:</p>
-          <button *ngIf="clickedIndex === i" (click)="deletePayment(p)" class="btnDelete">Delete</button>
-          <button *ngIf="clickedIndex === i" (click)="editPayment(p)" class="btnEdit">Edit</button>
-
+          <section id="buttons">
+            <button *ngIf="clickedIndex === i" (click)="editPayment(i)" class="btnEdit"><img src="./../../assets/icons/9edit.png"></button>
+            <button *ngIf="clickedIndex === i" (click)="deletePayment(p)" class="btnDelete"><img src="./../../assets/icons/10done.png"></button>
+          </section>
         </li>
       </ul>
       <form
@@ -55,19 +56,19 @@
         <input
           type="date"
           id="date"
-          [(ngModel)]="payDate"
+          [(ngModel)]="date"
           name="date"
           required
         />
         <label for="category">Category:</label>
         <select name="category" id="category" [(ngModel)]="payCat">
-          <option value="market">Market</option>
-          <option value="services">Servicies</option>
-          <option value="shopping">Shopping</option>
-          <option value="transport">Transport</option>
-          <option value="gastronomy">Gastronomy</option>
-          <option value="tourism">Tourism</option>
-          <option value="noCategory" selected>Others</option>
+          <option value="Market">Market</option>
+          <option value="Services">Services</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Transport">Transport</option>
+          <option value="Gastronomy">Gastronomy</option>
+          <option value="Tourism">Tourism</option>
+          <option value="Others" selected>Others</option>
         </select>
         <label for="participant">Receiver</label>
         <input
@@ -89,6 +90,70 @@
           <option value="false">No</option>
         </select>
         <button type="submit" id="addPayment">Add</button>
+      </form>
+      <form
+        id="editPaymentForm"
+        #paymentForm="ngForm"
+        *ngIf="showEdit"
+      >
+        <label for="description">Description:</label>
+        <input
+          type="text"
+          id="description"
+          [(ngModel)]="editPayDescp"
+          name="description"
+          required
+        />
+        <label for="amount">Amount:</label>
+        <input
+          type="number"
+          name="amount"
+          id="amount"
+          [(ngModel)]="editPayAmount"
+          name="amount"
+          required
+        />
+        <label for="date">Date:</label>
+        <input
+          type="date"
+          id="date"
+          [(ngModel)]="editDate"
+          name="date"
+          required
+        />
+        <label for="category">Category:</label>
+        <select name="category" id="category" [(ngModel)]="editPayCat">
+          <option value="Market">Market</option>
+          <option value="Services">Services</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Transport">Transport</option>
+          <option value="Gastronomy">Gastronomy</option>
+          <option value="Tourism">Tourism</option>
+          <option value="Others" selected>Others</option>
+        </select>
+        <label for="participant">Receiver</label>
+        <input
+          type="text"
+          id="participant"
+          [(ngModel)]="editPayParticipant"
+          name="participant"
+        />
+        <label for="comment">Comments:</label>
+        <input type="text" id="comment" [(ngModel)]="editPayComm" name="comment" />
+        <label for="recurrent">Recurrent:</label>
+        <select
+          name="recurrent"
+          id="recurrent"
+          [(ngModel)]="editPayRecurrent"
+          required
+        >
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+        <section id="buttons">
+          <button (click)="notSaveChanges()" class="btnEdit"><img src="./../../assets/icons/7delete.png"></button>
+          <button (click)="saveChanges()" class="btnDelete"><img src="./../../assets/icons/10done.png"></button>
+        </section>
       </form>
     </section>
   </section>

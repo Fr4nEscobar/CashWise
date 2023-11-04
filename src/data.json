@@ -446,10 +446,91 @@
           "comment": "cuota de la academia",
           "type": "outcome",
           "participant": "SOLUM"
+        },
+        {
+          "description": "Cuota alimentaria",
+          "date": "2023-11-04T15:27:01.299Z",
+          "amount": 30000,
+          "category": "noCategory",
+          "comment": "la comida del nene",
+          "type": "outcome",
+          "participant": "Pancho"
+        },
+        {
+          "description": "Luz",
+          "date": "2023-11-04T15:39:50.718Z",
+          "amount": 10000,
+          "category": "services",
+          "comment": "impuestos luz",
+          "type": "outcome",
+          "participant": "EDEA"
+        },
+        {
+          "description": "Gas",
+          "date": "2023-11-04T15:52:57.956Z",
+          "amount": 5000,
+          "category": "services",
+          "comment": "asf",
+          "type": "outcome",
+          "participant": "Camuzzi"
+        },
+        {
+          "description": "Gas",
+          "date": "2023-11-04T15:53:27.887Z",
+          "amount": 5000,
+          "category": "services",
+          "comment": "asf",
+          "type": "outcome",
+          "participant": "Camuzzi"
+        },
+        {
+          "description": "Plata en la calle",
+          "date": "Wed Nov 01 2023",
+          "amount": 20000,
+          "category": "noCategory",
+          "comment": "me encontre 20 lucas en la calle",
+          "type": "income",
+          "participant": "Alguien"
+        },
+        {
+          "description": "Gasas",
+          "date": "Thu Nov 02 2023",
+          "amount": 250,
+          "category": "noCategory",
+          "comment": "compre gasas en la farmacia",
+          "type": "outcome",
+          "participant": "Farmacity"
+        },
+        {
+          "description": "Butter Toffee",
+          "date": "Sun Nov 05 2023",
+          "amount": 50,
+          "category": "noCategory",
+          "comment": "re rico",
+          "type": "outcome",
+          "participant": "Kiosko"
+        },
+        {
+          "description": "Chicle",
+          "date": "Sun Nov 05 2023",
+          "amount": 50,
+          "category": "market",
+          "comment": "mascando",
+          "type": "outcome",
+          "participant": "Kiosko"
+        },
+        {
+          "description": "Chupetín",
+          "date": "Fri Nov 03 2023",
+          "amount": 75,
+          "category": "market",
+          "comment": "chupeteeee",
+          "type": "outcome",
+          "participant": "Kiosko"
         }
       ],
-      "monthlyBudget": 40000,
-      "monthlySpend": 19500,
+      "monthlyBudget": 60000,
+      "monthlySpend": 59925,
       "preferredCurrency": "ARS",
       "payments": [
         {
@@ -496,9 +577,118 @@
           "category": "noCategory",
           "comment": "cuota de la academia",
           "participant": "SOLUM"
+        },
+        {
+          "recurrent": "true",
+          "description": "Cuota alimentaria",
+          "date": "2023-12-07T00:00:00.000Z",
+          "amount": 30000,
+          "category": "noCategory",
+          "comment": "la comida del nene",
+          "participant": "Pancho"
+        },
+        {
+          "recurrent": "true",
+          "description": "Luz",
+          "date": "2023-11-08",
+          "amount": 10000,
+          "category": "services",
+          "comment": "impuestos luz",
+          "participant": "EDEA"
+        },
+        {
+          "recurrent": "true",
+          "description": "Luz",
+          "date": "2023-12-08T00:00:00.000Z",
+          "amount": 10000,
+          "category": "services",
+          "comment": "impuestos luz",
+          "participant": "EDEA"
+        },
+        {
+          "recurrent": "true",
+          "description": "Gas",
+          "date": "Fri Jan 05 2024",
+          "amount": 5000,
+          "category": "services",
+          "comment": "asf",
+          "participant": "Camuzzi"
+        },
+        {
+          "recurrent": "true",
+          "description": "Gas",
+          "date": "Fri Jan 05 2024",
+          "amount": 5000,
+          "category": "services",
+          "comment": "asf",
+          "participant": "Camuzzi"
+        },
+        {
+          "recurrent": "false",
+          "description": "Facultad",
+          "date": "Wed Dec 31 1969",
+          "amount": 15000,
+          "category": "noCategory",
+          "comment": "azdsfhjazsdjzdjfzd",
+          "participant": "tuviejq"
+        },
+        {
+          "recurrent": "false",
+          "description": "asgasg",
+          "date": "Invalid Date",
+          "amount": 12,
+          "category": "tourism",
+          "comment": "af",
+          "participant": "hdfads"
+        },
+        {
+          "recurrent": "true",
+          "description": "Galo crack",
+          "date": "2023-06-06",
+          "amount": 5,
+          "category": "Others",
+          "comment": "tu vieja",
+          "participant": "Panchote"
+        },
+        {
+          "recurrent": "true",
+          "description": "ASDGSDGSDag",
+          "date": "2023-06-06",
+          "amount": 50,
+          "category": "Others",
+          "comment": "sdhsdh",
+          "participant": "asdfhadhf"
         }
       ],
-      "notifications": [],
+      "notifications": [
+        {
+          "description": "Luz",
+          "issueDate": "2023-11-04T15:46:20.453Z",
+          "timeSince": 0,
+          "timeLeft": 4,
+          "participant": "EDEA",
+          "amount": 10000,
+          "active": true
+        },
+        {
+          "description": null,
+          "issueDate": "2023-11-04T18:15:05.261Z",
+          "timeSince": 0,
+          "timeLeft": -19665,
+          "participant": null,
+          "amount": null,
+          "active": true
+        },
+        {
+          "description": "Facultad",
+          "issueDate": "2023-11-04T18:50:57.545Z",
+          "timeSince": 0,
+          "timeLeft": -19665,
+          "participant": "tuviejq",
+          "amount": 15000,
+          "active": true
+        }
+      ],
       "id": 7
     }
   ]

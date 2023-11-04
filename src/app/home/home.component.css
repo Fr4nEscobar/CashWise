@@ -305,3 +305,15 @@
 #addTransaction:active{
   background-color: #1d1d1d;
 }
+
+#date::-webkit-calendar-picker-indicator {
+  background-color: transparent;
+  color: #fff;
+}
+
+#date::-webkit-calendar-picker-indicator::-webkit-calendar-event {
+  background-color: #141414;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+}

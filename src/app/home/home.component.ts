@@ -65,12 +65,15 @@ export class HomeComponent {
 
   addTransaction(){
     let newTrans: Transaction
+    let newDate = new Date(this.transDate)
+    newDate.setDate(newDate.getDate()+1)
+    let payDate = newDate.toDateString()
     if(this.transactionForm.valid) {
       if(this.transType==='income'){
-        newTrans = new Transaction(this.transDescp, this.transDate, this.transAmount, this.transCat, this.transComm, this.transType, this.transParticipant)
+        newTrans = new Transaction(this.transDescp, payDate, this.transAmount, this.transCat, this.transComm, this.transType, this.transParticipant)
         this.user.monthlyBudget! = this.user.monthlyBudget! + this.transAmount
       }else{
-        newTrans = new Transaction(this.transDescp, this.transDate, this.transAmount, this.transCat, this.transComm, this.transType, this.transParticipant)
+        newTrans = new Transaction(this.transDescp, payDate, this.transAmount, this.transCat, this.transComm, this.transType, this.transParticipant)
         this.user.monthlySpend! = this.user.monthlySpend! + this.transAmount
       }
       this.transactions.push(newTrans)
@@ -92,5 +95,13 @@ export class HomeComponent {
       error => {
         console.log('El usuario no se puedo actualizar:', error)
       })
+  }
+
+  getCurrentDate(): string {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = (today.getMonth() + 1).toString().padStart(2, '0');
+    const day = today.getDate().toString().padStart(2, '0');
+    return `${year}-${month}-${day}`;
   }
 }
