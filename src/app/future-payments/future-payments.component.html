@@ -15,6 +15,7 @@
         >
           <p class="date">{{ p.date }}</p>
 
+          
           <h4 class="description">{{ p.description }}</h4>
           <p class="amount">{{ user.preferredCurrency }}: {{ p.amount }}</p>
           <p class="category" *ngIf="clickedIndex === i">{{ p.category }}</p>
@@ -22,6 +23,9 @@
           <p class="dateT" *ngIf="clickedIndex === i">Fecha:</p>
           <p class="categoryT" *ngIf="clickedIndex === i">Category:</p>
           <p class="commentT" *ngIf="clickedIndex === i">Comment:</p>
+          <button *ngIf="clickedIndex === i" (click)="deletePayment(p)" class="btnDelete">Delete</button>
+          <button *ngIf="clickedIndex === i" (click)="editPayment(p)" class="btnEdit">Edit</button>
+
         </li>
       </ul>
       <form

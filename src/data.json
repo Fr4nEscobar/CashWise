@@ -347,16 +347,115 @@
           "comment": "Otra vez me da guita la nona",
           "type": "income",
           "participant": "Abuela"
+        },
+        {
+          "description": "Facultad",
+          "date": "2023-11-04T13:58:42.433Z",
+          "amount": 10000,
+          "category": "services",
+          "comment": "Cuota de la Facu",
+          "type": "outcome",
+          "participant": "UTN"
+        },
+        {
+          "description": "Cuota alimentaria",
+          "date": "2023-11-04T13:59:58.557Z",
+          "amount": 25000,
+          "category": "noCategory",
+          "comment": "la comida del nene",
+          "type": "outcome",
+          "participant": "Ex"
+        },
+        {
+          "description": "a ver que onda",
+          "date": "2023-11-04T14:15:00.298Z",
+          "amount": 30,
+          "category": "gastronomy",
+          "comment": "nefasta",
+          "type": "outcome",
+          "participant": "Botanico"
+        },
+        {
+          "description": "el gordo recurrente",
+          "date": "2023-11-04T14:15:13.518Z",
+          "amount": 1000,
+          "category": "services",
+          "comment": "nada",
+          "type": "outcome",
+          "participant": "el gordo R"
+        },
+        {
+          "description": "Gym",
+          "date": "2023-11-04T14:22:26.162Z",
+          "amount": 9500,
+          "category": "services",
+          "comment": "Saladito eh (pero no tanto como Forza)",
+          "type": "outcome",
+          "participant": "Meta"
+        },
+        {
+          "description": "Jiu Jitsu",
+          "date": "2023-11-04T14:23:21.931Z",
+          "amount": 10000,
+          "category": "noCategory",
+          "comment": "cuota de la academia",
+          "type": "outcome",
+          "participant": "SOLUM"
+        },
+        {
+          "description": "Jiu Jitsu",
+          "date": "2023-11-04T14:23:50.263Z",
+          "amount": 10000,
+          "category": "noCategory",
+          "comment": "cuota de la academia",
+          "type": "outcome",
+          "participant": "SOLUM"
+        },
+        {
+          "description": "Jiu Jitsu",
+          "date": "2023-11-04T14:31:30.476Z",
+          "amount": 10000,
+          "category": "noCategory",
+          "comment": "cuota de la academia",
+          "type": "outcome",
+          "participant": "SOLUM"
+        },
+        {
+          "description": "Jiu Jitsu",
+          "date": "2023-11-04T14:34:20.626Z",
+          "amount": 10000,
+          "category": "noCategory",
+          "comment": "cuota de la academia",
+          "type": "outcome",
+          "participant": "SOLUM"
+        },
+        {
+          "description": "Gym",
+          "date": "2023-11-04T14:38:32.909Z",
+          "amount": 9500,
+          "category": "services",
+          "comment": "Saladito eh (pero no tanto como Forza)",
+          "type": "outcome",
+          "participant": "Meta"
+        },
+        {
+          "description": "Jiu Jitsu",
+          "date": "2023-11-04T14:39:21.173Z",
+          "amount": 10000,
+          "category": "noCategory",
+          "comment": "cuota de la academia",
+          "type": "outcome",
+          "participant": "SOLUM"
         }
       ],
       "monthlyBudget": 40000,
-      "monthlySpend": 0,
+      "monthlySpend": 19500,
       "preferredCurrency": "ARS",
       "payments": [
         {
           "recurrent": "true",
           "description": "Gym",
-          "date": "2023-11-05",
+          "date": "2023-12-05T00:00:00.000Z",
           "amount": 9500,
           "category": "services",
           "comment": "Saladito eh (pero no tanto como Forza)",
@@ -364,44 +463,8 @@
         },
         {
           "recurrent": "true",
-          "description": "a ver que onda",
-          "date": "2023-11-04",
-          "amount": 30,
-          "category": "gastronomy",
-          "comment": "nefasta",
-          "participant": "Botanico"
-        },
-        {
-          "recurrent": "true",
-          "description": "Luz",
-          "date": "2023-11-06",
-          "amount": 15000,
-          "category": "services",
-          "comment": "luz mensual",
-          "participant": "EDEA"
-        },
-        {
-          "recurrent": "true",
-          "description": "Cuota alimentaria",
-          "date": "2023-11-04",
-          "amount": 25000,
-          "category": "noCategory",
-          "comment": "la comida del nene",
-          "participant": "Ex"
-        },
-        {
-          "recurrent": "true",
-          "description": "Facultad",
-          "date": "2023-11-04",
-          "amount": 10000,
-          "category": "services",
-          "comment": "Cuota de la Facu",
-          "participant": "UTN"
-        },
-        {
-          "recurrent": "true",
           "description": "Jiu Jitsu",
-          "date": "2023-11-04",
+          "date": "2023-12-04T00:00:00.000Z",
           "amount": 10000,
           "category": "noCategory",
           "comment": "cuota de la academia",
@@ -409,79 +472,33 @@
         },
         {
           "recurrent": "true",
-          "description": "Donaciones a la iglesia",
-          "date": "2023-11-08",
-          "amount": 15000,
-          "category": "noCategory",
-          "comment": "diezmo",
-          "participant": "Parroquia San Jorge"
-        }
-      ],
-      "notifications": [
-        {
-          "description": "Gym",
-          "issueDate": "2023-11-03T19:38:34.852Z",
-          "timeSince": 0,
-          "timeLeft": 2,
-          "participant": "Meta",
-          "amount": 9500,
-          "active": true
-        },
-        {
-          "description": "a ver que onda",
-          "issueDate": "2023-11-03T19:38:34.852Z",
-          "timeSince": 0,
-          "timeLeft": 1,
-          "participant": "Botanico",
-          "amount": 30,
-          "active": true
-        },
-        {
-          "description": "Luz",
-          "issueDate": "2023-11-03T19:38:34.852Z",
-          "timeSince": 0,
-          "timeLeft": 3,
-          "participant": "EDEA",
-          "amount": 15000,
-          "active": true
-        },
-        {
-          "description": "Cuota alimentaria",
-          "issueDate": "2023-11-03T19:38:34.852Z",
-          "timeSince": 0,
-          "timeLeft": 1,
-          "participant": "Ex",
-          "amount": 25000,
-          "active": true
-        },
-        {
-          "description": "Facultad",
-          "issueDate": "2023-11-03T19:38:34.852Z",
-          "timeSince": 0,
-          "timeLeft": 1,
-          "participant": "UTN",
-          "amount": 10000,
-          "active": true
-        },
-        {
           "description": "Jiu Jitsu",
-          "issueDate": "2023-11-03T19:38:34.852Z",
-          "timeSince": 0,
-          "timeLeft": 1,
-          "participant": "SOLUM",
+          "date": "2024-01-04T00:00:00.000Z",
           "amount": 10000,
-          "active": false
+          "category": "noCategory",
+          "comment": "cuota de la academia",
+          "participant": "SOLUM"
         },
         {
-          "description": "Donaciones a la iglesia",
-          "issueDate": "2023-11-03T19:38:34.852Z",
-          "timeSince": 0,
-          "timeLeft": 5,
-          "participant": "Parroquia San Jorge",
-          "amount": 15000,
-          "active": false
+          "recurrent": "true",
+          "description": "Gym",
+          "date": "2023-12-05T00:00:00.000Z",
+          "amount": 9500,
+          "category": "services",
+          "comment": "Saladito eh (pero no tanto como Forza)",
+          "participant": "Meta"
+        },
+        {
+          "recurrent": "true",
+          "description": "Jiu Jitsu",
+          "date": "2024-04-04T00:00:00.000Z",
+          "amount": 10000,
+          "category": "noCategory",
+          "comment": "cuota de la academia",
+          "participant": "SOLUM"
         }
       ],
+      "notifications": [],
       "id": 7
     }
   ]

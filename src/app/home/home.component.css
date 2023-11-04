@@ -44,8 +44,7 @@
 
 .transferData {
   background-color: #161616;
-  height: 100%;
-  width: 20vw;
+  height: 95%;
   border-radius: 1rem;
   margin-top: 1.25rem;
   grid-area: transferData;
@@ -55,8 +54,7 @@
 
 .graphData {
   background-color: #161616;
-  height: 100%;
-  width: 12.5vw;
+  height: 95%;
   border-radius: 1rem;
   margin-top: 1.25rem;
   grid-area: transferData;

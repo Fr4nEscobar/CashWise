@@ -172,6 +172,13 @@
     margin-bottom: 0.5rem;
 }
 
+.expandTransfer .btnDelete{
+    order: 6;
+}
+.expandTransfer .btnEdit{
+    order: 6;
+}
+
 .ocultTransfer {
     display: none;
 }
