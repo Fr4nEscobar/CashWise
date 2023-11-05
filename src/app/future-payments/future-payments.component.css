@@ -172,6 +172,8 @@
     margin-bottom: 0.5rem;
 }
 
+
+
 .btnDelete{
     order: 6;
     background-color: transparent;
@@ -218,10 +220,12 @@
     flex-direction: row;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
+    width: 0rem;
 }
 
 .expandTransfer #buttons {
     order: 6;
+    width: 5.5rem;
 }
 
 form{
@@ -308,4 +312,11 @@ form select:focus {
     background-color: #1d1d1d;
   }
 
+  .redPayment p{
+    color: #d22e2e;
+    }
+
+    .redPayment h4{
+        color: #d22e2e;
+    }
 

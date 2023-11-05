@@ -1,3 +1,5 @@
+import * as moment from "moment";
+
 export class Transaction {
     description?: string;
     date?: string;

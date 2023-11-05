@@ -4,6 +4,7 @@ import { UserVariableService } from '../user-variable.service';
 import { UserVerificationService } from '../user-verification.service';
 import { Payment } from '../login/user.transaction';
 import { Notification } from '../login/user.notifications';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-notifications',
@@ -35,7 +36,7 @@ export class NotificationsComponent {
   notificationsList() {
     if (this.payments) {
       for (let i = 0; i < this.payments.length; i++) {
-        let daysLeftDate = new Date(this.payments[i].date!);
+        let daysLeftDate = moment(this.payments[i].date!);
         let daysLeftInt = this.checkRemainingDays(daysLeftDate);
         daysLeftInt++
 
@@ -45,10 +46,11 @@ export class NotificationsComponent {
               notificacion.description === this.payments[i].description
           );
           if (!exist) {
-            let daysSinceDate = new Date()
+            let daysSinceDate = moment()
+            let daysSinceDateS = this.concatenateDate(daysSinceDate)
             let daysSinceInt = this.checkRemainingDays(daysLeftDate)
             daysSinceInt = daysSinceInt * (-1)
-            let aux = new Notification(this.payments[i].description!, daysSinceDate, daysSinceInt, daysLeftInt, this.payments[i].participant!, this.payments[i].amount!);
+            let aux = new Notification(this.payments[i].description!, daysSinceDateS, daysSinceInt, daysLeftInt, this.payments[i].participant!, this.payments[i].amount!);
             this.notifications.push(aux);
           }
         }
@@ -57,15 +59,18 @@ export class NotificationsComponent {
     this.udpateNotificationsInUser();
   }
 
-  checkRemainingDays(d: Date) {
-    let date = new Date();
+  checkRemainingDays(d: any) {
+    const currentDate = moment();
 
-    let remaining = d.getTime() - date.getTime();
-    let daysLeft = remaining / (1000 * 60 * 60 * 24);
-    let daysLeftInt: number = parseInt(daysLeft.toString(), 10);
+    currentDate.hour(23)
+    currentDate.minute(59)
     
-    return daysLeftInt;
+    const remaining = d.diff(currentDate, 'days');
+    
+    return remaining;
   }
+
+
 
   udpateNotificationsInUser() {
     this.user.notifications = this.notifications;
@@ -81,9 +86,8 @@ export class NotificationsComponent {
 
   updateNotifications() {
     this.notifications.forEach((notification) => {
-      let date = new Date(notification.issueDate!)
+      let date = moment(notification.issueDate!)
       let remainingDays = Math.abs(this.checkRemainingDays(date))
-      console.log(remainingDays)
       notification.timeSince = remainingDays;
     });
   }
@@ -95,5 +99,26 @@ export class NotificationsComponent {
         this.udpateNotificationsInUser()
       }
     });
+  }
+
+  concatenateDate(date: any){
+    let day = date.get('date')
+    let dayS = day.toString()
+    if(dayS.length===1){
+      dayS = '0'+dayS
+    }
+
+    let month = date.get('month')+1
+    let monthS = month.toString()
+    if(monthS.length===1){
+      monthS = '0'+monthS
+    }
+
+    let year = date.get('year')
+    let yearS = year.toString()
+
+    let d = yearS+'-'+monthS+'-'+dayS
+
+    return d
   }
 }

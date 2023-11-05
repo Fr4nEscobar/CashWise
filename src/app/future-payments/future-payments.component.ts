@@ -4,6 +4,7 @@ import { UserVariableService } from '../user-variable.service';
 import { Transaction, Payment } from '../login/user.transaction';
 import { UserVerificationService } from '../user-verification.service';
 import { Notification } from '../login/user.notifications'; //new
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-future-payments',
@@ -86,7 +87,7 @@ export class FuturePaymentsComponent {
     this.editPayDescp = p.description!
     this.editPayAmount = p.amount!
     console.log('p.date: ', p.date!)
-    let newDate = new Date(p.date!)
+    let newDate = moment(p.date!)
     console.log('newDate: ', newDate)
     this.editDate = this.concatenateDate(newDate);
     console.log('editDate: ', this.editDate)
@@ -131,8 +132,8 @@ export class FuturePaymentsComponent {
   }
 
   recurrentPayment(p: Payment) {
-    let date = new Date(p.date!)
-    date.setMonth(date.getMonth() + 1)
+    let date = moment(p.date!)
+    date.add(1, 'months')
     let dateS = this.concatenateDate(date)
     console.log('tipo fecha actualizada: ', typeof date)
     this.paymentsList.push(new Payment(p.description!, dateS, p.amount!, p.category!, p.comment!, p.recurrent!, p.participant!))
@@ -141,7 +142,11 @@ export class FuturePaymentsComponent {
   }
 
   paymentToTransaction(p: Payment) {
-    let newDate = new Date()
+    let newDate = moment()
+    newDate.hour(0)
+    newDate.minute(0)
+    newDate.second(0)
+    newDate.millisecond(0)
     let payDate = this.concatenateDate(newDate)
     let t = new Transaction(p.description!, payDate, p.amount!, p.category!, p.comment!, 'outcome', p.participant!)
     this.user.transactions?.push(t)
@@ -178,8 +183,11 @@ export class FuturePaymentsComponent {
 
   addPayment() {
     let newPayment: Payment;
-    let newDate = new Date(this.date)
+    console.log('Fecha formulario: ', this.date)
+    let newDate = moment(this.date)
+    console.log('Moment recien creado: ', newDate)
     let payDate = this.concatenateDate(newDate)
+    console.log('Moment string: ', payDate)
     newPayment = new Payment(
       this.payDescp,
       payDate,
@@ -208,23 +216,38 @@ export class FuturePaymentsComponent {
     );
   }
 
-  concatenateDate(date: Date){
-    let day = date.getDate()
+  calculateDays(date: string) {
+    const currentDate = moment();
+    const targetDate = moment(date);
+
+    targetDate.hour(23)
+    targetDate.minute(59)
+    
+    const days = targetDate.diff(currentDate, 'days');
+
+    return days
+  }
+
+  concatenateDate(date: any){
+    let day = date.get('date')
     let dayS = day.toString()
     if(dayS.length===1){
       dayS = '0'+dayS
     }
 
-    let month = date.getMonth()
-    let monthS = day.toString()
+    let month = date.get('month')+1
+    let monthS = month.toString()
     if(monthS.length===1){
       monthS = '0'+monthS
     }
 
-    let year = date.getFullYear()
+    let year = date.get('year')
+    let yearS = year.toString()
 
-    let d = year+'-'+monthS+'-'+dayS
+    let d = yearS+'-'+monthS+'-'+dayS
 
     return d
   }
+
+
 }

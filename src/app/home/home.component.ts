@@ -3,6 +3,7 @@ import { User } from '../login/user.model';
 import { UserVariableService } from '../user-variable.service';
 import { Transaction } from '../login/user.transaction';
 import { UserVerificationService } from '../user-verification.service';
+import * as moment from 'moment';
 
 
 
@@ -65,9 +66,8 @@ export class HomeComponent {
 
   addTransaction(){
     let newTrans: Transaction
-    let newDate = new Date(this.transDate)
-    newDate.setDate(newDate.getDate()+1)
-    let payDate = newDate.toDateString()
+    let newDate = moment(this.transDate)
+    let payDate = this.concatenateDate(newDate)
     if(this.transactionForm.valid) {
       if(this.transType==='income'){
         newTrans = new Transaction(this.transDescp, payDate, this.transAmount, this.transCat, this.transComm, this.transType, this.transParticipant)
@@ -85,6 +85,28 @@ export class HomeComponent {
     }
   }
 
+  concatenateDate(date: any){
+    let day = date.get('date')
+    let dayS = day.toString()
+    if(dayS.length===1){
+      dayS = '0'+dayS
+    }
+
+    let month = date.get('month')+1
+    let monthS = month.toString()
+    if(monthS.length===1){
+      monthS = '0'+monthS
+    }
+
+    let year = date.get('year')
+    let yearS = year.toString()
+
+    let d = yearS+'-'+monthS+'-'+dayS
+
+    return d
+  }
+
+
   udpateTransactions() {
     this.user.transactions = this.transactions
 
@@ -98,10 +120,7 @@ export class HomeComponent {
   }
 
   getCurrentDate(): string {
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = (today.getMonth() + 1).toString().padStart(2, '0');
-    const day = today.getDate().toString().padStart(2, '0');
-    return `${year}-${month}-${day}`;
+    const today = moment();
+    return this.concatenateDate(today);
   }
 }

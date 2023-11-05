@@ -9,7 +9,7 @@
       <ul id="paymentsList" *ngIf="showList">
         <li
           class="paymentItem"
-          [ngClass]="{ expandTransfer: clickedIndex === i }"
+          [ngClass]="{ expandTransfer: clickedIndex === i, redPayment: calculateDays(p.date!) < 0}"
           *ngFor="let p of user.payments; let i = index"
           (click)="expandPayment(i)"
         >
@@ -23,7 +23,7 @@
           <p class="dateT" *ngIf="clickedIndex === i">Fecha:</p>
           <p class="categoryT" *ngIf="clickedIndex === i">Category:</p>
           <p class="commentT" *ngIf="clickedIndex === i">Comment:</p>
-          <section id="buttons">
+          <section id="buttons" *ngIf="clickedIndex === i">
             <button *ngIf="clickedIndex === i" (click)="editPayment(i)" class="btnEdit"><img src="./../../assets/icons/9edit.png"></button>
             <button *ngIf="clickedIndex === i" (click)="deletePayment(p)" class="btnDelete"><img src="./../../assets/icons/10done.png"></button>
           </section>

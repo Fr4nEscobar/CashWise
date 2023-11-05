@@ -534,158 +534,41 @@
       "preferredCurrency": "ARS",
       "payments": [
         {
-          "recurrent": "true",
-          "description": "Gym",
-          "date": "2023-12-05T00:00:00.000Z",
-          "amount": 9500,
-          "category": "services",
-          "comment": "Saladito eh (pero no tanto como Forza)",
-          "participant": "Meta"
-        },
-        {
-          "recurrent": "true",
+          "recurrent": "false",
           "description": "Jiu Jitsu",
-          "date": "2023-12-04T00:00:00.000Z",
+          "date": "2023-11-07",
           "amount": 10000,
-          "category": "noCategory",
-          "comment": "cuota de la academia",
-          "participant": "SOLUM"
-        },
-        {
-          "recurrent": "true",
-          "description": "Jiu Jitsu",
-          "date": "2024-01-04T00:00:00.000Z",
-          "amount": 10000,
-          "category": "noCategory",
-          "comment": "cuota de la academia",
-          "participant": "SOLUM"
+          "category": "Others",
+          "comment": "asdfg",
+          "participant": "Solum"
         },
         {
           "recurrent": "true",
           "description": "Gym",
-          "date": "2023-12-05T00:00:00.000Z",
-          "amount": 9500,
-          "category": "services",
-          "comment": "Saladito eh (pero no tanto como Forza)",
-          "participant": "Meta"
-        },
-        {
-          "recurrent": "true",
-          "description": "Jiu Jitsu",
-          "date": "2024-04-04T00:00:00.000Z",
+          "date": "2023-11-09",
           "amount": 10000,
-          "category": "noCategory",
-          "comment": "cuota de la academia",
-          "participant": "SOLUM"
-        },
-        {
-          "recurrent": "true",
-          "description": "Cuota alimentaria",
-          "date": "2023-12-07T00:00:00.000Z",
-          "amount": 30000,
-          "category": "noCategory",
-          "comment": "la comida del nene",
-          "participant": "Pancho"
-        },
-        {
-          "recurrent": "true",
-          "description": "Luz",
-          "date": "2023-11-08",
-          "amount": 10000,
-          "category": "services",
-          "comment": "impuestos luz",
-          "participant": "EDEA"
-        },
-        {
-          "recurrent": "true",
-          "description": "Luz",
-          "date": "2023-12-08T00:00:00.000Z",
-          "amount": 10000,
-          "category": "services",
-          "comment": "impuestos luz",
-          "participant": "EDEA"
-        },
-        {
-          "recurrent": "true",
-          "description": "Gas",
-          "date": "Fri Jan 05 2024",
-          "amount": 5000,
-          "category": "services",
-          "comment": "asf",
-          "participant": "Camuzzi"
-        },
-        {
-          "recurrent": "true",
-          "description": "Gas",
-          "date": "Fri Jan 05 2024",
-          "amount": 5000,
-          "category": "services",
-          "comment": "asf",
-          "participant": "Camuzzi"
-        },
-        {
-          "recurrent": "false",
-          "description": "Facultad",
-          "date": "Wed Dec 31 1969",
-          "amount": 15000,
-          "category": "noCategory",
-          "comment": "azdsfhjazsdjzdjfzd",
-          "participant": "tuviejq"
-        },
-        {
-          "recurrent": "false",
-          "description": "asgasg",
-          "date": "Invalid Date",
-          "amount": 12,
-          "category": "tourism",
-          "comment": "af",
-          "participant": "hdfads"
-        },
-        {
-          "recurrent": "true",
-          "description": "Galo crack",
-          "date": "2023-06-06",
-          "amount": 5,
           "category": "Others",
-          "comment": "tu vieja",
-          "participant": "Panchote"
-        },
-        {
-          "recurrent": "true",
-          "description": "ASDGSDGSDag",
-          "date": "2023-06-06",
-          "amount": 50,
-          "category": "Others",
-          "comment": "sdhsdh",
-          "participant": "asdfhadhf"
+          "comment": "asdgf",
+          "participant": "Forza"
         }
       ],
       "notifications": [
         {
-          "description": "Luz",
-          "issueDate": "2023-11-04T15:46:20.453Z",
+          "description": "Jiu Jitsu",
+          "issueDate": "2023-11-05T13:40:54.332Z",
           "timeSince": 0,
-          "timeLeft": 4,
-          "participant": "EDEA",
+          "timeLeft": 0,
+          "participant": "Solum",
           "amount": 10000,
           "active": true
         },
         {
-          "description": null,
-          "issueDate": "2023-11-04T18:15:05.261Z",
+          "description": "Gym",
+          "issueDate": "2023-11-05",
           "timeSince": 0,
-          "timeLeft": -19665,
-          "participant": null,
-          "amount": null,
-          "active": true
-        },
-        {
-          "description": "Facultad",
-          "issueDate": "2023-11-04T18:50:57.545Z",
-          "timeSince": 0,
-          "timeLeft": -19665,
-          "participant": "tuviejq",
-          "amount": 15000,
+          "timeLeft": 4,
+          "participant": "Forza",
+          "amount": 10000,
           "active": true
         }
       ],
