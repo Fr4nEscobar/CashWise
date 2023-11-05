@@ -25,7 +25,7 @@
           <p class="commentT" *ngIf="clickedIndex === i">Comment:</p>
           <section id="buttons" *ngIf="clickedIndex === i">
             <button *ngIf="clickedIndex === i" (click)="editPayment(i)" class="btnEdit"><img src="./../../assets/icons/9edit.png"></button>
-            <button *ngIf="clickedIndex === i" (click)="deletePayment(p)" class="btnDelete"><img src="./../../assets/icons/10done.png"></button>
+            <button *ngIf="clickedIndex === i" (click)="paymentDone(p)" class="btnDelete"><img src="./../../assets/icons/10done.png"></button>
           </section>
         </li>
       </ul>
@@ -151,7 +151,8 @@
           <option value="false">No</option>
         </select>
         <section id="buttons">
-          <button (click)="notSaveChanges()" class="btnEdit"><img src="./../../assets/icons/7delete.png"></button>
+          <button (click)="deletePayment()" class="btnEdit"><img src="./../../assets/icons/11delete.png"></button>
+          <button (click)="notSaveChanges()" class="btnMid"><img src="./../../assets/icons/7x.png"></button>
           <button (click)="saveChanges()" class="btnDelete"><img src="./../../assets/icons/10done.png"></button>
         </section>
       </form>

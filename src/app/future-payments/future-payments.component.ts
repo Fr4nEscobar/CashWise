@@ -58,10 +58,9 @@ export class FuturePaymentsComponent {
 
     this.paymentsList = this.user.payments!;
     this.notifications = this.user.notifications!;
-    this.paymentsCheck()
   }
 
-  deletePayment(p: Payment) {
+  paymentDone(p: Payment) {
     let index = this.user.payments!.indexOf(p);
     if (index !== -1) {
       this.paymentToTransaction(p)
@@ -74,11 +73,20 @@ export class FuturePaymentsComponent {
       this.user.payments!.splice(index, 1)
 
     }
-  }
-
-  paymentsCheck() {
     
   }
+
+
+  deletePayment(){
+    let p = this.paymentsList[this.index]
+    this.paymentsList.splice(this.index, 1)
+    this.deleteNotifications(p)
+    this.showEdit = false;
+    this.showList = true;
+    this.textoBTrans = 'New payment';
+  }
+
+
 
   editPayment(i: number) {
     let p = this.paymentsList[i]

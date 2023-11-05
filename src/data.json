@@ -534,41 +534,23 @@
       "preferredCurrency": "ARS",
       "payments": [
         {
-          "recurrent": "false",
-          "description": "Jiu Jitsu",
-          "date": "2023-11-07",
-          "amount": 10000,
-          "category": "Others",
-          "comment": "asdfg",
-          "participant": "Solum"
-        },
-        {
           "recurrent": "true",
-          "description": "Gym",
-          "date": "2023-11-09",
-          "amount": 10000,
-          "category": "Others",
-          "comment": "asdgf",
-          "participant": "Forza"
+          "description": "Pizza",
+          "date": "2023-11-06",
+          "amount": 322,
+          "category": "Gastronomy",
+          "comment": "n",
+          "participant": "qqqq"
         }
       ],
       "notifications": [
         {
-          "description": "Jiu Jitsu",
-          "issueDate": "2023-11-05T13:40:54.332Z",
-          "timeSince": 0,
-          "timeLeft": 0,
-          "participant": "Solum",
-          "amount": 10000,
-          "active": true
-        },
-        {
-          "description": "Gym",
+          "description": "Pizza",
           "issueDate": "2023-11-05",
           "timeSince": 0,
-          "timeLeft": 4,
-          "participant": "Forza",
-          "amount": 10000,
+          "timeLeft": 1,
+          "participant": "qqqq",
+          "amount": 322,
           "active": true
         }
       ],
