@@ -1,4 +1,4 @@
-.aside{
+.aside {
     width: 4rem;
     height: 100vh;
     box-sizing: border-box;
@@ -14,16 +14,16 @@
     float: left;
 }
 
-.aside:hover{
+.aside:hover {
     width: 13.5rem;
 }
 
-.aside:hover > .item > .text{
+.aside:hover>.item>.text {
     opacity: 1;
     margin-left: 0;
 }
 
-hr{
+hr {
     height: 0.03rem;
     color: #86c232;
     opacity: 100%;
@@ -39,11 +39,11 @@ hr{
     margin-top: 0;
 }
 
-#topDivider{
+#topDivider {
     margin-bottom: 1rem;
 }
 
-#mainDivider{
+#mainDivider {
     height: 0.03rem;
     color: #86c232;
     opacity: 100%;
@@ -57,18 +57,18 @@ hr{
     margin-top: none;
 }
 
-.item{
+.item {
     display: flex;
     align-items: center;
     /*margin: 20px 0;*/
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
-    
-    
+
+
 
 }
 
-.item .icon{
+.item .icon {
     width: 2rem;
     height: 2rem;
     padding-left: 1rem;
@@ -76,28 +76,28 @@ hr{
     padding-bottom: 0rem;
     flex-shrink: 0;
     fill: #424242;
-    
+
 }
 
-.item:not(#logo):hover{
+.item:not(#logo):hover {
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
 }
 
-.item:not(#logo):hover > .icon{
+.item:not(#logo):hover>.icon {
     width: 2.5rem;
     height: 2.5rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     transition: smooth 0.3s;
-    
+
 }
 
-.item:hover > hr{
+.item:hover>hr {
     margin-bottom: 0rem;
 }
 
-.item .text{
+.item .text {
     opacity: 0;
     transition: ease-in-out 0.3;
     transition-delay: .2s;
@@ -105,14 +105,14 @@ hr{
     white-space: nowrap;
 }
 
-#logo{
+#logo {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 125%;
 
 }
 
-#logo .icon{
+#logo .icon {
     width: 2.5rem;
     height: 2.5rem;
     padding-left: 0.75rem;
@@ -120,46 +120,50 @@ hr{
 }
 
 #logOut {
+    color: #141414;
     position: absolute;
     bottom: 0;
+    font-weight: bolder;
+    font-size: 1.1rem;
 }
 
 
 
-/*   #divImage{
+#divImage {
     height: 100%;
     width: 4rem;
     transition: width ease-in-out 0.3s;
-    
-} 
+
+}
 
 
-  
 
-#divImage img{
+
+#divImage img {
     height: 100%;
-    overflow-x:hidden;
-} 
+    overflow-x: hidden;
+}
 
 .aside:hover #divImage {
     width: 13.5rem;
-} */
+}
 
-#divImage {
+/* #divImage {
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
+     align-items: center; 
     width: 100%;
     height: 100%;
     transition: width ease-in-out 0.3s;
-  }
-  
-  #divImage img {
-    width: 100px; height: auto; 
-  }
-  
-  .aside:hover {
+}
+
+#divImage img {
+    width: 100px;
+    height: auto;
+}
+
+.aside:hover {
     width: 13.5rem;
-  }
+} */
