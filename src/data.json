@@ -527,33 +527,32 @@
           "comment": "chupeteeee",
           "type": "outcome",
           "participant": "Kiosko"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-06",
+          "amount": 322,
+          "category": "Gastronomy",
+          "comment": "n",
+          "type": "outcome",
+          "participant": "qqqq"
         }
       ],
       "monthlyBudget": 60000,
-      "monthlySpend": 59925,
+      "monthlySpend": 60247,
       "preferredCurrency": "ARS",
       "payments": [
         {
           "recurrent": "true",
           "description": "Pizza",
-          "date": "2023-11-06",
+          "date": "2023-12-04",
           "amount": 322,
           "category": "Gastronomy",
           "comment": "n",
           "participant": "qqqq"
         }
       ],
-      "notifications": [
-        {
-          "description": "Pizza",
-          "issueDate": "2023-11-05",
-          "timeSince": 0,
-          "timeLeft": 1,
-          "participant": "qqqq",
-          "amount": 322,
-          "active": true
-        }
-      ],
+      "notifications": [],
       "id": 7
     }
   ]

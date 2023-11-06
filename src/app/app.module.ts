@@ -15,6 +15,8 @@ import { DetailsComponent } from './details/details.component';
 import { FuturePaymentsComponent } from './future-payments/future-payments.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
     
   ],
   providers: [CargarScriptsService],

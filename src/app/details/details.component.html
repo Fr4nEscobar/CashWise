@@ -17,6 +17,7 @@
                     <p class="commentT" *ngIf="clickedIndex === i">Comment:</p>
                 </li>
             </ul>
+            <button (click)="exportToPDF()"></button>
             <ul id="incomeList" *ngIf="incomeButtonOn">
                 <li class="transferItem" [ngClass]="{'expandTransfer': clickedIndex === i}" *ngFor="let t of incomeList; let i = index" (click)="expandTransfer(i)">
                     <p class="date">{{t.date}}</p>
