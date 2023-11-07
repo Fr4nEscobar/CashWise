@@ -253,3 +253,16 @@
 }
 
 
+.filter{
+ 
+    color: #141414;
+    background-color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    margin: 0.5rem;
+}
+
+.filter button:hover, button:active{
+    background-color: #333;
+}

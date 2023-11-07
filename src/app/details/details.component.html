@@ -1,4 +1,11 @@
 <div id="container" *ngIf="isData">
+    <div id="filterContainer">
+        <input class="filter" type="text" [(ngModel)]="filterDescription" placeholder="Filter by description">
+        <input class="filter" type="date" [(ngModel)]="filterStartDate" placeholder="Start Date">
+        <input class="filter" type="date" [(ngModel)]="filterEndDate" placeholder="End Date">
+        <button class="filter" (click)="applyFilters()">Apply Filters</button>
+        <button class="filter" (click)="resetFilters()">Reset Filters</button>
+      </div>
     <section id="transferList">
         <section id="buttonContainer">
             <button id="incomeButton" class="selectionButton" [ngClass]="{'buttonOn':incomeButtonOn}" (click)="clickOnIncome()">Income</button>
