@@ -5,7 +5,7 @@
             <button id="outcomeButton" class="selectionButton" [ngClass]="{'buttonOn':outcomeButtonOn}" (click)="clickOnOutcome()">Outcome</button>
         </section>
         <section id="listContainer">
-            <ul id="transfersList" *ngIf="incomeButtonOn == false && outcomeButtonOn == false">
+            <ul class="list" id="transfersList" *ngIf="incomeButtonOn == false && outcomeButtonOn == false">
                 <li class="transferItem" [ngClass]="{'expandTransfer': clickedIndex === i}" *ngFor="let t of user.transactions; let i = index" (click)="expandTransfer(i)">
                     <p class="date">{{t.date}}</p>
                     <h4 class="description">{{t.description}}</h4>
@@ -17,8 +17,7 @@
                     <p class="commentT" *ngIf="clickedIndex === i">Comment:</p>
                 </li>
             </ul>
-            <button (click)="exportToPDF()"></button>
-            <ul id="incomeList" *ngIf="incomeButtonOn">
+            <ul class="list" id="incomeList" *ngIf="incomeButtonOn">
                 <li class="transferItem" [ngClass]="{'expandTransfer': clickedIndex === i}" *ngFor="let t of incomeList; let i = index" (click)="expandTransfer(i)">
                     <p class="date">{{t.date}}</p>
                     <h4 class="description">{{t.description}}</h4>
@@ -30,7 +29,7 @@
                     <p class="commentT" *ngIf="clickedIndex === i">Comment:</p>
                 </li>
             </ul>
-            <ul id="outcomeList" *ngIf="outcomeButtonOn">
+            <ul class="list" id="outcomeList" *ngIf="outcomeButtonOn">
                 <li class="transferItem" [ngClass]="{'expandTransfer': clickedIndex === i}" *ngFor="let t of outcomeList; let i = index" (click)="expandTransfer(i)">
                     <p class="date">{{t.date}}</p>
                     <h4 class="description">{{t.description}}</h4>
@@ -42,6 +41,9 @@
                     <p class="commentT" *ngIf="clickedIndex === i">Comment:</p>
                 </li>
             </ul>
-        </section>
+        </section> 
+    </section>
+    <section id="exportContainer">
+        <button id="exportButton" (click)="exportToPDF()">Export to PDF</button>
     </section>
 </div>

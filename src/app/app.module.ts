@@ -14,6 +14,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { DetailsComponent } from './details/details.component';
 import { FuturePaymentsComponent } from './future-payments/future-payments.component';
 import { NotificationsComponent } from './notifications/notifications.component';
+import { NgChartsModule } from 'ng2-charts';
+
+
 
 
 
@@ -27,6 +30,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
     DetailsComponent,
     FuturePaymentsComponent,
     NotificationsComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -34,6 +38,8 @@ import { NotificationsComponent } from './notifications/notifications.component'
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    NgChartsModule,
+    
     
   ],
   providers: [CargarScriptsService],

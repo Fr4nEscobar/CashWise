@@ -12,29 +12,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    overflow-y: auto;
 }
-
-#container::-webkit-scrollbar{
-    background: #141414;
-    width: 0.5rem;
-    border-top-right-radius: 3rem;
-    border-bottom-right-radius: 3rem;
-
-  }
-  
-  #container::-webkit-scrollbar-thumb{
-    appearance: none;
-    background-color: #86c232;
-    border-radius: 2rem;
-    border-top-right-radius: 3rem;
-    border-bottom-right-radius: 3rem;
-  }
 
 #buttonContainer{
     display: flex;
     justify-content:space-around;
-    height: 3rem;
+    height: 2vw;
+    border-bottom: 1px solid #fff;
 }
 
 .selectionButton{
@@ -74,15 +58,66 @@
     background-color: #1d1d1d;    
 }
 
+#exportContainer{
+    display: flex;
+    justify-content:center;
+    height: 2vw;
+    border-top: 1px solid #fff;
+}
+
+#exportButton{
+    background-color: #141414;
+    color: #86c332;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
+}
+
+#exportButton:hover{
+    font-size: 0.95rem;
+    padding-top: 0.525rem;
+    padding-bottom: 0.525rem;
+  }
+  
+#exportButton:focus{
+    background-color: #1d1d1d;
+  }
+
 #listContainer{
     width: 100%;
     height: 100%;
     display: flex;
-   
     justify-content: center;
 }
 
+.list {
+    overflow-y: auto;
+    max-height: 41vw;
+}
 
+
+.list::-webkit-scrollbar{
+    background: #141414;
+    width: 0.5rem;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+
+  }
+  
+.list::-webkit-scrollbar-thumb{
+    appearance: none;
+    background-color: #86c232;
+    border-radius: 2rem;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+  }
 
 #transfersList{
     list-style: none;
@@ -92,11 +127,10 @@
     text-align: center;
     padding: 0rem;
     width: 100%;
-    border-top: 1px solid #fff;
     margin: 0rem;
+    
 
 }
-
 
 #outcomeList{
     list-style: none;
@@ -106,7 +140,6 @@
     text-align: center;
     padding: 0rem;
     width: 100%;
-    border-top: 1px solid #fff;
     margin: 0rem;
 }
 
@@ -118,7 +151,6 @@
     text-align: center;
     padding: 0rem;
     width: 100%;
-    border-top: 1px solid #fff;
     margin: 0rem;
 }
 

@@ -70,23 +70,63 @@ export class DetailsComponent {
   exportToPDF() {
     const doc = new jsPDF();
 
-    const orderedData = this.user.transactions!.map((transaction) => [
-      transaction.description!,
+    let transactionsArray = [...this.user.transactions!]
+    let totalAmount = this.calculateTotal()
+    let operator!: string
+    if(totalAmount>=0){
+      operator = '+'
+    }else{
+      operator = '-'
+      totalAmount = Math.abs(totalAmount)
+    }
+    let totalTransactions = new Transaction('', 'TOTAL', this.calculateTotal(), '', '', operator, '')
+    transactionsArray?.push(totalTransactions)
+
+    const orderedData = transactionsArray!.map((transaction) => [
       transaction.date!,
+      transaction.description!,
       transaction.category!,
       transaction.participant!,
       transaction.type!,
       transaction.amount!,
     ]);
 
+    const logoImg = new Image();
+    logoImg.src = './../../assets/icons/greenLogoLarge.png';
+
+    logoImg.onload = function () {
+    doc.addImage(logoImg, 'PNG', 14, 2, 30, 10);
+
     autoTable(doc, {
       head: [
-        ['Description', 'Date', 'Category', 'Participant', 'Type', 'Amount'],
+        ['Date', 'Description', 'Category', 'Participant', 'Type', 'Amount'],
       ],
       body: orderedData,
+      headStyles: {
+        fillColor: [134, 195, 50], 
+        textColor: [0, 0, 0] 
+      }
     });
 
-    
     doc.save('Transactions.pdf');
+    }
+
+    transactionsArray = []
+  }
+
+
+  calculateTotal(){
+    let total = 0
+    this.user.transactions!.forEach(element => {
+      if(element.type === "income"){
+        total += element.amount!
+        console.log('income')
+      }else if(element.type === "outcome"){
+        total -= element.amount!
+        console.log('outcome')
+      }
+    });
+
+    return total
   }
 }

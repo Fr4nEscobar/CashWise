@@ -217,7 +217,7 @@
           "description": "Regalo de la abuela",
           "date": "2023-10-31",
           "amount": 2000,
-          "category": "noCategory",
+          "category": "others",
           "comment": "jaja se lo rompio la vieja",
           "type": "income",
           "participant": "Abuela"
@@ -280,7 +280,7 @@
           "description": "Sueldo",
           "date": "2023-11-02",
           "amount": 25000,
-          "category": "noCategory",
+          "category": "others",
           "comment": "No paga nada el rata",
           "type": "income",
           "participant": "Boss"
@@ -298,7 +298,7 @@
           "description": "cxvxcvc",
           "date": "2022-02-03",
           "amount": 32424,
-          "category": "noCategory",
+          "category": "others",
           "comment": "daw",
           "type": "income",
           "participant": "Galotinho"
@@ -334,7 +334,7 @@
           "description": "Deuda pancho",
           "date": "2023-11-02",
           "amount": 10000,
-          "category": "noCategory",
+          "category": "others",
           "comment": "El chopan me debía guita",
           "type": "income",
           "participant": "Pancho"
@@ -343,196 +343,16 @@
           "description": "Regalo de la abuela",
           "date": "2023-11-02",
           "amount": 3000,
-          "category": "noCategory",
+          "category": "others",
           "comment": "Otra vez me da guita la nona",
           "type": "income",
           "participant": "Abuela"
         },
         {
-          "description": "Facultad",
-          "date": "2023-11-04T13:58:42.433Z",
-          "amount": 10000,
-          "category": "services",
-          "comment": "Cuota de la Facu",
-          "type": "outcome",
-          "participant": "UTN"
-        },
-        {
-          "description": "Cuota alimentaria",
-          "date": "2023-11-04T13:59:58.557Z",
-          "amount": 25000,
-          "category": "noCategory",
-          "comment": "la comida del nene",
-          "type": "outcome",
-          "participant": "Ex"
-        },
-        {
-          "description": "a ver que onda",
-          "date": "2023-11-04T14:15:00.298Z",
-          "amount": 30,
-          "category": "gastronomy",
-          "comment": "nefasta",
-          "type": "outcome",
-          "participant": "Botanico"
-        },
-        {
-          "description": "el gordo recurrente",
-          "date": "2023-11-04T14:15:13.518Z",
-          "amount": 1000,
-          "category": "services",
-          "comment": "nada",
-          "type": "outcome",
-          "participant": "el gordo R"
-        },
-        {
-          "description": "Gym",
-          "date": "2023-11-04T14:22:26.162Z",
-          "amount": 9500,
-          "category": "services",
-          "comment": "Saladito eh (pero no tanto como Forza)",
-          "type": "outcome",
-          "participant": "Meta"
-        },
-        {
-          "description": "Jiu Jitsu",
-          "date": "2023-11-04T14:23:21.931Z",
-          "amount": 10000,
-          "category": "noCategory",
-          "comment": "cuota de la academia",
-          "type": "outcome",
-          "participant": "SOLUM"
-        },
-        {
-          "description": "Jiu Jitsu",
-          "date": "2023-11-04T14:23:50.263Z",
-          "amount": 10000,
-          "category": "noCategory",
-          "comment": "cuota de la academia",
-          "type": "outcome",
-          "participant": "SOLUM"
-        },
-        {
-          "description": "Jiu Jitsu",
-          "date": "2023-11-04T14:31:30.476Z",
-          "amount": 10000,
-          "category": "noCategory",
-          "comment": "cuota de la academia",
-          "type": "outcome",
-          "participant": "SOLUM"
-        },
-        {
-          "description": "Jiu Jitsu",
-          "date": "2023-11-04T14:34:20.626Z",
-          "amount": 10000,
-          "category": "noCategory",
-          "comment": "cuota de la academia",
-          "type": "outcome",
-          "participant": "SOLUM"
-        },
-        {
-          "description": "Gym",
-          "date": "2023-11-04T14:38:32.909Z",
-          "amount": 9500,
-          "category": "services",
-          "comment": "Saladito eh (pero no tanto como Forza)",
-          "type": "outcome",
-          "participant": "Meta"
-        },
-        {
-          "description": "Jiu Jitsu",
-          "date": "2023-11-04T14:39:21.173Z",
-          "amount": 10000,
-          "category": "noCategory",
-          "comment": "cuota de la academia",
-          "type": "outcome",
-          "participant": "SOLUM"
-        },
-        {
-          "description": "Cuota alimentaria",
-          "date": "2023-11-04T15:27:01.299Z",
-          "amount": 30000,
-          "category": "noCategory",
-          "comment": "la comida del nene",
-          "type": "outcome",
-          "participant": "Pancho"
-        },
-        {
-          "description": "Luz",
-          "date": "2023-11-04T15:39:50.718Z",
-          "amount": 10000,
-          "category": "services",
-          "comment": "impuestos luz",
-          "type": "outcome",
-          "participant": "EDEA"
-        },
-        {
-          "description": "Gas",
-          "date": "2023-11-04T15:52:57.956Z",
-          "amount": 5000,
-          "category": "services",
-          "comment": "asf",
-          "type": "outcome",
-          "participant": "Camuzzi"
-        },
-        {
-          "description": "Gas",
-          "date": "2023-11-04T15:53:27.887Z",
-          "amount": 5000,
-          "category": "services",
-          "comment": "asf",
-          "type": "outcome",
-          "participant": "Camuzzi"
-        },
-        {
-          "description": "Plata en la calle",
-          "date": "Wed Nov 01 2023",
-          "amount": 20000,
-          "category": "noCategory",
-          "comment": "me encontre 20 lucas en la calle",
-          "type": "income",
-          "participant": "Alguien"
-        },
-        {
-          "description": "Gasas",
-          "date": "Thu Nov 02 2023",
-          "amount": 250,
-          "category": "noCategory",
-          "comment": "compre gasas en la farmacia",
-          "type": "outcome",
-          "participant": "Farmacity"
-        },
-        {
-          "description": "Butter Toffee",
-          "date": "Sun Nov 05 2023",
-          "amount": 50,
-          "category": "noCategory",
-          "comment": "re rico",
-          "type": "outcome",
-          "participant": "Kiosko"
-        },
-        {
-          "description": "Chicle",
-          "date": "Sun Nov 05 2023",
-          "amount": 50,
-          "category": "market",
-          "comment": "mascando",
-          "type": "outcome",
-          "participant": "Kiosko"
-        },
-        {
-          "description": "Chupetín",
-          "date": "Fri Nov 03 2023",
-          "amount": 75,
-          "category": "market",
-          "comment": "chupeteeee",
-          "type": "outcome",
-          "participant": "Kiosko"
-        },
-        {
           "description": "Pizza",
           "date": "2023-11-06",
           "amount": 322,
-          "category": "Gastronomy",
+          "category": "gastronomy",
           "comment": "n",
           "type": "outcome",
           "participant": "qqqq"
@@ -547,7 +367,7 @@
           "description": "Pizza",
           "date": "2023-12-04",
           "amount": 322,
-          "category": "Gastronomy",
+          "category": "gastronomy",
           "comment": "n",
           "participant": "qqqq"
         }
