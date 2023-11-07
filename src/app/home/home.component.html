@@ -20,16 +20,18 @@
 
   <section class="transferData">
     <button id="newTransaction" (click)="changeContainer()">{{textoBTrans}}</button>
-    <ul class="transactionList" *ngIf="!showForm">
-      <li class="transactionItem" *ngFor="let t of user.transactions">
-        <p id="transferDesc">{{t.description}}</p>
-        <div id="transferAmount">
-          <p class="transferOperator" *ngIf="t.type === 'income'">+</p>
-          <p class="transferOperator" *ngIf="t.type === 'outcome'">-</p>
-          <p id="transferNumber">{{t.amount}}</p>
-        </div>
-      </li>
-    </ul>
+    <div id="transactionListContainer">
+      <ul class="transactionList" *ngIf="!showForm">
+        <li class="transactionItem" *ngFor="let t of user.transactions">
+          <p id="transferDesc">{{t.description}}</p>
+          <div id="transferAmount">
+            <p class="transferOperator" *ngIf="t.type === 'income'">+</p>
+            <p class="transferOperator" *ngIf="t.type === 'outcome'">-</p>
+            <p id="transferNumber">{{t.amount}}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
     <form id="transactionForm" #transactionForm="ngForm" (ngSubmit)="addTransaction()" *ngIf="showForm">
       <label for="type">Type:</label>
       <select name="type" id="type" [(ngModel)]="transType" (click)="changeParticipant()" required>
@@ -61,7 +63,74 @@
   </section>
   
   <section class="graphData">
-    <canvas id="pieChart" width="400" height="400"></canvas>
+    <div id="chartContainer">
+      <canvas id="pieChart" width="128px" height="128px"></canvas>
+    </div>
+    <table id="legendTable">
+      <tr class="legendRow">
+        <td class="legendColor">
+          <img src="./../../assets/icons/market.png">
+          <p>Market</p>
+        </td>
+        <td class="legendPercentage">
+          <p>{{shortPercentage(perMarket)}}%</p>
+        </td>
+      </tr>
+      <tr class="legendRow">
+        <td class="legendColor">
+          <img src="./../../assets/icons/services.png">
+          <p>Services</p>
+        </td>
+        <td class="legendPercentage">
+          <p>{{shortPercentage(perServices)}}%</p>
+        </td>
+      </tr>
+      <tr class="legendRow">
+        <td class="legendColor">
+          <img src="./../../assets/icons/shopping.png">
+          <p>Shopping</p>
+        </td>
+        <td class="legendPercentage">
+          <p>{{shortPercentage(perShopping)}}%</p>
+        </td>
+      </tr>
+      <tr class="legendRow">
+        <td class="legendColor">
+          <img src="./../../assets/icons/transport.png">
+          <p>Transport</p>
+        </td>
+        <td class="legendPercentage">
+          <p>{{shortPercentage(perTransport)}}%</p>
+        </td>
+      </tr>
+      <tr class="legendRow">
+        <td class="legendColor">
+          <img src="./../../assets/icons/gastronomy.png">
+          <p>Gastronomy</p>
+        </td>
+        <td class="legendPercentage">
+          <p>{{shortPercentage(perGastronomy)}}%</p>
+        </td>
+      </tr>
+      <tr class="legendRow">
+        <td class="legendColor">
+          <img src="./../../assets/icons/tourism.png">
+          <p>Tourism</p>
+        </td>
+        <td class="legendPercentage">
+          <p>{{shortPercentage(perTourism)}}%</p>
+        </td>
+      </tr>
+      <tr class="legendRow">
+        <td class="legendColor">
+          <img src="./../../assets/icons/others.png">
+          <p>Others</p>
+        </td>
+        <td class="legendPercentage">
+          <p>{{shortPercentage(perOthers)}}%</p>
+        </td>
+      </tr>
+    </table>
   </section>
 </section>
 

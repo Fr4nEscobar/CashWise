@@ -60,6 +60,7 @@ export class HomeComponent implements OnInit {
     this.transactions = this.user.transactions!
     console.log(this.transactions)
 
+    this.setGraph()
 
   }
 
@@ -67,10 +68,14 @@ export class HomeComponent implements OnInit {
     this.setGraph()
     this.percents = [this.perMarket, this.perServices, this.perShopping, this.perTransport, this.perGastronomy, this.perTourism, this.perOthers];
 
-    const colors = ['#FF5733', '#3498db', '#2ecc71' , '#A3412C' , '#198CFF', '#0AA524', '#F111E7']; // Colores para cada porcentaje
+    const colors = ['#d2c677', '#cfd277', '#b9d277' , '#a2d277' , '#84d277', '#77d288', '#77d2a8']; // Colores para cada porcentaje
 
     const canvas = document.getElementById('pieChart') as HTMLCanvasElement;
+    canvas.width = 128
+    canvas.height = 128
     const ctx: CanvasRenderingContext2D | null = canvas.getContext('2d');
+
+    
 
    if(ctx) {
     const chartOptions: ChartOptions = {
@@ -78,10 +83,11 @@ export class HomeComponent implements OnInit {
       maintainAspectRatio: false,
       plugins: {
         legend: {
-          display: true,
+          display: false,
           position: 'bottom'
         }
       }
+      
     }
 
         const chartData = {
@@ -143,6 +149,8 @@ export class HomeComponent implements OnInit {
     } else {
       alert("Required fields must be filled")
     }
+
+    this.setGraph()
   }
 
   concatenateDate(date: any) {
@@ -224,5 +232,14 @@ export class HomeComponent implements OnInit {
     this.angleGastronomy = (360 * this.perGastronomy) / 100;
     this.angleTourism = (360 * this.perTourism) / 100;
     this.angleOthers = (360 * this.perOthers) / 100;
+  }
+
+  shortPercentage(percentage: number){
+    const decimals = 2;
+
+    const shortPercentage = percentage.toFixed(decimals);
+
+    return shortPercentage
+
   }
 }

@@ -95,15 +95,16 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    overflow-y: auto;
 }
 
 .list {
-    overflow-y: auto;
+    
     max-height: 41vw;
 }
 
 
-.list::-webkit-scrollbar{
+#listContainer::-webkit-scrollbar{
     background: #141414;
     width: 0.5rem;
     border-top-right-radius: 3rem;
@@ -111,7 +112,7 @@
 
   }
   
-.list::-webkit-scrollbar-thumb{
+  #listContainer::-webkit-scrollbar-thumb{
     appearance: none;
     background-color: #86c232;
     border-radius: 2rem;
@@ -135,18 +136,19 @@
 #outcomeList{
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
     padding: 0rem;
     width: 100%;
     margin: 0rem;
+
 }
 
 #incomeList{
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
     padding: 0rem;

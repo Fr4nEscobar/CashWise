@@ -18,7 +18,12 @@
     width: 13.5rem;
 }
 
-.aside:hover>.item>.text {
+.aside:hover>#topDiv>.item>.text {
+    opacity: 1;
+    margin-left: 0;
+}
+
+.aside:hover>#botDiv>#logOut>.text {
     opacity: 1;
     margin-left: 0;
 }
@@ -121,27 +126,110 @@ hr {
 
 #logOut {
     color: #141414;
+    background-color: #86c232;
     position: absolute;
     bottom: 0;
     font-weight: bolder;
     font-size: 1.1rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
 }
 
+#logOut .text {
+    color: #141414;
+}
 
+#logOut:hover {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+#logOut .icon {
+    width: 2rem;
+    height: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0rem;
+    flex-shrink: 0;
+    fill: #424242;
+
+}
+
+#logOut:not(#logo):hover {
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+#logOut:not(#logo):hover>.icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    transition: smooth 0.3s;
+
+}
+
+#logOut:hover>hr {
+    margin-bottom: 0rem;
+}
+
+#logOut .text {
+    opacity: 0;
+    transition: ease-in-out 0.3;
+    transition-delay: .2s;
+    margin-left: 15px;
+    white-space: nowrap;
+}
+
+#bottomHr{
+    height: 0.03rem;
+    color: #86c232;
+    opacity: 100%;
+    border-top: #86c232;
+    border-color: #86c232;
+    border-right: #86c232;
+    border-left: #86c232;
+    border-bottom: #86c232;
+    border-radius: 0.01rem;
+    margin-bottom: 0rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-top: 0;
+}
+
+#topDiv {
+    height: 32vh;
+    color: #86c232;
+}
+
+#botDiv {
+    height: 8vh;
+    background-color: #86c232;
+}
 
 #divImage {
-    height: 100%;
+    height: 60vh;
     width: 4rem;
     transition: width ease-in-out 0.3s;
+    position: relative;
 
 }
 
-
-
-
 #divImage img {
-    height: 100%;
+    margin-top: auto;
     overflow-x: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    max-height: 60vh;
 }
 
 .aside:hover #divImage {

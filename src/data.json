@@ -356,10 +356,28 @@
           "comment": "n",
           "type": "outcome",
           "participant": "qqqq"
+        },
+        {
+          "description": "Chanclas",
+          "date": "2023-11-06",
+          "amount": 2000,
+          "category": "others",
+          "comment": "chanclas",
+          "type": "outcome",
+          "participant": "OpenSports"
+        },
+        {
+          "description": "Buzo",
+          "date": "2023-11-07",
+          "amount": 25000,
+          "category": "shopping",
+          "comment": "buzo canguro",
+          "type": "outcome",
+          "participant": "Nike"
         }
       ],
       "monthlyBudget": 60000,
-      "monthlySpend": 60247,
+      "monthlySpend": 87247,
       "preferredCurrency": "ARS",
       "payments": [
         {
