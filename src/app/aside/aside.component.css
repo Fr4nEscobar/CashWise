@@ -207,11 +207,15 @@ hr {
 #topDiv {
     height: 32vh;
     color: #86c232;
+    position: relative;
+    z-index: 1;
 }
 
 #botDiv {
     height: 8vh;
     background-color: #86c232;
+    position: relative;
+    z-index: 1;
 }
 
 #divImage {
@@ -219,6 +223,7 @@ hr {
     width: 4rem;
     transition: width ease-in-out 0.3s;
     position: relative;
+    z-index: 0;
 
 }
 

@@ -48,7 +48,7 @@
   border-radius: 1rem;
   margin-top: 1.25rem;
   grid-area: transferData;
-  width: 48%;
+  width: 19vw;
   margin-bottom: 2.5rem;
 }
 
@@ -115,6 +115,7 @@
 #transactionListContainer {
   overflow-y: auto;
   max-height: 100%;
+  width: 100%;
 }
 
 .transactionList {
@@ -317,7 +318,7 @@
   border-radius: 1rem;
   margin-top: 1.25rem;
   grid-area: transferData;
-  width: 48%;
+  width: 19vw;
   justify-self: end;
   margin-bottom: 2.5rem;
   display: flex;
@@ -343,7 +344,7 @@
   background-color: transparent;
   border: none;
   color: #fff;
-  width: 65%;
+  width: 70%;
   margin-bottom: 0rem;
 }
 

@@ -5,13 +5,13 @@
 
 #container {
     position: absolute;
-    height: 45vw;
-    width: 40vw;
+    height: 40vw;
+    width: 45vw;
     background-color: #141414;
     border-radius: 1rem;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -45%);
 }
 
 #buttonContainer{
@@ -95,16 +95,17 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    overflow-y: auto;
+    
 }
 
 .list {
     
-    max-height: 41vw;
+    max-height: 36vw;
+    flex-direction: column-reverse;
 }
 
 
-#listContainer::-webkit-scrollbar{
+#transfersList::-webkit-scrollbar{
     background: #141414;
     width: 0.5rem;
     border-top-right-radius: 3rem;
@@ -112,7 +113,7 @@
 
   }
   
-  #listContainer::-webkit-scrollbar-thumb{
+#transfersList::-webkit-scrollbar-thumb{
     appearance: none;
     background-color: #86c232;
     border-radius: 2rem;
@@ -123,12 +124,13 @@
 #transfersList{
     list-style: none;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     padding: 0rem;
     width: 100%;
     margin: 0rem;
+    overflow-y: auto;
     
 
 }
@@ -252,17 +254,55 @@
     display: none;
 }
 
+#filterContainer {
+    position: absolute;
+    height: 5vw;
+    width: 45vw;
+    background-color: #141414;
+    border-radius: 1rem;
+    align-self: center;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
 .filter{
  
-    color: #141414;
-    background-color: #fff;
-    border: none;
+    color: #fff;
+    background-color: #141414;
+    border-radius: 2rem;
+    height: 2rem;
     padding: 0.5rem;
-    border-radius: 0.25rem;
     margin: 0.5rem;
+    display: flex;
+    justify-content: center;
 }
 
-.filter button:hover, button:active{
-    background-color: #333;
+#filterContainer input {
+    border: 1px solid #fff;
+}
+
+#filterContainer input:focus {
+    border-color: #86c232;
+    outline: none;
+}
+
+#filterContainer button {
+    border: 1px solid #fff;
+    height: 3rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#filterContainer button:active{
+    transform: scale(.95);
+    border: 1px solid #86c232;
+}
+
+#filterContainer button:hover {
+    background-color: #1d1d1d;
 }
