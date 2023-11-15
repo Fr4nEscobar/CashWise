@@ -23,6 +23,8 @@ export class HomeComponent implements OnInit {
   textoBTrans: string = "New transaction"
   participant: string = 'Sender'
   operator: string = ""
+  monthlySpend: number = 0
+  monthlyRemaining: number = 0
 
   transType!: string
   transDescp!: string
@@ -32,6 +34,7 @@ export class HomeComponent implements OnInit {
   transComm!: string
   transParticipant!: string
   transactions!: Transaction[]
+  chart!: any
 
   perMarket!: number
   perServices!: number
@@ -57,6 +60,10 @@ export class HomeComponent implements OnInit {
     this.userId = userVariable.getId()
     this.isData = true
 
+    this.user.renewalDate = this.checkRenewalDate()
+    this.monthlySpend = this.calculateMonthlySpend()
+    this.monthlyRemaining = this.user.monthlyBudget! - this.monthlySpend
+
     this.transactions = this.user.transactions!
     console.log(this.transactions)
 
@@ -66,6 +73,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.setGraph()
+    this.createGraph()
+  }
+
+  createGraph() {
     this.percents = [this.perMarket, this.perServices, this.perShopping, this.perTransport, this.perGastronomy, this.perTourism, this.perOthers];
 
     const colors = ['#d2c677', '#cfd277', '#b9d277' , '#a2d277' , '#84d277', '#77d288', '#77d2a8']; // Colores para cada porcentaje
@@ -98,13 +109,11 @@ export class HomeComponent implements OnInit {
           }]
         };
 
-        new Chart(ctx, {
+        this.chart = new Chart(ctx, {
           type: 'pie',
           data: chartData,
           options: chartOptions
         });
-
-
    }
   }
 
@@ -117,7 +126,82 @@ export class HomeComponent implements OnInit {
   }
 
   calculateRemaining() {
-    return this.user.monthlyBudget! - this.user.monthlySpend!
+    return this.user.totalIncome! - this.user.totalSpend!
+  }
+
+  calculateMonthlySpend(){
+    let total = 0
+    const finalDate = this.user.renewalDate!
+    let finalDateArray = finalDate.split('-')
+    let monthNumber = parseInt(finalDateArray[1], 10)-1
+    const initialDate = finalDateArray[0]+'-'+(monthNumber.toString())+'-'+finalDateArray[2]
+    
+    this.user.transactions!.forEach(transaction => {
+      if(transaction.type === 'outcome') {
+        let transDate = moment(transaction.date).format('YYYY-MM-DD')
+        if(this.sameOrAfter(transDate, initialDate) && this.isBefore(transDate, finalDate)){
+          total += transaction.amount!
+        }
+      }
+    });
+
+    console.log('TOTAL: '+total)
+
+    return total
+  }
+
+  isBefore(date1: string, date2: string) {
+    let date1Array = date1?.split('-')
+    let date2Array = date2?.split('-')
+
+    if(date1Array[0]<date2Array[0]) {
+      return true
+    }else if(date1Array[0]===date2Array[0]) {
+      if(date1Array[1]<date2Array[1]) {
+        return true
+      }else if(date1Array[1]===date2Array[1]) {
+        if(date1Array[2]<date2Array[2]) {
+          return true
+        }
+      }
+    }
+    console.log('isBefore failing')
+    return false
+  }
+
+  sameOrAfter(date1: string, date2: string) {
+    let date1Array = date1?.split('-')
+    let date2Array = date2?.split('-')
+
+    if(date1Array[0]>date2Array[0]) {
+      return true
+    }else if(date1Array[0]===date2Array[0]) {
+      if(date1Array[1]>date2Array[1]) {
+        return true
+      }else if(date1Array[1]===date2Array[1]) {
+        if(date1Array[2]>=date2Array[2]) {
+          return true
+        }
+      }
+    }
+    return false
+  }
+
+  checkRenewalDate() {
+    let now = moment().format('YYYY-MM-DD')
+    let originalRenewal = this.user.renewalDate!
+    let monthNumber!: number
+    let newDate!: string
+
+    if(this.sameOrAfter(now, originalRenewal)) {
+      let originalRenewalArray = originalRenewal.split('-')
+      monthNumber = parseInt(originalRenewalArray[1], 10)+1
+      newDate = originalRenewalArray[0]+'-'+(monthNumber.toString())+'-'+originalRenewalArray[2]
+      return newDate
+    }
+    
+    return originalRenewal
+
   }
 
   changeContainer() {
@@ -137,10 +221,10 @@ export class HomeComponent implements OnInit {
     if (this.transactionForm.valid) {
       if (this.transType === 'income') {
         newTrans = new Transaction(this.transDescp, payDate, this.transAmount, this.transCat, this.transComm, this.transType, this.transParticipant)
-        this.user.monthlyBudget! = this.user.monthlyBudget! + this.transAmount
+        this.user.totalIncome! = this.user.totalIncome! + this.transAmount
       } else {
         newTrans = new Transaction(this.transDescp, payDate, this.transAmount, this.transCat, this.transComm, this.transType, this.transParticipant)
-        this.user.monthlySpend! = this.user.monthlySpend! + this.transAmount
+        this.user.totalSpend! = this.user.totalSpend! + this.transAmount
       }
       this.transactions.push(newTrans)
 
@@ -151,6 +235,8 @@ export class HomeComponent implements OnInit {
     }
 
     this.setGraph()
+    this.chart.destroy()
+    this.createGraph()
   }
 
   concatenateDate(date: any) {
@@ -173,7 +259,6 @@ export class HomeComponent implements OnInit {
 
     return d
   }
-
 
   udpateTransactions() {
     this.user.transactions = this.transactions
@@ -242,4 +327,8 @@ export class HomeComponent implements OnInit {
     return shortPercentage
 
   }
+
+
+
+
 }

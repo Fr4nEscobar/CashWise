@@ -4,6 +4,7 @@ import { UserVerificationService } from '../user-verification.service';
 import { User } from './user.model';
 import { Router } from '@angular/router';
 import { UserVariableService } from '../user-variable.service';
+import { LoginVerificationService } from '../login-verification.service';
 import { FormGroup, Validators, FormBuilder, AbstractControl, ValidationErrors } from '@angular/forms';
 
 
@@ -28,14 +29,45 @@ export class LoginComponent {
   signUpMessage: string = ''
   signInMessage: string = ''
   registerForm!: FormGroup
+  messageName: string = ''
+  messageEmail: string = ''
+  messagePassword: string = ''
 
 
-  constructor(private _CargaScripts: CargarScriptsService, private userVerification: UserVerificationService, private router: Router, private userVariable: UserVariableService, private formBuilder: FormBuilder) {
+  constructor(private _CargaScripts: CargarScriptsService, private userVerification: UserVerificationService, private router: Router, private userVariable: UserVariableService, private formBuilder: FormBuilder, private loginVer: LoginVerificationService) {
     _CargaScripts.carga(["logicaAnimacion"])
+    this.loginVer.logOut()
     this.registerForm = this.formBuilder.group({ name: ['', [Validators.required]], email: ['', [Validators.required, Validators.email]], password: ['', [Validators.required, Validators.pattern(/(?=.*[A-Z])(?=.*[a-z])(?=.*\d)+/), Validators.minLength(6), Validators.maxLength(28)]] })
     this.registerEmail = this.getEmail()
     this.registerPassword = this.getPassword()
     this.registerName = this.getName()
+  }
+
+  verifyPassword(){
+    const password = this.registerForm.get('password')
+    if(password?.invalid && (password.touched || password.dirty)) {
+      this.messagePassword = 'Invalid password (at least a capital letter, a lowercase letter and a number needed, 6-38 characters lenght)'
+    } else {
+      this.messagePassword = ''
+    }
+  }
+
+  verifyEmail() {
+    const email = this.registerForm.get('email')
+    if(email?.invalid && (email.touched || email.dirty)) {
+      this.messageEmail = 'Invalid email'
+    } else {
+      this.messageEmail = ''
+    }
+  }
+
+  verifyName() {
+    const name = this.registerForm.get('name')
+    if(name?.invalid && (name.touched || name.dirty)) {
+      this.messageName = 'Invalid name'
+    } else {
+      this.messageName = ''
+    }
   }
 
   getEmail() {
@@ -60,8 +92,10 @@ export class LoginComponent {
 
       if (data) {
         this.user = data[0]
+        this.user.monthlyIncome = parseFloat(data[0].monthlyIncome)
         this.user.monthlyBudget = parseFloat(data[0].monthlyBudget)
-        this.user.monthlySpend = parseFloat(data[0].monthlySpend)
+        this.user.totalIncome = parseFloat(data[0].totalIncome)
+        this.user.totalSpend = parseFloat(data[0].totalSpend)
         this.userId = parseInt(data[0].id)
       } else {
         this.user = new User('', '', '')
@@ -74,6 +108,8 @@ export class LoginComponent {
       } else {
         if (this.user.name === '') {
           flag = false
+        }else{
+          flag = true
         }
       }
       return flag;
@@ -92,7 +128,7 @@ export class LoginComponent {
     if (result) {
       this.userVariable.setUser(this.user, this.userId)
       this.signInMessage = ''
-
+      this.loginVer.logIn()
       this.router.navigate(['/home'])
     } else {
       this.signInMessage = ''
@@ -112,22 +148,18 @@ export class LoginComponent {
     let user = new User(this.registerName, this.registerEmail, this.registerPassword);
 
     if (result) {
-      this.signUpMessage = ''
-      this.signUpMessage = 'The user has already registered'
-
+      alert('The email has already registered')
     } else {
       this.userVerification.addUser(user).subscribe(
         response => {
           this.signUpMessage = ''
           this.userVariable.setUser(user, this.userId)
-          this.router.navigate(['/home'])
         },
         error => {
           this.signUpMessage = ''
           this.signUpMessage = 'An error has occurred while registering your user, please try again later'
         }
       );
-      
     }
   }
 }

@@ -69,7 +69,7 @@ export class FuturePaymentsComponent {
       if (p.recurrent) {
         this.recurrentPayment(p)
       }
-      this.user.monthlySpend = this.user.monthlySpend! + p.amount!
+      this.user.totalSpend = this.user.totalSpend! + p.amount!
       this.user.payments!.splice(index, 1)
 
     }

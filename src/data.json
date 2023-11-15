@@ -368,12 +368,21 @@
         },
         {
           "description": "Buzo",
-          "date": "2023-11-07",
+          "date": "2023-11-14",
           "amount": 25000,
           "category": "shopping",
           "comment": "buzo canguro",
           "type": "outcome",
           "participant": "Nike"
+        },
+        {
+          "description": "Pasajes Río",
+          "date": "2023-11-15",
+          "amount": 100000,
+          "category": "tourism",
+          "comment": "pasajes a rio",
+          "type": "outcome",
+          "participant": "Despegar"
         }
       ],
       "monthlyBudget": 60000,
@@ -391,7 +400,11 @@
         }
       ],
       "notifications": [],
-      "id": 7
+      "id": 7,
+      "renewalDate": "2023-12-13",
+      "monthlyIncome": 60000,
+      "totalIncome": 0,
+      "totalSpend": 200000
     }
   ]
 }
