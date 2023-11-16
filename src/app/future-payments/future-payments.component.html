@@ -67,16 +67,16 @@
           required
         />
         <label for="date">Date:</label>
-        <input type="date" id="date" [(ngModel)]="date" name="date" required />
+        <input type="date" id="date" [(ngModel)]="date" name="date" min="{{ getCurrentDate() | date:'yyyy-MM-dd' }}" [max]="getMaxDate()"  required />
         <label for="category">Category:</label>
         <select name="category" id="category" [(ngModel)]="payCat">
-          <option value="Market">Market</option>
-          <option value="Services">Services</option>
-          <option value="Shopping">Shopping</option>
-          <option value="Transport">Transport</option>
-          <option value="Gastronomy">Gastronomy</option>
-          <option value="Tourism">Tourism</option>
-          <option value="Others" selected>Others</option>
+          <option value="market">Market</option>
+          <option value="services">Services</option>
+          <option value="shopping">Shopping</option>
+          <option value="transport">Transport</option>
+          <option value="gastronomy">Gastronomy</option>
+          <option value="tourism">Tourism</option>
+          <option value="others" selected>Others</option>
         </select>
         <label for="participant">Receiver</label>
         <input
@@ -123,17 +123,18 @@
           id="date"
           [(ngModel)]="editDate"
           name="date"
+          min="{{ getCurrentDate() | date:'yyyy-MM-dd' }}" [max]="getMaxDate()"
           required
         />
         <label for="category">Category:</label>
         <select name="category" id="category" [(ngModel)]="editPayCat">
-          <option value="Market">Market</option>
-          <option value="Services">Services</option>
-          <option value="Shopping">Shopping</option>
-          <option value="Transport">Transport</option>
-          <option value="Gastronomy">Gastronomy</option>
-          <option value="Tourism">Tourism</option>
-          <option value="Others" selected>Others</option>
+          <option value="market">Market</option>
+          <option value="services">Services</option>
+          <option value="shopping">Shopping</option>
+          <option value="transport">Transport</option>
+          <option value="gastronomy">Gastronomy</option>
+          <option value="tourism">Tourism</option>
+          <option value="others" selected>Others</option>
         </select>
         <label for="participant">Receiver</label>
         <input

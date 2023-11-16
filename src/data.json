@@ -851,18 +851,118 @@
           "comment": "cdds",
           "type": "outcome",
           "participant": "galote"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-16",
+          "amount": 20000,
+          "category": "Market",
+          "type": "outcome",
+          "participant": "Market"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-16",
+          "amount": 20000,
+          "category": "Market",
+          "type": "outcome",
+          "participant": "Market"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-16",
+          "amount": 2000000,
+          "category": "Market",
+          "type": "outcome",
+          "participant": "Market"
+        },
+        {
+          "description": "probando",
+          "date": "2012-02-20",
+          "amount": 10,
+          "category": "tourism",
+          "comment": "to",
+          "type": "outcome",
+          "participant": "yo"
         }
       ],
       "monthlyBudget": 60000,
       "monthlySpend": 87247,
       "preferredCurrency": "ARS",
-      "payments": [],
+      "payments": [
+        {
+          "recurrent": "true",
+          "description": "Pizza",
+          "date": "2024-02-18",
+          "amount": 2000000,
+          "category": "Market",
+          "participant": "Market"
+        }
+      ],
       "notifications": [],
       "id": 7,
       "renewalDate": "2023-12-13",
       "monthlyIncome": 60000,
       "totalIncome": 0,
-      "totalSpend": 421749
+      "totalSpend": 2461759
+    },
+    {
+      "name": "a",
+      "email": "a",
+      "password": "a",
+      "transactions": [
+        {
+          "description": "Pizza",
+          "date": "2023-11-16",
+          "amount": 2000,
+          "category": "gastronomy",
+          "type": "outcome",
+          "participant": "qsyo"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-16",
+          "amount": 2000,
+          "category": "gastronomy",
+          "comment": null,
+          "type": "income",
+          "participant": "qsyo"
+        },
+        {
+          "description": "Hamburguesa doble",
+          "date": "2023-11-16",
+          "amount": 10000,
+          "category": "gastronomy",
+          "type": "outcome",
+          "participant": "Galotinho"
+        },
+        {
+          "description": "Regalo de la abuela",
+          "date": "2023-11-16",
+          "amount": 20000,
+          "category": "others",
+          "type": "outcome",
+          "participant": "Abuela"
+        }
+      ],
+      "monthlyIncome": 5000000,
+      "monthlyBudget": 300000,
+      "totalIncome": 2000,
+      "totalSpend": 112000,
+      "renewalDate": "2023-12-04",
+      "preferredCurrency": "ARS",
+      "payments": [
+        {
+          "recurrent": "true",
+          "description": "Regalo de la abuela",
+          "date": "2024-04-18",
+          "amount": 20000,
+          "category": "others",
+          "participant": "Abuela"
+        }
+      ],
+      "notifications": [],
+      "id": 8
     }
   ]
 }

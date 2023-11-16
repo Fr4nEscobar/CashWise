@@ -274,5 +274,16 @@ export class FuturePaymentsComponent {
     return d
   }
 
+  getCurrentDate(): string {
+    const today = moment();
+    return this.concatenateDate(today);
+  }
+
+  getMaxDate(): string {
+    const today = new Date();
+    const minDate = new Date();
+    minDate.setFullYear(today.getFullYear() + 10);
+    return minDate.toISOString().split('T')[0];
+  }
 
 }

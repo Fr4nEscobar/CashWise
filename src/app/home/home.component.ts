@@ -53,6 +53,7 @@ export class HomeComponent implements OnInit {
   percents: Number[] = []
 
 
+
   @ViewChild('transactionForm', { static: false }) transactionForm: any;
 
   constructor(private userVariable: UserVariableService, private userVerification: UserVerificationService) {
@@ -66,14 +67,24 @@ export class HomeComponent implements OnInit {
 
     this.transactions = this.user.transactions!
     console.log(this.transactions)
-
+    
     this.setGraph()
 
   }
 
   ngOnInit(): void {
     this.setGraph()
+    if(this.chart){
+      this.chart.destroy()
+    }
     this.createGraph()
+  }
+
+  getLeastDate(): string {
+    const today = new Date();
+    const minDate = new Date();
+    minDate.setFullYear(today.getFullYear() - 10);
+    return minDate.toISOString().split('T')[0];
   }
 
   createGraph() {
@@ -320,6 +331,7 @@ export class HomeComponent implements OnInit {
     this.angleGastronomy = (360 * this.perGastronomy) / 100;
     this.angleTourism = (360 * this.perTourism) / 100;
     this.angleOthers = (360 * this.perOthers) / 100;
+    
   }
 
   shortPercentage(percentage: number){

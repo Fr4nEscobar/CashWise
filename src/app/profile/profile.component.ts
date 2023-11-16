@@ -55,8 +55,15 @@ export class ProfileComponent{
     if (this.changeMonthlyB !== undefined) {
       this.user.monthlyBudget = this.changeMonthlyB
     } 
-    if (this.changeRenewalD !== undefined && this.changeRenewalD < 31 && this.changeRenewalD > 0) {
-      this.user.renewalDate =  this.generateRenewalDate(this.changeRenewalD)
+    if (this.changeRenewalD !== undefined && this.changeRenewalD < 31 && this.changeRenewalD > -31) {
+      
+      let rd = Math.abs(this.changeRenewalD)
+      this.user.renewalDate =  this.generateRenewalDate(rd)      
+    }
+    else{
+      if(this.changeRenewalD! > 31 || this.changeRenewalD! < -31){
+        alert('The date must be between 1 and 30')
+      }
     }
     if (this.changePreferredC !== this.user.preferredCurrency) {
       this.user.preferredCurrency = this.changePreferredC

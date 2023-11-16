@@ -47,7 +47,7 @@
       <label for="amount">Amount:</label>
       <input type="number" name="amount" id="amount" [(ngModel)]="transAmount" min="1" name="amount" required>
       <label for="date">Date:</label>
-      <input type="date" id="date" [(ngModel)]="transDate" name="date" max="{{ getCurrentDate() | date:'yyyy-MM-dd' }}" required>
+      <input type="date" id="date" [(ngModel)]="transDate" name="date" max="{{ getCurrentDate() | date:'yyyy-MM-dd' }}" [min]="getLeastDate()" required>
       <label for="category">Category:</label>
       <select name="category" id="category" [(ngModel)]="transCat">
         <option value="market">Market</option>
