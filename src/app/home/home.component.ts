@@ -230,7 +230,10 @@ export class HomeComponent implements OnInit {
 
       this.transactionForm.resetForm()
       this.udpateTransactions()
-    } else {
+    } else if(this.transAmount<1){
+      alert('The amount cannot be less than 1')
+    }
+    else {
       alert("Required fields must be filled")
     }
 

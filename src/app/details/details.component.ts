@@ -167,7 +167,7 @@ export class DetailsComponent {
       let endDate = moment(this.filterEndDate);
       let stringEndDate = this.concatenateDate(endDate);
       this.user.transactions = this.user.transactions.filter((t) => {
-        const transactionDate = moment(t.date, 'YYYY-MM-DD'); // AsegÃºrate de especificar el formato de fecha correcto
+        const transactionDate = moment(t.date, 'YYYY-MM-DD'); 
 
         return (
           transactionDate.isSameOrAfter(stringStartDate, 'day') &&

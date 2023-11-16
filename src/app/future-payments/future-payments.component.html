@@ -9,13 +9,15 @@
       <ul id="paymentsList" *ngIf="showList">
         <li
           class="paymentItem"
-          [ngClass]="{ expandTransfer: clickedIndex === i, redPayment: calculateDays(p.date!) < 0}"
+          [ngClass]="{
+            expandTransfer: clickedIndex === i,
+            redPayment: calculateDays(p.date!) < 0
+          }"
           *ngFor="let p of user.payments; let i = index"
           (click)="expandPayment(i)"
         >
           <p class="date">{{ p.date }}</p>
 
-          
           <h4 class="description">{{ p.description }}</h4>
           <p class="amount">{{ user.preferredCurrency }}: {{ p.amount }}</p>
           <p class="category" *ngIf="clickedIndex === i">{{ p.category }}</p>
@@ -24,8 +26,20 @@
           <p class="categoryT" *ngIf="clickedIndex === i">Category:</p>
           <p class="commentT" *ngIf="clickedIndex === i">Comment:</p>
           <section id="buttons" *ngIf="clickedIndex === i">
-            <button *ngIf="clickedIndex === i" (click)="editPayment(i)" class="btnEdit"><img src="./../../assets/icons/9edit.png"></button>
-            <button *ngIf="clickedIndex === i" (click)="paymentDone(p)" class="btnDelete"><img src="./../../assets/icons/10done.png"></button>
+            <button
+              *ngIf="clickedIndex === i"
+              (click)="editPayment(i)"
+              class="btnEdit"
+            >
+              <img src="./../../assets/icons/9edit.png" />
+            </button>
+            <button
+              *ngIf="clickedIndex === i"
+              (click)="paymentDone(p)"
+              class="btnDelete"
+            >
+              <img src="./../../assets/icons/10done.png" />
+            </button>
           </section>
         </li>
       </ul>
@@ -46,20 +60,14 @@
         <label for="amount">Amount:</label>
         <input
           type="number"
-          name="amount"
           id="amount"
           [(ngModel)]="payAmount"
           name="amount"
+          min="1"
           required
         />
         <label for="date">Date:</label>
-        <input
-          type="date"
-          id="date"
-          [(ngModel)]="date"
-          name="date"
-          required
-        />
+        <input type="date" id="date" [(ngModel)]="date" name="date" required />
         <label for="category">Category:</label>
         <select name="category" id="category" [(ngModel)]="payCat">
           <option value="Market">Market</option>
@@ -91,11 +99,7 @@
         </select>
         <button type="submit" id="addPayment">Add</button>
       </form>
-      <form
-        id="editPaymentForm"
-        #paymentForm="ngForm"
-        *ngIf="showEdit"
-      >
+      <form id="editPaymentForm" #paymentForm="ngForm" *ngIf="showEdit">
         <label for="description">Description:</label>
         <input
           type="text"
@@ -139,7 +143,12 @@
           name="participant"
         />
         <label for="comment">Comments:</label>
-        <input type="text" id="comment" [(ngModel)]="editPayComm" name="comment" />
+        <input
+          type="text"
+          id="comment"
+          [(ngModel)]="editPayComm"
+          name="comment"
+        />
         <label for="recurrent">Recurrent:</label>
         <select
           name="recurrent"
@@ -151,9 +160,15 @@
           <option value="false">No</option>
         </select>
         <section id="buttons">
-          <button (click)="deletePayment()" class="btnEdit"><img src="./../../assets/icons/11delete.png"></button>
-          <button (click)="notSaveChanges()" class="btnMid"><img src="./../../assets/icons/7x.png"></button>
-          <button (click)="saveChanges()" class="btnDelete"><img src="./../../assets/icons/10done.png"></button>
+          <button (click)="deletePayment()" class="btnEdit">
+            <img src="./../../assets/icons/11delete.png" />
+          </button>
+          <button (click)="notSaveChanges()" class="btnMid">
+            <img src="./../../assets/icons/7x.png" />
+          </button>
+          <button (click)="saveChanges()" class="btnDelete">
+            <img src="./../../assets/icons/10done.png" />
+          </button>
         </section>
       </form>
     </section>

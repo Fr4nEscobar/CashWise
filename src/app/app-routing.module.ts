@@ -13,8 +13,9 @@ const routes: Routes = [
   {path: 'home', component:HomeComponent, canActivate: [AuthGuard]},
   {path: 'profile', component:ProfileComponent, canActivate: [AuthGuard]},
   {path: 'details', component:DetailsComponent, canActivate: [AuthGuard]},
-  {path: 'futurePay', component:FuturePaymentsComponent, canActivate: [AuthGuard]}
-  
+  {path: 'futurePay', component:FuturePaymentsComponent, canActivate: [AuthGuard]},
+  { path: '**', component: LoginComponent }
+
 ];
 
 @NgModule({

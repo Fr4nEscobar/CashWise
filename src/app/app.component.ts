@@ -13,7 +13,8 @@ export class AppComponent {
   constructor(private router:Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        this.showSidebar = event.url !== '/'
+        this.showSidebar = (event.url === '/home' || event.url === '/profile' ||event.url === '/details' ||event.url === '/futurePay')
+
       }
     });
   }

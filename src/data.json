@@ -383,28 +383,486 @@
           "comment": "pasajes a rio",
           "type": "outcome",
           "participant": "Despegar"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-15",
+          "amount": 322,
+          "category": "gastronomy",
+          "comment": "n",
+          "type": "outcome",
+          "participant": "qqqq"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-15",
+          "amount": 322,
+          "category": "gastronomy",
+          "comment": "n",
+          "type": "outcome",
+          "participant": "qqqq"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-15",
+          "amount": 322,
+          "category": "gastronomy",
+          "comment": "n",
+          "type": "outcome",
+          "participant": "qqqq"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-15",
+          "amount": 322,
+          "category": "gastronomy",
+          "comment": "n",
+          "type": "outcome",
+          "participant": "qqqq"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-15",
+          "amount": 322,
+          "category": "gastronomy",
+          "comment": "n",
+          "type": "outcome",
+          "participant": "qqqq"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-15",
+          "amount": 322,
+          "category": "gastronomy",
+          "comment": "n",
+          "type": "outcome",
+          "participant": "qqqq"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-15",
+          "amount": 322,
+          "category": "gastronomy",
+          "comment": "n",
+          "type": "outcome",
+          "participant": "qqqq"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-15",
+          "amount": 322,
+          "category": "gastronomy",
+          "comment": "n",
+          "type": "outcome",
+          "participant": "qqqq"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-15",
+          "amount": 322,
+          "category": "gastronomy",
+          "comment": "n",
+          "type": "outcome",
+          "participant": "qqqq"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-15",
+          "amount": 322,
+          "category": "gastronomy",
+          "comment": "n",
+          "type": "outcome",
+          "participant": "qqqq"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-15",
+          "amount": 322,
+          "category": "gastronomy",
+          "comment": "n",
+          "type": "outcome",
+          "participant": "qqqq"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-15",
+          "amount": 322,
+          "category": "gastronomy",
+          "comment": "n",
+          "type": "outcome",
+          "participant": "qqqq"
+        },
+        {
+          "description": "das",
+          "date": "2023-11-15",
+          "amount": 100,
+          "category": "Services",
+          "comment": "panchoteee",
+          "type": "outcome",
+          "participant": "PANCHOTEEE"
+        },
+        {
+          "description": "das",
+          "date": "2023-11-15",
+          "amount": 100,
+          "category": "Services",
+          "comment": "panchoteee",
+          "type": "outcome",
+          "participant": "PANCHOTEEE"
+        },
+        {
+          "description": "das",
+          "date": "2023-11-15",
+          "amount": 100,
+          "category": "Services",
+          "comment": "panchoteee",
+          "type": "outcome",
+          "participant": "PANCHOTEEE"
+        },
+        {
+          "description": "das",
+          "date": "2023-11-15",
+          "amount": 100,
+          "category": "Services",
+          "comment": "panchoteee",
+          "type": "outcome",
+          "participant": "PANCHOTEEE"
+        },
+        {
+          "description": "das",
+          "date": "2023-11-15",
+          "amount": 100,
+          "category": "Services",
+          "comment": "panchoteee",
+          "type": "outcome",
+          "participant": "PANCHOTEEE"
+        },
+        {
+          "description": "das",
+          "date": "2023-11-15",
+          "amount": 100,
+          "category": "Services",
+          "comment": "panchoteee",
+          "type": "outcome",
+          "participant": "PANCHOTEEE"
+        },
+        {
+          "description": "Pizza",
+          "date": "2023-11-15",
+          "amount": 322,
+          "category": "gastronomy",
+          "comment": "n",
+          "type": "outcome",
+          "participant": "qqqq"
+        },
+        {
+          "description": "Hamburguesa doble",
+          "date": "2023-11-15",
+          "amount": 1000,
+          "category": "Gastronomy",
+          "comment": "galote",
+          "type": "outcome",
+          "participant": "galote"
+        },
+        {
+          "description": "Hamburcdcdsguesa doble",
+          "date": "2023-11-15",
+          "amount": 321,
+          "category": "Shopping",
+          "comment": "dasd",
+          "type": "outcome",
+          "participant": "edd"
+        },
+        {
+          "description": "Hamburcdcdsguesa doble",
+          "date": "2023-11-15",
+          "amount": 321,
+          "category": "Shopping",
+          "comment": "dasd",
+          "type": "outcome",
+          "participant": "edd"
+        },
+        {
+          "description": "Hamburcdcdsguesa doble",
+          "date": "2023-11-15",
+          "amount": 321,
+          "category": "Shopping",
+          "comment": "dasd",
+          "type": "outcome",
+          "participant": "edd"
+        },
+        {
+          "description": "Hamburcdcdsguesa doble",
+          "date": "2023-11-15",
+          "amount": 321,
+          "category": "Shopping",
+          "comment": "dasd",
+          "type": "outcome",
+          "participant": "edd"
+        },
+        {
+          "description": "asd",
+          "date": "2023-11-15",
+          "amount": 321,
+          "category": "Market",
+          "comment": "ADD",
+          "type": "outcome",
+          "participant": "ASD"
+        },
+        {
+          "description": "asd",
+          "date": "2023-11-15",
+          "amount": 321,
+          "category": "Market",
+          "comment": "ADD",
+          "type": "outcome",
+          "participant": "ASD"
+        },
+        {
+          "description": "asd",
+          "date": "2023-11-15",
+          "amount": 321,
+          "category": "Market",
+          "comment": "ADD",
+          "type": "outcome",
+          "participant": "ASD"
+        },
+        {
+          "description": "no",
+          "date": "2023-11-15",
+          "amount": 10,
+          "category": "Market",
+          "comment": "no",
+          "type": "outcome",
+          "participant": "no"
+        },
+        {
+          "description": "asd",
+          "date": "2023-11-15",
+          "amount": 321,
+          "category": "Market",
+          "comment": "ADD",
+          "type": "outcome",
+          "participant": "ASD"
+        },
+        {
+          "description": "q",
+          "date": "2023-11-15",
+          "amount": 11,
+          "category": "Market",
+          "comment": "ads0ij",
+          "type": "outcome",
+          "participant": "das"
+        },
+        {
+          "description": "q",
+          "date": "2023-11-15",
+          "amount": 11,
+          "category": "Market",
+          "comment": "ads0ij",
+          "type": "outcome",
+          "participant": "das"
+        },
+        {
+          "description": "q",
+          "date": "2023-11-15",
+          "amount": 11,
+          "category": "Market",
+          "comment": "ads0ij",
+          "type": "outcome",
+          "participant": "das"
+        },
+        {
+          "description": "asd",
+          "date": "2023-11-15",
+          "amount": 321,
+          "category": "Market",
+          "comment": "ADD",
+          "type": "outcome",
+          "participant": "ASD"
+        },
+        {
+          "description": "asd",
+          "date": "2023-11-15",
+          "amount": 321,
+          "category": "Market",
+          "comment": "ADD",
+          "type": "outcome",
+          "participant": "ASD"
+        },
+        {
+          "description": "no",
+          "date": "2023-11-15",
+          "amount": 10,
+          "category": "Market",
+          "comment": "no",
+          "type": "outcome",
+          "participant": "no"
+        },
+        {
+          "description": "asd",
+          "date": "2023-11-15",
+          "amount": 321,
+          "category": "Market",
+          "comment": "ADD",
+          "type": "outcome",
+          "participant": "ASD"
+        },
+        {
+          "description": "asd",
+          "date": "2023-11-15",
+          "amount": 321,
+          "category": "Market",
+          "comment": "ADD",
+          "type": "outcome",
+          "participant": "ASD"
+        },
+        {
+          "description": "no",
+          "date": "2023-11-15",
+          "amount": 10,
+          "category": "Market",
+          "comment": "no",
+          "type": "outcome",
+          "participant": "no"
+        },
+        {
+          "description": "asd",
+          "date": "2023-11-15",
+          "amount": 321,
+          "category": "Market",
+          "comment": "ADD",
+          "type": "outcome",
+          "participant": "ASD"
+        },
+        {
+          "description": "q",
+          "date": "2023-11-15",
+          "amount": 11,
+          "category": "Market",
+          "comment": "ads0ij",
+          "type": "outcome",
+          "participant": "das"
+        },
+        {
+          "description": "q",
+          "date": "2023-11-15",
+          "amount": 11,
+          "category": "Market",
+          "comment": "ads0ij",
+          "type": "outcome",
+          "participant": "das"
+        },
+        {
+          "description": "q",
+          "date": "2023-11-15",
+          "amount": 11,
+          "category": "Market",
+          "comment": "ads0ij",
+          "type": "outcome",
+          "participant": "das"
+        },
+        {
+          "description": "piza",
+          "date": "2023-11-15",
+          "amount": 10,
+          "category": "Market",
+          "comment": "cad",
+          "type": "outcome",
+          "participant": "df"
+        },
+        {
+          "description": "piza",
+          "date": "2023-11-15",
+          "amount": 10,
+          "category": "Market",
+          "comment": "cad",
+          "type": "outcome",
+          "participant": "df"
+        },
+        {
+          "description": "das",
+          "date": "2023-11-15",
+          "amount": 432,
+          "category": "Market",
+          "comment": "koo",
+          "type": "outcome",
+          "participant": "ko"
+        },
+        {
+          "description": "das",
+          "date": "2023-11-15",
+          "amount": 432,
+          "category": "Market",
+          "comment": "koo",
+          "type": "outcome",
+          "participant": "ko"
+        },
+        {
+          "description": "ko",
+          "date": "2023-11-15",
+          "amount": 1,
+          "category": "Market",
+          "comment": "pk",
+          "type": "outcome",
+          "participant": "kop"
+        },
+        {
+          "description": "dsd",
+          "date": "2023-11-15",
+          "amount": 4,
+          "category": "Market",
+          "comment": "ads",
+          "type": "outcome",
+          "participant": "das"
+        },
+        {
+          "description": "noti",
+          "date": "2023-11-15",
+          "amount": 1000,
+          "category": "Services",
+          "comment": "panchooteee",
+          "type": "outcome",
+          "participant": "panchoteee"
+        },
+        {
+          "description": "noti",
+          "date": "2023-11-15",
+          "amount": 1000,
+          "category": "Services",
+          "comment": "panchooteee",
+          "type": "outcome",
+          "participant": "panchoteee"
+        },
+        {
+          "description": "ffafa",
+          "date": "2023-11-15",
+          "amount": 200000,
+          "category": "Others",
+          "comment": "quedé re loco",
+          "type": "outcome",
+          "participant": "pancho"
+        },
+        {
+          "description": "das",
+          "date": "2020-02-20",
+          "amount": 10000,
+          "category": "others",
+          "comment": "cdds",
+          "type": "outcome",
+          "participant": "galote"
         }
       ],
       "monthlyBudget": 60000,
       "monthlySpend": 87247,
       "preferredCurrency": "ARS",
-      "payments": [
-        {
-          "recurrent": "true",
-          "description": "Pizza",
-          "date": "2023-12-04",
-          "amount": 322,
-          "category": "gastronomy",
-          "comment": "n",
-          "participant": "qqqq"
-        }
-      ],
+      "payments": [],
       "notifications": [],
       "id": 7,
       "renewalDate": "2023-12-13",
       "monthlyIncome": 60000,
       "totalIncome": 0,
-      "totalSpend": 200000
+      "totalSpend": 421749
     }
   ]
 }

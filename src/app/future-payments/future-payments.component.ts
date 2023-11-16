@@ -65,12 +65,19 @@ export class FuturePaymentsComponent {
     if (index !== -1) {
       this.paymentToTransaction(p)
       this.deleteNotifications(p)
+      
+    
+      if (p.recurrent!.toString() === 'true') {
 
-      if (p.recurrent) {
         this.recurrentPayment(p)
+      }else{
       }
+
       this.user.totalSpend = this.user.totalSpend! + p.amount!
+      
       this.user.payments!.splice(index, 1)
+      
+      this.updatePayments()
 
     }
     
@@ -80,6 +87,7 @@ export class FuturePaymentsComponent {
   deletePayment(){
     let p = this.paymentsList[this.index]
     this.paymentsList.splice(this.index, 1)
+    this.updatePayments()
     this.deleteNotifications(p)
     this.showEdit = false;
     this.showList = true;
@@ -135,6 +143,7 @@ export class FuturePaymentsComponent {
 
     this.paymentsList[this.index] = p
 
+    this.updatePayments()
     this.notSaveChanges()
 
   }
@@ -196,6 +205,8 @@ export class FuturePaymentsComponent {
     console.log('Moment recien creado: ', newDate)
     let payDate = this.concatenateDate(newDate)
     console.log('Moment string: ', payDate)
+    console.log(this.payRecurrent)
+   if(this.paymentForm.valid){
     newPayment = new Payment(
       this.payDescp,
       payDate,
@@ -209,6 +220,12 @@ export class FuturePaymentsComponent {
 
     this.paymentForm.resetForm();
     this.updatePayments();
+   }else if(this.payAmount<1){
+    alert('The amount cannot be less than 1')
+  }
+  else {
+    alert("Required fields must be filled")
+  }
   }
 
   updatePayments() {
