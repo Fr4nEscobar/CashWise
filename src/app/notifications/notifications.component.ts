@@ -5,6 +5,8 @@ import { UserVerificationService } from '../user-verification.service';
 import { Payment } from '../login/user.transaction';
 import { Notification } from '../login/user.notifications';
 import * as moment from 'moment';
+import { CargarScriptsService } from '../cargar-scripts.service';
+import { EmailService } from '../email.service';
 
 @Component({
   selector: 'app-notifications',
@@ -20,7 +22,8 @@ export class NotificationsComponent {
 
   constructor(
     private userVariable: UserVariableService,
-    private userVerification: UserVerificationService
+    private userVerification: UserVerificationService,
+    private emailService: EmailService
   ) {
     this.user = userVariable.getUser();
     this.userId = userVariable.getId();
@@ -52,6 +55,7 @@ export class NotificationsComponent {
             daysSinceInt = daysSinceInt * (-1)
             let aux = new Notification(this.payments[i].description!, daysSinceDateS, daysSinceInt, daysLeftInt, this.payments[i].participant!, this.payments[i].amount!);
             this.notifications.push(aux);
+            this.sendEmail(this.user.email!, "Payment forthcoming: " + aux.description, this.createBody(daysLeftInt, aux.description!))
           }
         }
       }
@@ -68,6 +72,19 @@ export class NotificationsComponent {
     const remaining = d.diff(currentDate, 'days');
     
     return remaining;
+  }
+
+  createBody(daysLeft: number, description: string): string {
+    let body = "Hi, your future payment is near. " + "You have " + daysLeft + " days to pay: "+ description + "\n\n Please, don't reply to this email."
+    return body
+  }
+
+  sendEmail(to: string, subject: string, body: string): void {
+    this.emailService.sendEmail(to, subject, body)
+      .subscribe(
+        () => console.log('Correo enviado exitosamente'),
+        (error) => console.error('Error al enviar el correo:', error)
+      );
   }
 
 

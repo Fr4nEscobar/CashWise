@@ -35,7 +35,8 @@ export class LoginComponent {
 
 
   constructor(private _CargaScripts: CargarScriptsService, private userVerification: UserVerificationService, private router: Router, private userVariable: UserVariableService, private formBuilder: FormBuilder, private loginVer: LoginVerificationService) {
-    _CargaScripts.carga(["logicaAnimacion"])
+    _CargaScripts.carga([
+      { nombre: 'logicaAnimacion'}])
     this.loginVer.logOut()
     this.registerForm = this.formBuilder.group({ name: ['', [Validators.required]], email: ['', [Validators.required, Validators.email]], password: ['', [Validators.required, Validators.pattern(/(?=.*[A-Z])(?=.*[a-z])(?=.*\d)+/), Validators.minLength(6), Validators.maxLength(28)]] })
     this.registerEmail = this.getEmail()

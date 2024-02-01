@@ -161,18 +161,6 @@
       "id": 2
     },
     {
-      "name": "Francisco",
-      "email": "fr4nciscoescobar@gmail.com",
-      "password": "panchote123",
-      "transactions": [],
-      "monthlyBudget": 140000,
-      "monthlySpend": 85000,
-      "preferredCurrency": "ARS",
-      "payments": [],
-      "notifications": [],
-      "id": 3
-    },
-    {
       "name": "Franco",
       "email": "francoferro@gmail.com",
       "password": "francote123",
@@ -901,7 +889,7 @@
       ],
       "notifications": [],
       "id": 7,
-      "renewalDate": "2023-12-13",
+      "renewalDate": "2023-21-13",
       "monthlyIncome": 60000,
       "totalIncome": 0,
       "totalSpend": 2461759
@@ -943,26 +931,430 @@
           "category": "others",
           "type": "outcome",
           "participant": "Abuela"
+        },
+        {
+          "description": "Regalo de la abuela",
+          "date": "2024-01-22",
+          "amount": 20000,
+          "category": "others",
+          "type": "outcome",
+          "participant": "Abuela"
+        },
+        {
+          "description": "Regalo de la abuela",
+          "date": "2024-01-22",
+          "amount": 20000,
+          "category": "others",
+          "type": "outcome",
+          "participant": "Abuela"
         }
       ],
       "monthlyIncome": 5000000,
       "monthlyBudget": 300000,
       "totalIncome": 2000,
-      "totalSpend": 112000,
-      "renewalDate": "2023-12-04",
+      "totalSpend": 152000,
+      "renewalDate": "2023-34-04",
       "preferredCurrency": "ARS",
       "payments": [
         {
-          "recurrent": "true",
-          "description": "Regalo de la abuela",
-          "date": "2024-04-18",
-          "amount": 20000,
-          "category": "others",
-          "participant": "Abuela"
+          "recurrent": "false",
+          "description": "dasda",
+          "date": "2024-01-22",
+          "amount": 12000,
+          "category": "market",
+          "comment": "asd",
+          "participant": "Galote"
+        },
+        {
+          "recurrent": "false",
+          "description": "asdasdsa",
+          "date": "2024-01-29",
+          "amount": 11000,
+          "category": "market",
+          "comment": "asd",
+          "participant": "Galote"
+        },
+        {
+          "recurrent": "false",
+          "description": "dasda",
+          "date": "2024-01-24",
+          "amount": 12000,
+          "category": "market",
+          "comment": "asdas",
+          "participant": "Galote"
+        },
+        {
+          "recurrent": "false",
+          "description": "dasda",
+          "date": "2024-01-24",
+          "amount": 12000,
+          "category": "market",
+          "comment": "asdas",
+          "participant": "Galote"
+        },
+        {
+          "recurrent": "false",
+          "description": "Gas",
+          "date": "2024-01-29",
+          "amount": 83000,
+          "category": "services",
+          "comment": "50 Garrafas",
+          "participant": "Camuzzi"
         }
       ],
-      "notifications": [],
+      "notifications": [
+        {
+          "description": "dasda",
+          "issueDate": "2024-01-22",
+          "timeSince": 1,
+          "timeLeft": 1,
+          "participant": "Galote",
+          "amount": 12000,
+          "active": true
+        },
+        {
+          "description": "asdasdsa",
+          "issueDate": "2024-01-22",
+          "timeSince": 1,
+          "timeLeft": 7,
+          "participant": "Galote",
+          "amount": 11000,
+          "active": true
+        },
+        {
+          "description": "Gas",
+          "issueDate": "2024-01-23",
+          "timeSince": -5,
+          "timeLeft": 6,
+          "participant": "Camuzzi",
+          "amount": 83000,
+          "active": true
+        }
+      ],
       "id": 8
+    },
+    {
+      "name": "Pancho",
+      "email": "fr4nciscoescobar@gmail.com",
+      "password": "Panchote123",
+      "transactions": [
+        {
+          "description": "dasda",
+          "date": "2024-01-23",
+          "amount": 12000,
+          "category": "market",
+          "comment": "asdas",
+          "type": "outcome",
+          "participant": "Galote"
+        },
+        {
+          "description": "dasda",
+          "date": "2024-01-23",
+          "amount": 12000,
+          "category": "market",
+          "comment": "asdas",
+          "type": "outcome",
+          "participant": "Galote"
+        },
+        {
+          "description": "dasda",
+          "date": "2024-01-23",
+          "amount": 12000,
+          "comment": "asdas",
+          "type": "outcome",
+          "participant": "Galote"
+        },
+        {
+          "description": "dasda",
+          "date": "2024-01-23",
+          "amount": 12000,
+          "category": "market",
+          "comment": "asdas",
+          "type": "outcome",
+          "participant": "Galote"
+        }
+      ],
+      "monthlyIncome": 0,
+      "monthlyBudget": 0,
+      "totalIncome": 0,
+      "totalSpend": 48000,
+      "renewalDate": "2024-2-01",
+      "preferredCurrency": "ARS",
+      "payments": [
+        {
+          "recurrent": "false",
+          "description": "dasda",
+          "date": "2024-01-30",
+          "amount": 12000,
+          "category": "market",
+          "comment": "asdas",
+          "participant": "Galote"
+        },
+        {
+          "recurrent": "false",
+          "description": "hg",
+          "date": "2024-01-30",
+          "amount": 1000,
+          "category": "services",
+          "comment": "asdas",
+          "participant": "Galote"
+        },
+        {
+          "recurrent": "false",
+          "description": "jgjkhl",
+          "date": "2024-01-30",
+          "amount": 12000,
+          "category": "shopping",
+          "comment": "asdas",
+          "participant": "Galote"
+        },
+        {
+          "recurrent": "false",
+          "description": "xvcb",
+          "date": "2024-01-30",
+          "amount": 12000,
+          "category": "transport",
+          "comment": "asdas",
+          "participant": "Galote"
+        },
+        {
+          "recurrent": "false",
+          "description": "jtgity",
+          "date": "2024-01-30",
+          "amount": 1200,
+          "category": "market",
+          "comment": "asdas",
+          "participant": "Galote"
+        },
+        {
+          "recurrent": "false",
+          "description": "qrteru",
+          "date": "2024-01-30",
+          "amount": 100,
+          "category": "market",
+          "comment": "asdas",
+          "participant": "Galote"
+        },
+        {
+          "recurrent": "false",
+          "description": "afhkgly8uo",
+          "date": "2024-01-30",
+          "amount": 1100,
+          "category": "shopping",
+          "comment": "asdas",
+          "participant": "Galote"
+        },
+        {
+          "recurrent": "false",
+          "description": "dhfbn",
+          "date": "2024-01-29",
+          "amount": 100,
+          "category": "shopping",
+          "comment": "asdas",
+          "participant": "Galote"
+        },
+        {
+          "recurrent": "false",
+          "description": "fbnzgv",
+          "date": "2024-01-29",
+          "amount": 100,
+          "category": "services",
+          "comment": "asdas",
+          "participant": "Galote"
+        },
+        {
+          "recurrent": "false",
+          "description": "sadshjnf",
+          "date": "2024-01-29",
+          "amount": 100,
+          "category": "services",
+          "comment": "asdas",
+          "participant": "Galote"
+        },
+        {
+          "recurrent": "false",
+          "description": "bbfjgkut",
+          "date": "2024-01-29",
+          "amount": 100,
+          "category": "market",
+          "comment": "asdas",
+          "participant": "Galote"
+        },
+        {
+          "recurrent": "false",
+          "description": "adsgjfg",
+          "date": "2024-01-29",
+          "amount": 100,
+          "category": "market",
+          "comment": "asdas",
+          "participant": "Galote"
+        },
+        {
+          "recurrent": "false",
+          "description": "ascavdjyty",
+          "date": "2024-01-29",
+          "amount": 100,
+          "category": "services",
+          "comment": "asdas",
+          "participant": "Galote"
+        },
+        {
+          "recurrent": "false",
+          "description": "Gas",
+          "date": "2024-01-29",
+          "amount": 83000,
+          "category": "services",
+          "comment": "50 Garrafas",
+          "participant": "Camuzzi"
+        },
+        {
+          "recurrent": "false",
+          "description": "Luz",
+          "date": "2024-01-29",
+          "amount": 1000000,
+          "category": "services",
+          "comment": "Luz",
+          "participant": "EDEA"
+        }
+      ],
+      "notifications": [
+        {
+          "description": "dasda",
+          "issueDate": "2024-01-23",
+          "timeSince": 0,
+          "timeLeft": 7,
+          "participant": "Galote",
+          "amount": 12000,
+          "active": true
+        },
+        {
+          "description": "hg",
+          "issueDate": "2024-01-23",
+          "timeSince": 0,
+          "timeLeft": 7,
+          "participant": "Galote",
+          "amount": 1000,
+          "active": true
+        },
+        {
+          "description": "jgjkhl",
+          "issueDate": "2024-01-23",
+          "timeSince": 0,
+          "timeLeft": 7,
+          "participant": "Galote",
+          "amount": 12000,
+          "active": true
+        },
+        {
+          "description": "xvcb",
+          "issueDate": "2024-01-23",
+          "timeSince": 0,
+          "timeLeft": 7,
+          "participant": "Galote",
+          "amount": 12000,
+          "active": true
+        },
+        {
+          "description": "jtgity",
+          "issueDate": "2024-01-23",
+          "timeSince": 0,
+          "timeLeft": 7,
+          "participant": "Galote",
+          "amount": 1200,
+          "active": true
+        },
+        {
+          "description": "qrteru",
+          "issueDate": "2024-01-23",
+          "timeSince": 0,
+          "timeLeft": 7,
+          "participant": "Galote",
+          "amount": 100,
+          "active": true
+        },
+        {
+          "description": "afhkgly8uo",
+          "issueDate": "2024-01-23",
+          "timeSince": 0,
+          "timeLeft": 7,
+          "participant": "Galote",
+          "amount": 1100,
+          "active": true
+        },
+        {
+          "description": "dhfbn",
+          "issueDate": "2024-01-23",
+          "timeSince": 0,
+          "timeLeft": 6,
+          "participant": "Galote",
+          "amount": 100,
+          "active": true
+        },
+        {
+          "description": "fbnzgv",
+          "issueDate": "2024-01-23",
+          "timeSince": 0,
+          "timeLeft": 6,
+          "participant": "Galote",
+          "amount": 100,
+          "active": true
+        },
+        {
+          "description": "sadshjnf",
+          "issueDate": "2024-01-23",
+          "timeSince": 0,
+          "timeLeft": 6,
+          "participant": "Galote",
+          "amount": 100,
+          "active": true
+        },
+        {
+          "description": "bbfjgkut",
+          "issueDate": "2024-01-23",
+          "timeSince": 0,
+          "timeLeft": 6,
+          "participant": "Galote",
+          "amount": 100,
+          "active": true
+        },
+        {
+          "description": "adsgjfg",
+          "issueDate": "2024-01-23",
+          "timeSince": 0,
+          "timeLeft": 6,
+          "participant": "Galote",
+          "amount": 100,
+          "active": true
+        },
+        {
+          "description": "ascavdjyty",
+          "issueDate": "2024-01-23",
+          "timeSince": 0,
+          "timeLeft": 6,
+          "participant": "Galote",
+          "amount": 100,
+          "active": true
+        },
+        {
+          "description": "Gas",
+          "issueDate": "2024-01-23",
+          "timeSince": 0,
+          "timeLeft": 6,
+          "participant": "Camuzzi",
+          "amount": 83000,
+          "active": true
+        },
+        {
+          "description": "Luz",
+          "issueDate": "2024-01-23",
+          "timeSince": -5,
+          "timeLeft": 6,
+          "participant": "EDEA",
+          "amount": 1000000,
+          "active": true
+        }
+      ],
+      "id": 9
     }
   ]
 }
