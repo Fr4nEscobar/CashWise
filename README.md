@@ -27,7 +27,7 @@ Run `npm run server` to initialize the server where all data is stored.
 
 ### E-Mail server
 
-Run `node emailserver.js` to initialize the server that sends reminders as emails.
+Run `node emailServer.js` to initialize the server that sends reminders as emails. The default port for this server is `3200`, this can be changed by updating the `cons port` in the emailServer.js file.
 
 ### Development server
 
