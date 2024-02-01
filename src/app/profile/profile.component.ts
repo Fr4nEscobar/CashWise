@@ -71,10 +71,10 @@ export class ProfileComponent{
   
     this.userVerification.updateUser(this.user, this.userId).subscribe(
       response => {
-        console.log('Usuario actualizado con éxito:')
+        console.log('User updated succesfully')
       },
       error => {
-        console.log('El usuario no se puedo actualizar:')
+        console.log('Error: user cannot be updated')
       }
       
     )
