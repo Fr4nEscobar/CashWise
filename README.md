@@ -17,7 +17,7 @@ CashWise is conceived as a comprehensive financial management application design
 
 ## Technologies
 
-TypeScript was chosen as the main language, taking advantage of its static typing for the creation of a robust application. The framework Angular CLI in his version 16.2.5 was used to build the project structure, providing a modular and scalable architecture. HTML was employed for creating web content, while CSS was used to customize the presentation and enhance the visual experience for users."
+TypeScript was chosen as the main language, taking advantage of its static typing for the creation of a robust application. The framework Angular CLI in his version 16.2.5 was used to build the project structure, providing a modular and scalable architecture. HTML was employed for creating web content, while CSS was used to customize the presentation and enhance the visual experience for users.
 
 ## How to launch
 
