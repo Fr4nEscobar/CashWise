@@ -47,7 +47,7 @@ export class DetailsComponent {
     this.originalTransactions = [...this.user.transactions!];
 
 
-    console.log(this.user.preferredCurrency);
+
     this.isData = true;
   }
 
@@ -143,10 +143,8 @@ export class DetailsComponent {
     this.user.transactions!.forEach((element) => {
       if (element.type === 'income') {
         total += element.amount!;
-        console.log('income');
       } else if (element.type === 'outcome') {
         total -= element.amount!;
-        console.log('outcome');
       }
     });
 

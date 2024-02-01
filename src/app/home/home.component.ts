@@ -66,7 +66,6 @@ export class HomeComponent implements OnInit {
     this.monthlyRemaining = this.user.monthlyBudget! - this.monthlySpend
 
     this.transactions = this.user.transactions!
-    console.log(this.transactions)
     
     this.setGraph()
 
@@ -146,7 +145,6 @@ export class HomeComponent implements OnInit {
     let finalDateArray = finalDate.split('-')
     let monthNumber = parseInt(finalDateArray[1], 10)-1
     const initialDate = finalDateArray[0]+'-'+(monthNumber.toString())+'-'+finalDateArray[2]
-    
     this.user.transactions!.forEach(transaction => {
       if(transaction.type === 'outcome') {
         let transDate = moment(transaction.date).format('YYYY-MM-DD')
@@ -156,14 +154,12 @@ export class HomeComponent implements OnInit {
       }
     });
 
-    console.log('TOTAL: '+total)
-
     return total
   }
 
   isBefore(date1: string, date2: string) {
-    let date1Array = date1?.split('-')
-    let date2Array = date2?.split('-')
+    let date1Array = date1?.split('-').map(Number)
+    let date2Array = date2?.split('-').map(Number)
 
     if(date1Array[0]<date2Array[0]) {
       return true
@@ -176,13 +172,12 @@ export class HomeComponent implements OnInit {
         }
       }
     }
-    console.log('isBefore failing')
     return false
   }
 
   sameOrAfter(date1: string, date2: string) {
-    let date1Array = date1?.split('-')
-    let date2Array = date2?.split('-')
+    let date1Array = date1?.split('-').map(Number)
+    let date2Array = date2?.split('-').map(Number)
 
     if(date1Array[0]>date2Array[0]) {
       return true
@@ -279,10 +274,10 @@ export class HomeComponent implements OnInit {
 
     this.userVerification.updateUser(this.user, this.userId).subscribe(
       response => {
-        console.log('Usuario actualizado con éxito:', response)
+        console.log('Usuario actualizado con éxito:')
       },
       error => {
-        console.log('El usuario no se puedo actualizar:', error)
+        console.log('El usuario no se puedo actualizar:')
       })
   }
 
@@ -342,8 +337,5 @@ export class HomeComponent implements OnInit {
     return shortPercentage
 
   }
-
-
-
 
 }

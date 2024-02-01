@@ -102,11 +102,8 @@ export class FuturePaymentsComponent {
 
     this.editPayDescp = p.description!
     this.editPayAmount = p.amount!
-    console.log('p.date: ', p.date!)
     let newDate = moment(p.date!)
-    console.log('newDate: ', newDate)
     this.editDate = this.concatenateDate(newDate);
-    console.log('editDate: ', this.editDate)
     this.editPayCat = p.category!
     this.editPayParticipant = p.participant!
     this.editPayComm = p.comment!
@@ -152,7 +149,6 @@ export class FuturePaymentsComponent {
     let date = moment(p.date!)
     date.add(1, 'months')
     let dateS = this.concatenateDate(date)
-    console.log('tipo fecha actualizada: ', typeof date)
     this.paymentsList.push(new Payment(p.description!, dateS, p.amount!, p.category!, p.comment!, p.recurrent!, p.participant!))
     this.updatePayments()
 
@@ -200,12 +196,8 @@ export class FuturePaymentsComponent {
 
   addPayment() {
     let newPayment: Payment;
-    console.log('Fecha formulario: ', this.date)
     let newDate = moment(this.date)
-    console.log('Moment recien creado: ', newDate)
     let payDate = this.concatenateDate(newDate)
-    console.log('Moment string: ', payDate)
-    console.log(this.payRecurrent)
    if(this.paymentForm.valid){
     newPayment = new Payment(
       this.payDescp,
@@ -233,10 +225,10 @@ export class FuturePaymentsComponent {
 
     this.userVerification.updateUser(this.user, this.userId).subscribe(
       (response) => {
-        console.log('Usuario actualizado con éxito:', response);
+        console.log('Usuario actualizado con éxito:');
       },
       (error) => {
-        console.log('El usuario no se puedo actualizar:', error);
+        console.log('El usuario no se puedo actualizar:');
       }
     );
   }

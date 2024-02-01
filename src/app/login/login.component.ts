@@ -144,7 +144,6 @@ export class LoginComponent {
     this.registerName = this.getName()
 
     const result = await this.verifyUserData(this.registerEmail, 0);
-    console.log(result)
 
     let user = new User(this.registerName, this.registerEmail, this.registerPassword);
 

@@ -93,10 +93,10 @@ export class NotificationsComponent {
     this.user.notifications = this.notifications;
     this.userVerification.updateUser(this.user, this.userId).subscribe(
       (response) => {
-        console.log('Usuario actualizado con éxito:', response);
+        console.log('Usuario actualizado con éxito:');
       },
       (error) => {
-        console.log('El usuario no se puedo actualizar:', error);
+        console.log('El usuario no se puedo actualizar:');
       }
     );
   }
